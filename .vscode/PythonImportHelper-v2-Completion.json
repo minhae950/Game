@@ -16,6 +16,14 @@
         "documentation": {}
     },
     {
+        "label": "*",
+        "importPath": "ursina",
+        "description": "ursina",
+        "isExtraImport": true,
+        "detail": "ursina",
+        "documentation": {}
+    },
+    {
         "label": "FirstPersonController",
         "importPath": "ursina.prefabs.first_person_controller",
         "description": "ursina.prefabs.first_person_controller",
@@ -92,6 +100,78 @@
         "description": "quterview",
         "peekOfCode": "model_visible = True\ndef update():\n    global model_visible\n    # 스페이스 키를 눌러서 모델 숨기기 또는 보이기\n    if held_keys['space']:\n        if model_visible:\n            model_entity.visible = False\n        else:\n            model_entity.visible = True\n        model_visible = not model_visible  # 상태 반전",
         "detail": "quterview",
+        "documentation": {}
+    },
+    {
+        "label": "start_game",
+        "kind": 2,
+        "importPath": "UI_test",
+        "description": "UI_test",
+        "peekOfCode": "def start_game():\n    title.text = \"Game Started!\"\ndef exit_game():\n    application.quit()\nstart_button.on_click = start_game\nexit_button.on_click = exit_game\napp.run()\napp.run()",
+        "detail": "UI_test",
+        "documentation": {}
+    },
+    {
+        "label": "exit_game",
+        "kind": 2,
+        "importPath": "UI_test",
+        "description": "UI_test",
+        "peekOfCode": "def exit_game():\n    application.quit()\nstart_button.on_click = start_game\nexit_button.on_click = exit_game\napp.run()\napp.run()",
+        "detail": "UI_test",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "UI_test",
+        "description": "UI_test",
+        "peekOfCode": "app = Ursina()\n# 텍스트와 버튼 생성\ntitle = Text(text='Game Menu', position=(0, 0.3), scale=2, color=color.orange)\nstart_button = Button(text='Start', color=color.azure, scale=(0.3, 0.1), position=(0, 0.1))\nexit_button = Button(text='Exit', color=color.red, scale=(0.3, 0.1), position=(0, -0.1))\n# 버튼 클릭 시 동작 설정\ndef start_game():\n    title.text = \"Game Started!\"\ndef exit_game():\n    application.quit()",
+        "detail": "UI_test",
+        "documentation": {}
+    },
+    {
+        "label": "title",
+        "kind": 5,
+        "importPath": "UI_test",
+        "description": "UI_test",
+        "peekOfCode": "title = Text(text='Game Menu', position=(0, 0.3), scale=2, color=color.orange)\nstart_button = Button(text='Start', color=color.azure, scale=(0.3, 0.1), position=(0, 0.1))\nexit_button = Button(text='Exit', color=color.red, scale=(0.3, 0.1), position=(0, -0.1))\n# 버튼 클릭 시 동작 설정\ndef start_game():\n    title.text = \"Game Started!\"\ndef exit_game():\n    application.quit()\nstart_button.on_click = start_game\nexit_button.on_click = exit_game",
+        "detail": "UI_test",
+        "documentation": {}
+    },
+    {
+        "label": "start_button",
+        "kind": 5,
+        "importPath": "UI_test",
+        "description": "UI_test",
+        "peekOfCode": "start_button = Button(text='Start', color=color.azure, scale=(0.3, 0.1), position=(0, 0.1))\nexit_button = Button(text='Exit', color=color.red, scale=(0.3, 0.1), position=(0, -0.1))\n# 버튼 클릭 시 동작 설정\ndef start_game():\n    title.text = \"Game Started!\"\ndef exit_game():\n    application.quit()\nstart_button.on_click = start_game\nexit_button.on_click = exit_game\napp.run()",
+        "detail": "UI_test",
+        "documentation": {}
+    },
+    {
+        "label": "exit_button",
+        "kind": 5,
+        "importPath": "UI_test",
+        "description": "UI_test",
+        "peekOfCode": "exit_button = Button(text='Exit', color=color.red, scale=(0.3, 0.1), position=(0, -0.1))\n# 버튼 클릭 시 동작 설정\ndef start_game():\n    title.text = \"Game Started!\"\ndef exit_game():\n    application.quit()\nstart_button.on_click = start_game\nexit_button.on_click = exit_game\napp.run()\napp.run()",
+        "detail": "UI_test",
+        "documentation": {}
+    },
+    {
+        "label": "start_button.on_click",
+        "kind": 5,
+        "importPath": "UI_test",
+        "description": "UI_test",
+        "peekOfCode": "start_button.on_click = start_game\nexit_button.on_click = exit_game\napp.run()\napp.run()",
+        "detail": "UI_test",
+        "documentation": {}
+    },
+    {
+        "label": "exit_button.on_click",
+        "kind": 5,
+        "importPath": "UI_test",
+        "description": "UI_test",
+        "peekOfCode": "exit_button.on_click = exit_game\napp.run()\napp.run()",
+        "detail": "UI_test",
         "documentation": {}
     },
     {
