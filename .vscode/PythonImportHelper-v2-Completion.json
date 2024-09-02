@@ -107,7 +107,7 @@
         "kind": 2,
         "importPath": "UI_test",
         "description": "UI_test",
-        "peekOfCode": "def start_game():\n    title.text = \"Game Started!\"\ndef exit_game():\n    application.quit()\nstart_button.on_click = start_game\nexit_button.on_click = exit_game\napp.run()\napp.run()",
+        "peekOfCode": "def start_game():\n    title.text = \"Game Started!\"\ndef exit_game():\n    application.quit()\nstart_button.on_click = start_game\nexit_button.on_click = exit_game\napp.run()",
         "detail": "UI_test",
         "documentation": {}
     },
@@ -116,7 +116,7 @@
         "kind": 2,
         "importPath": "UI_test",
         "description": "UI_test",
-        "peekOfCode": "def exit_game():\n    application.quit()\nstart_button.on_click = start_game\nexit_button.on_click = exit_game\napp.run()\napp.run()",
+        "peekOfCode": "def exit_game():\n    application.quit()\nstart_button.on_click = start_game\nexit_button.on_click = exit_game\napp.run()",
         "detail": "UI_test",
         "documentation": {}
     },
@@ -152,7 +152,7 @@
         "kind": 5,
         "importPath": "UI_test",
         "description": "UI_test",
-        "peekOfCode": "exit_button = Button(text='Exit', color=color.red, scale=(0.3, 0.1), position=(0, -0.1))\n# 버튼 클릭 시 동작 설정\ndef start_game():\n    title.text = \"Game Started!\"\ndef exit_game():\n    application.quit()\nstart_button.on_click = start_game\nexit_button.on_click = exit_game\napp.run()\napp.run()",
+        "peekOfCode": "exit_button = Button(text='Exit', color=color.red, scale=(0.3, 0.1), position=(0, -0.1))\n# 버튼 클릭 시 동작 설정\ndef start_game():\n    title.text = \"Game Started!\"\ndef exit_game():\n    application.quit()\nstart_button.on_click = start_game\nexit_button.on_click = exit_game\napp.run()",
         "detail": "UI_test",
         "documentation": {}
     },
@@ -161,7 +161,7 @@
         "kind": 5,
         "importPath": "UI_test",
         "description": "UI_test",
-        "peekOfCode": "start_button.on_click = start_game\nexit_button.on_click = exit_game\napp.run()\napp.run()",
+        "peekOfCode": "start_button.on_click = start_game\nexit_button.on_click = exit_game\napp.run()",
         "detail": "UI_test",
         "documentation": {}
     },
@@ -170,7 +170,7 @@
         "kind": 5,
         "importPath": "UI_test",
         "description": "UI_test",
-        "peekOfCode": "exit_button.on_click = exit_game\napp.run()\napp.run()",
+        "peekOfCode": "exit_button.on_click = exit_game\napp.run()",
         "detail": "UI_test",
         "documentation": {}
     },
