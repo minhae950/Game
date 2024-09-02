@@ -8,9 +8,14 @@ model_path = 'man.obj'
 Grid_texture = load_texture('Texture.jpg')
 
 #map
-ground = Entity(model='plane', scale=(50, 1, 50), texture=Grid_texture, collider='box')
+ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')
 
 model_entity = Entity(model=model_path, scale=(0.4, 0.4, 0.4), color=color.orange, rotation=(-90, 0, 90), position=(0, 0, 0))
+
+
+
+card = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0, -0), parent=camera.ui)
+card.visible = False
 
 #fucking player settings
 player = FirstPersonController()
@@ -26,11 +31,14 @@ hand.rotation = Vec3(0, 90, 0)  # 손 모양을 약간 회전
 
 #blogal variables
 hand_visable = False
-hand.visible = False 
-weapon_state = 'none'
+hand.visible = False
+cursur_lock = False
+card_visible = False
+
 
 def input(key):
     global hand_visable
+    global cursur_lock
     #print(key) #for check
     
     if key == 'left shift':
@@ -42,10 +50,19 @@ def input(key):
         if hand_visable == False:
             hand.visible = True
             hand_visable = True
-            weapon_state = 'hand'
         elif hand_visable == True:
             hand.visible = False
             hand_visable = not hand_visable
+            
+    if key == 'tab':
+        if cursur_lock == False:
+            mouse.locked = True
+            cursur_lock = True
+            card.visible = False
+        elif cursur_lock == True:
+            mouse.locked = False
+            cursur_lock = not cursur_lock
+            card.visible = True
             
     if key =='escape':
         quit_game()

@@ -1,23 +1,42 @@
 from ursina import *
+from ursina.prefabs.first_person_controller import FirstPersonController
 
 app = Ursina()
 
-# 텍스트와 버튼 생성
-title = Text(text='Game Menu', position=(0, 0.3), scale=2, color=color.orange)
-start_button = Button(text='Start', color=color.azure, scale=(0.3, 0.1), position=(0, 0.1))
-exit_button = Button(text='Exit', color=color.red, scale=(0.3, 0.1), position=(0, -0.1))
+# 플레이어 설정
+player = FirstPersonController()
 
-# 버튼 클릭 시 동작 설정
-def start_game():
-    title.text = "Game Started!"
+# 바닥 생성
+floor = Entity(model='plane', scale=(10, 1, 10), texture='white_cube', texture_scale=(10, 10), collider='box')
 
-def exit_game():
-    application.quit()
+health_bar_background = Entity(model='quad', color=color.gray, scale=(0.4, 0.05), position=(-0.5, 0.4, -0.1), parent=camera.ui)
+health_bar = Entity(model='quad', color=color.green, scale=(0.38, 0.04), position=(-0.5, 0.4, -0.2), parent=camera.ui)
+health_text = Text(text="Health", position=(-0.85, 0.42), scale=1.5, parent=camera.ui)
 
-start_button.on_click = start_game
-exit_button.on_click = exit_game
+ammo_count = Text(text='Ammo: 30', position=(0.7, -0.45), scale=2, parent=camera.ui)
 
-app.run()
+hp=8
 
+def reduce_health():
+    global hp
+    if health_bar.scale_x > 0:
+        health_bar.scale_x -= 0.05
+        health_bar.x -= 0.025
+        hp -= 1
+    if hp <= 0:
+        gameover_text = Text(text='Game Over', position=(-0.1, 0.015), scale=1.5, parent=camera.ui)
+
+def reduce_ammo():
+    current_ammo = int(ammo_count.text.split(': ')[1])
+    if current_ammo > 0:
+        current_ammo -= 1
+        ammo_count.text = f'Ammo: {current_ammo}'
+
+def input(key):
+    if key == 'space':
+        reduce_health()
+        reduce_ammo()
+    if key == 'escape':
+        application.quit()
 
 app.run()
