@@ -3,23 +3,24 @@ from ursina.prefabs.first_person_controller import FirstPersonController
 
 app = Ursina()
 
-#model import
+#모델 가져오기
 model_path = 'man.obj'
-Grid_texture = load_texture('Texture.jpg')
+model_m = 'model.obj'
+#Grid_texture = load_texture('Texture.jpg')
 
-#map
-ground = Entity(model='plane', scale=(50, 1, 50), texture=Grid_texture, collider='box')
+#맵 생성
+#ground = Entity(model = 'plane', scale = (50, 1, 50), texture = Grid_texture, collider = 'box')
+Hospital_Models = Entity(model = model_m, scale = (0.37, 0.37, 0.37), position = (0, -0.8, 10), collider='box')
+model_entity = Entity(model = model_path, scale = (0.4, 0.4, 0.4), color = color.orange, rotation = (-90, 0, 90), position = (0, 0, 0))
 
-model_entity = Entity(model=model_path, scale=(0.4, 0.4, 0.4), color=color.orange, rotation=(-90, 0, 90), position=(0, 0, 0))
-
-#fucking player settings
+#player settings
 player = FirstPersonController()
-crosshair = Entity(model='circle', color=color.red, scale=(0.003, 0.003), position=(0, 0, 0))
+crosshair = Entity(model = 'cube', color = color.red, scale = (0.003, 0.003), position = (10, 10, 10))
 camera.fov = 100
 
-# cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')
+#cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')
 
-#UI
+#UI손모양
 hand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))
 hand.position = Vec3(0.5, -0.3, 0.5)  # 화면 우측 하단에 위치시키기
 hand.rotation = Vec3(0, 90, 0)  # 손 모양을 약간 회전
@@ -31,7 +32,6 @@ weapon_state = 'none'
 
 def input(key):
     global hand_visable
-    #print(key) #for check
     
     if key == 'left shift':
         player.speed = 10
