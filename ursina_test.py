@@ -26,8 +26,8 @@ camera.fov = 100
 
 #UI
 hand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))
-hand.position = Vec3(0.5, -0.3, 0.5)  # 화면 우측 하단에 위치시키기
-hand.rotation = Vec3(0, 90, 0)  # 손 모양을 약간 회전
+hand.position = Vec3(0.5, -0.3, 0.5)
+hand.rotation = Vec3(0, 90, 0)
 
 #blogal variables
 hand_visable = False

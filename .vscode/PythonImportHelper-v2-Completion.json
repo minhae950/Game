@@ -268,7 +268,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "card = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0, -0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncrosshair = Entity(model='circle', color=color.red, scale=(0.003, 0.003), position=(0, 0, 0))\ncamera.fov = 100\n# cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))\nhand.position = Vec3(0.5, -0.3, 0.5)  # 화면 우측 하단에 위치시키기",
+        "peekOfCode": "card = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0, -0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncrosshair = Entity(model='circle', color=color.red, scale=(0.003, 0.003), position=(0, 0, 0))\ncamera.fov = 100\n# cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))\nhand.position = Vec3(0.5, -0.3, 0.5)",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -277,7 +277,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "card.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncrosshair = Entity(model='circle', color=color.red, scale=(0.003, 0.003), position=(0, 0, 0))\ncamera.fov = 100\n# cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))\nhand.position = Vec3(0.5, -0.3, 0.5)  # 화면 우측 하단에 위치시키기\nhand.rotation = Vec3(0, 90, 0)  # 손 모양을 약간 회전",
+        "peekOfCode": "card.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncrosshair = Entity(model='circle', color=color.red, scale=(0.003, 0.003), position=(0, 0, 0))\ncamera.fov = 100\n# cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -286,7 +286,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "player = FirstPersonController()\ncrosshair = Entity(model='circle', color=color.red, scale=(0.003, 0.003), position=(0, 0, 0))\ncamera.fov = 100\n# cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))\nhand.position = Vec3(0.5, -0.3, 0.5)  # 화면 우측 하단에 위치시키기\nhand.rotation = Vec3(0, 90, 0)  # 손 모양을 약간 회전\n#blogal variables\nhand_visable = False",
+        "peekOfCode": "player = FirstPersonController()\ncrosshair = Entity(model='circle', color=color.red, scale=(0.003, 0.003), position=(0, 0, 0))\ncamera.fov = 100\n# cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visable = False",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -295,7 +295,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "crosshair = Entity(model='circle', color=color.red, scale=(0.003, 0.003), position=(0, 0, 0))\ncamera.fov = 100\n# cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))\nhand.position = Vec3(0.5, -0.3, 0.5)  # 화면 우측 하단에 위치시키기\nhand.rotation = Vec3(0, 90, 0)  # 손 모양을 약간 회전\n#blogal variables\nhand_visable = False\nhand.visible = False",
+        "peekOfCode": "crosshair = Entity(model='circle', color=color.red, scale=(0.003, 0.003), position=(0, 0, 0))\ncamera.fov = 100\n# cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visable = False\nhand.visible = False",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -304,7 +304,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "camera.fov = 100\n# cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))\nhand.position = Vec3(0.5, -0.3, 0.5)  # 화면 우측 하단에 위치시키기\nhand.rotation = Vec3(0, 90, 0)  # 손 모양을 약간 회전\n#blogal variables\nhand_visable = False\nhand.visible = False\ncursur_lock = False",
+        "peekOfCode": "camera.fov = 100\n# cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visable = False\nhand.visible = False\ncursur_lock = False",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -313,7 +313,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "hand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))\nhand.position = Vec3(0.5, -0.3, 0.5)  # 화면 우측 하단에 위치시키기\nhand.rotation = Vec3(0, 90, 0)  # 손 모양을 약간 회전\n#blogal variables\nhand_visable = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\ndef input(key):\n    global hand_visable",
+        "peekOfCode": "hand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visable = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\ndef input(key):\n    global hand_visable",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -322,7 +322,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "hand.position = Vec3(0.5, -0.3, 0.5)  # 화면 우측 하단에 위치시키기\nhand.rotation = Vec3(0, 90, 0)  # 손 모양을 약간 회전\n#blogal variables\nhand_visable = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\ndef input(key):\n    global hand_visable\n    global cursur_lock",
+        "peekOfCode": "hand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visable = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\ndef input(key):\n    global hand_visable\n    global cursur_lock",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -331,7 +331,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "hand.rotation = Vec3(0, 90, 0)  # 손 모양을 약간 회전\n#blogal variables\nhand_visable = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\ndef input(key):\n    global hand_visable\n    global cursur_lock\n    #print(key) #for check",
+        "peekOfCode": "hand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visable = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\ndef input(key):\n    global hand_visable\n    global cursur_lock\n    #print(key) #for check",
         "detail": "ursina_test",
         "documentation": {}
     },
