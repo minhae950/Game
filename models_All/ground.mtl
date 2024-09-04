@@ -1,0 +1,18 @@
+newmtl Ground1Mtl
+Material Color
+Ka 0.851252 0.827726 0.827726
+Kd 0.851252 0.827726 0.827726
+Ks 0.270398 0.262925 0.262925 
+
+d 1
+
+Ns 0
+
+map_Ka Ground1_diff.png
+map_Kd Ground1_diff.png
+map_d Ground1_diff.png
+
+map_Bump Ground1_nmap.png
+
+map_Ns Ground1_spec.png
+

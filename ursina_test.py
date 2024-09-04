@@ -5,13 +5,36 @@ app = Ursina()
 
 #모델 가져오기
 model_path = 'man.obj'
-model_m = 'model.obj'
-#Grid_texture = load_texture('Texture.jpg')
+model_door = 'door.obj'
+model_ground = 'ground.obj'
+model_Front_Wall = 'Front_Wall.obj'
+model_Left_Wall = 'Left_Wall.obj'
+model_Right_Wall = 'Right_Wall.obj'
+model_Central_Desk = 'Central_Desk.obj'
+model_Inner_left_wall = 'Inner_left_wall.obj'
+model_Inner_Right_Wall = 'Inner_Right_Wall.obj'
+model_Inside_front_Wall = 'Inside_front_Wall.obj'
+model_Facde_Wall_parts1 = 'Facde_Wall_parts1.obj'
+model_Facde_Wall_parts2 = 'Facde_Wall_parts2.obj'
+model_Diagonal_wall1= 'Diagonal_wall1.obj'
+model_Diagonal_wall2 = 'Diagonal_wall2.obj'
 
 #맵 생성
-#ground = Entity(model = 'plane', scale = (50, 1, 50), texture = Grid_texture, collider = 'box')
-Hospital_Models = Entity(model = model_m, scale = (0.37, 0.37, 0.37), position = (0, -0.8, 10), collider='box')
-model_entity = Entity(model = model_path, scale = (0.4, 0.4, 0.4), color = color.orange, rotation = (-90, 0, 90), position = (0, 0, 0))
+Model_door = Entity(model = model_door, scale = (0.37, 0.37, 0.37), position = (0, -0.8, 10), collider='box')#문
+Model_ground = Entity(model = model_ground, scale = (0.37, 0.37, 0.37), position = (0, -0.8, 10), collider='box')#땅
+Model_Left_Wall = Entity(model = model_Left_Wall, scale = (0.37, 0.37, 0.37), position = (0, -0.8, 10), collider='box')#왼쪽 벽
+Model_Right_Wall = Entity(model = model_Right_Wall, scale = (0.37, 0.37, 0.37), position = (0, -0.8, 10), collider='box')#오른쪽 벽
+Model_Front_Wall = Entity(model = model_Front_Wall, scale = (0.37, 0.37, 0.37), position = (0, -0.8, 10), collider='box')#정면 벽
+Model_Central_Desk = Entity(model = model_Central_Desk, scale = (0.37, 0.37, 0.37), position = (0, -0.8, 10), collider='box')#중앙 테이블
+Model_Diagonal_wall1 = Entity(model = model_Diagonal_wall1, scale = (0.37, 0.37, 0.37), position = (0, -0.8, 10), collider='box')#대각선 벽1
+Model_Diagonal_wall2 = Entity(model = model_Diagonal_wall2, scale = (0.37, 0.37, 0.37), position = (0, -0.8, 10), collider='box')#대각선 벽2
+Model_Inner_left_wall = Entity(model = model_Inner_left_wall, scale = (0.37, 0.37, 0.37), position = (0, -0.8, 10), collider='box')#안쪽 왼쪽 벽
+Model_Inner_Right_Wall = Entity(model = model_Inner_Right_Wall, scale = (0.37, 0.37, 0.37), position = (0, -0.8, 10), collider='box')#안쪽 오른쪽 벽
+Model_Inside_front_Wall = Entity(model = model_Inside_front_Wall, scale = (0.37, 0.37, 0.37), position = (0, -0.8, 10), collider='box')#안쪽 정면 벽
+Model_Facde_Wall_parts1 = Entity(model = model_Facde_Wall_parts1, scale = (0.37, 0.37, 0.37), position = (0, -0.8, 10), collider='box')#안쪽 정멱 부품1안된;;;;
+Model_Facde_Wall_parts2 = Entity(model = model_Facde_Wall_parts2, scale = (0.37, 0.37, 0.37), position = (0, -0.8, 10), collider='box')#안쪽 정멱 부품2안됨;;;;
+
+model_entity = Entity(model = model_path, scale = (0.4, 0.4, 0.4), color = color.orange, rotation = (-90, 0, 90), position = (0, 0, 0))#사람
 
 #player settings
 player = FirstPersonController()
