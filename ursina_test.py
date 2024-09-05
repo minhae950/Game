@@ -19,7 +19,6 @@ card.visible = False
 
 #fucking player settings
 player = FirstPersonController()
-crosshair = Entity(model='circle', color=color.red, scale=(0.003, 0.003), position=(0, 0, 0))
 camera.fov = 100
 
 # cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')
@@ -71,6 +70,5 @@ def quit_game():
     application.quit()
 
 
-crosshair.parent = camera.ui
 
 app.run()

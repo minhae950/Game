@@ -214,7 +214,7 @@
         "kind": 2,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "def quit_game():\n    application.quit()\ncrosshair.parent = camera.ui\napp.run()",
+        "peekOfCode": "def quit_game():\n    application.quit()\napp.run()",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -232,7 +232,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "model_path = 'man.obj'\nGrid_texture = load_texture('Texture.jpg')\n#map\nground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\nmodel_entity = Entity(model=model_path, scale=(0.4, 0.4, 0.4), color=color.orange, rotation=(-90, 0, 90), position=(0, 0, 0))\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0, -0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncrosshair = Entity(model='circle', color=color.red, scale=(0.003, 0.003), position=(0, 0, 0))",
+        "peekOfCode": "model_path = 'man.obj'\nGrid_texture = load_texture('Texture.jpg')\n#map\nground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\nmodel_entity = Entity(model=model_path, scale=(0.4, 0.4, 0.4), color=color.orange, rotation=(-90, 0, 90), position=(0, 0, 0))\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0, -0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncamera.fov = 100",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -241,7 +241,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "Grid_texture = load_texture('Texture.jpg')\n#map\nground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\nmodel_entity = Entity(model=model_path, scale=(0.4, 0.4, 0.4), color=color.orange, rotation=(-90, 0, 90), position=(0, 0, 0))\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0, -0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncrosshair = Entity(model='circle', color=color.red, scale=(0.003, 0.003), position=(0, 0, 0))\ncamera.fov = 100",
+        "peekOfCode": "Grid_texture = load_texture('Texture.jpg')\n#map\nground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\nmodel_entity = Entity(model=model_path, scale=(0.4, 0.4, 0.4), color=color.orange, rotation=(-90, 0, 90), position=(0, 0, 0))\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0, -0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncamera.fov = 100\n# cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -250,7 +250,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\nmodel_entity = Entity(model=model_path, scale=(0.4, 0.4, 0.4), color=color.orange, rotation=(-90, 0, 90), position=(0, 0, 0))\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0, -0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncrosshair = Entity(model='circle', color=color.red, scale=(0.003, 0.003), position=(0, 0, 0))\ncamera.fov = 100\n# cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')\n#UI",
+        "peekOfCode": "ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\nmodel_entity = Entity(model=model_path, scale=(0.4, 0.4, 0.4), color=color.orange, rotation=(-90, 0, 90), position=(0, 0, 0))\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0, -0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncamera.fov = 100\n# cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -259,7 +259,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "model_entity = Entity(model=model_path, scale=(0.4, 0.4, 0.4), color=color.orange, rotation=(-90, 0, 90), position=(0, 0, 0))\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0, -0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncrosshair = Entity(model='circle', color=color.red, scale=(0.003, 0.003), position=(0, 0, 0))\ncamera.fov = 100\n# cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))",
+        "peekOfCode": "model_entity = Entity(model=model_path, scale=(0.4, 0.4, 0.4), color=color.orange, rotation=(-90, 0, 90), position=(0, 0, 0))\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0, -0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncamera.fov = 100\n# cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))\nhand.position = Vec3(0.5, -0.3, 0.5)",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -268,7 +268,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "card = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0, -0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncrosshair = Entity(model='circle', color=color.red, scale=(0.003, 0.003), position=(0, 0, 0))\ncamera.fov = 100\n# cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))\nhand.position = Vec3(0.5, -0.3, 0.5)",
+        "peekOfCode": "card = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0, -0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncamera.fov = 100\n# cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -277,7 +277,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "card.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncrosshair = Entity(model='circle', color=color.red, scale=(0.003, 0.003), position=(0, 0, 0))\ncamera.fov = 100\n# cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)",
+        "peekOfCode": "card.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncamera.fov = 100\n# cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -286,16 +286,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "player = FirstPersonController()\ncrosshair = Entity(model='circle', color=color.red, scale=(0.003, 0.003), position=(0, 0, 0))\ncamera.fov = 100\n# cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visable = False",
-        "detail": "ursina_test",
-        "documentation": {}
-    },
-    {
-        "label": "crosshair",
-        "kind": 5,
-        "importPath": "ursina_test",
-        "description": "ursina_test",
-        "peekOfCode": "crosshair = Entity(model='circle', color=color.red, scale=(0.003, 0.003), position=(0, 0, 0))\ncamera.fov = 100\n# cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visable = False\nhand.visible = False",
+        "peekOfCode": "player = FirstPersonController()\ncamera.fov = 100\n# cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13), color=color.rgb(150, 75, 0))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visable = False\nhand.visible = False",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -368,15 +359,6 @@
         "importPath": "ursina_test",
         "description": "ursina_test",
         "peekOfCode": "card_visible = False\ndef input(key):\n    global hand_visable\n    global cursur_lock\n    #print(key) #for check\n    if key == 'left shift':\n        player.speed = 10\n    if key == 'left shift up': \n        player.speed = 5\n    if key == '1':",
-        "detail": "ursina_test",
-        "documentation": {}
-    },
-    {
-        "label": "crosshair.parent",
-        "kind": 5,
-        "importPath": "ursina_test",
-        "description": "ursina_test",
-        "peekOfCode": "crosshair.parent = camera.ui\napp.run()",
         "detail": "ursina_test",
         "documentation": {}
     }
