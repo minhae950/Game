@@ -1,10 +1,10 @@
 from ursina import *
-from ursina.prefabs.first_person_controller import FirstPersonController
+from ursina.prefabs.first_person_controller import FirstPersonController as fpc # sorry for dirty names
 
 app = Ursina()
 
 # 플레이어 설정
-player = FirstPersonController()
+player = fpc()
 
 # 바닥 생성
 floor = Entity(model='plane', scale=(10, 1, 10), texture='white_cube', texture_scale=(10, 10), collider='box')
