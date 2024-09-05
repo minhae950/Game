@@ -14,8 +14,8 @@ model_Central_Desk = 'Central_Desk.obj'
 model_Inner_left_wall = 'Inner_left_wall.obj'
 model_Inner_Right_Wall = 'Inner_Right_Wall.obj'
 model_Inside_front_Wall = 'Inside_front_Wall.obj'
-model_Facde_Wall_parts1 = 'Facde_Wall_parts1.obj'
-model_Facde_Wall_parts2 = 'Facde_Wall_parts2.obj'
+model_Interior_Facde_Wall_parts1 = 'Interior_Facde_Wall_parts1.obj'
+model_Interior_Facde_Wall_parts2 = 'Interior_Facde_Wall_parts2.obj'
 model_Diagonal_wall1= 'Diagonal_wall1.obj'
 model_Diagonal_wall2 = 'Diagonal_wall2.obj'
 
@@ -31,8 +31,8 @@ Model_Diagonal_wall2 = Entity(model = model_Diagonal_wall2, scale = (0.37, 0.37,
 Model_Inner_left_wall = Entity(model = model_Inner_left_wall, scale = (0.37, 0.37, 0.37), position = (0, -0.8, 10), collider='box')#안쪽 왼쪽 벽
 Model_Inner_Right_Wall = Entity(model = model_Inner_Right_Wall, scale = (0.37, 0.37, 0.37), position = (0, -0.8, 10), collider='box')#안쪽 오른쪽 벽
 Model_Inside_front_Wall = Entity(model = model_Inside_front_Wall, scale = (0.37, 0.37, 0.37), position = (0, -0.8, 10), collider='box')#안쪽 정면 벽
-Model_Facde_Wall_parts1 = Entity(model = model_Facde_Wall_parts1, scale = (0.37, 0.37, 0.37), position = (0, -0.8, 10), collider='box')#안쪽 정멱 부품1안된;;;;
-Model_Facde_Wall_parts2 = Entity(model = model_Facde_Wall_parts2, scale = (0.37, 0.37, 0.37), position = (0, -0.8, 10), collider='box')#안쪽 정멱 부품2안됨;;;;
+Model_Facde_Wall_parts1 = Entity(model = model_Interior_Facde_Wall_parts1, scale = (0.37, 0.37, 0.37), position = (0, -0.8, 10), collider='box')#안쪽 정멱 부품1안된;;;;
+Model_Facde_Wall_parts2 = Entity(model = model_Interior_Facde_Wall_parts2, scale = (0.37, 0.37, 0.37), position = (0, -0.8, 10), collider='box')#안쪽 정멱 부품2안됨;;;;
 
 model_entity = Entity(model = model_path, scale = (0.4, 0.4, 0.4), color = color.orange, rotation = (-90, 0, 90), position = (0, 0, 0))#사람
 
@@ -50,12 +50,14 @@ hand.rotation = Vec3(0, 90, 0)  # 손 모양을 약간 회전
 
 #blogal variables
 hand_visable = False
-hand.visible = False 
-weapon_state = 'none'
+hand.visible = False
+cursor_visable = False
+
 
 def input(key):
     global hand_visable
-    
+    global cursor_visable
+
     if key == 'left shift':
         player.speed = 10
     if key == 'left shift up': 
@@ -65,11 +67,19 @@ def input(key):
         if hand_visable == False:
             hand.visible = True
             hand_visable = True
-            weapon_state = 'hand'
         elif hand_visable == True:
             hand.visible = False
             hand_visable = not hand_visable
             
+    if key == 'tab':
+        if cursor_visable == False:
+            mouse.locked = False
+            cursor_visable == True
+        elif cursor_visable == True:
+            mouse.locked = True
+            cursor_visable = False
+
+
     if key =='escape':
         quit_game()
 
