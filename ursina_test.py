@@ -4,13 +4,13 @@ from ursina.prefabs.first_person_controller import FirstPersonController
 app = Ursina()
 
 #model import
-model_path = 'man.obj'
+man = 'man.obj'
 
 #class
 class InteractableCube(Entity):
-    def __init__(self, name, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), **kwargs):
+    def __init__(self, name, model, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), **kwargs):
         super().__init__(
-            model='man.obj',
+            model=model,
             name=name,
             color=color.azure,
             collider='box',
@@ -21,14 +21,13 @@ class InteractableCube(Entity):
         )
         self.original_color = self.color
         
+    #interact #define
     def interact(self):
         print(f"Interacted with {self.name}")
         self.color = color.red
-
     def on_hover(self):
         self.color = color.green
         show_text(self.name, 0.01, (0, -0.1))
-
     def on_unhover(self):
         self.color = self.original_color
         
@@ -37,8 +36,8 @@ class InteractableCube(Entity):
 ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')
 
 
-Humman1 = InteractableCube(name='man1', position=(3, 0, 3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
-Humman2 = InteractableCube(name='man2', position=(-3, 0, -3), scale=(0.4, 0.4, 0.4), rotation=(-90, 90, 90))
+Humman1 = InteractableCube(name='man1', model='man', position=(3, 0, 3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
+Humman2 = InteractableCube(name='man2', model='man', position=(-3, 0, -3), scale=(0.4, 0.4, 0.4), rotation=(-90, 90, 90))
 
 #Tab UI
 card = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)
@@ -59,6 +58,9 @@ hand.visible = False
 cursur_lock = False
 card_visible = False
 previous_hovered_entity = None
+
+#dialog
+texts = ["Hello Doctor,", "Can you help me?"]
 
 def input(key):
     global hand_visable
@@ -112,7 +114,7 @@ def input(key):
     if key =='escape':
         quit_game()
 
-def show_text(text, duration=2, position=(0, 0, 0)):
+def show_text(text, duration=2, position=(0, -0.2)):
     message = Text(text, position=position, origin=(0, 0), scale=2, color=color.black)
     invoke(message.disable, delay=duration)
     return duration
@@ -135,9 +137,10 @@ def update():
         if held_keys['e']:
             hovered_entity.interact()
             if hovered_entity.name == 'man1':
-                show_text("hello, I'm 1", 2, (0, -0.2))
+                show_text_sequence(texts, interval=2)
+                
             if hovered_entity.name == 'man2':
-                show_text("hello, I'm 2", 2, (0, -0.2))
+                show_text_sequence(texts, interval=2)
 
         if previous_hovered_entity and previous_hovered_entity != hovered_entity:
             previous_hovered_entity.on_unhover()
