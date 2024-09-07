@@ -24,6 +24,30 @@
         "documentation": {}
     },
     {
+        "label": "*",
+        "importPath": "ursina",
+        "description": "ursina",
+        "isExtraImport": true,
+        "detail": "ursina",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "ursina",
+        "description": "ursina",
+        "isExtraImport": true,
+        "detail": "ursina",
+        "documentation": {}
+    },
+    {
+        "label": "FirstPersonController",
+        "importPath": "ursina.prefabs.first_person_controller",
+        "description": "ursina.prefabs.first_person_controller",
+        "isExtraImport": true,
+        "detail": "ursina.prefabs.first_person_controller",
+        "documentation": {}
+    },
+    {
         "label": "FirstPersonController",
         "importPath": "ursina.prefabs.first_person_controller",
         "description": "ursina.prefabs.first_person_controller",
@@ -45,6 +69,114 @@
         "description": "ursina.prefabs.first_person_controller",
         "isExtraImport": true,
         "detail": "ursina.prefabs.first_person_controller",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "InteractableCube",
+        "kind": 6,
+        "importPath": "interrection",
+        "description": "interrection",
+        "peekOfCode": "class InteractableCube(Entity):\n    def __init__(self, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), **kwargs):\n        super().__init__(\n            model='man.obj',\n            color=color.azure,\n            collider='box',\n            position=position,\n            scale=scale,\n            rotation=rotation,\n            **kwargs",
+        "detail": "interrection",
+        "documentation": {}
+    },
+    {
+        "label": "show_text",
+        "kind": 2,
+        "importPath": "interrection",
+        "description": "interrection",
+        "peekOfCode": "def show_text(text, duration=2, ):\n    message = Text(text, position=(0, -0.2), origin=(0, 0), scale=2)\n    invoke(message.disable, delay=duration)\n    return duration\ndef show_text_sequence(texts, interval=2):\n    total_time = 0\n    for text in texts:\n        invoke(show_text, text, interval, delay=total_time)\n        total_time += interval\ncube1 = InteractableCube(position=(3, 0, 3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))",
+        "detail": "interrection",
+        "documentation": {}
+    },
+    {
+        "label": "show_text_sequence",
+        "kind": 2,
+        "importPath": "interrection",
+        "description": "interrection",
+        "peekOfCode": "def show_text_sequence(texts, interval=2):\n    total_time = 0\n    for text in texts:\n        invoke(show_text, text, interval, delay=total_time)\n        total_time += interval\ncube1 = InteractableCube(position=(3, 0, 3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\ncube2 = InteractableCube(position=(-3, 0, -3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nprevious_hovered_entity = None\ndef update():\n    global previous_hovered_entity",
+        "detail": "interrection",
+        "documentation": {}
+    },
+    {
+        "label": "update",
+        "kind": 2,
+        "importPath": "interrection",
+        "description": "interrection",
+        "peekOfCode": "def update():\n    global previous_hovered_entity\n    hit_info = raycast(camera.world_position, camera.forward, distance=3)\n    if hit_info.hit and isinstance(hit_info.entity, InteractableCube):\n        hovered_entity = hit_info.entity\n        if held_keys['e']:\n            hovered_entity.interact()\n        if previous_hovered_entity and previous_hovered_entity != hovered_entity:\n            previous_hovered_entity.color = previous_hovered_entity.original_color\n        previous_hovered_entity = hovered_entity",
+        "detail": "interrection",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "interrection",
+        "description": "interrection",
+        "peekOfCode": "app = Ursina()\nground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\nplayer = FirstPersonController()\ntexts = [\"안녕하세요.\", \"My name is Minjun.\", \"Can you help me?\"]\nclass InteractableCube(Entity):\n    def __init__(self, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), **kwargs):\n        super().__init__(\n            model='man.obj',\n            color=color.azure,\n            collider='box',",
+        "detail": "interrection",
+        "documentation": {}
+    },
+    {
+        "label": "ground",
+        "kind": 5,
+        "importPath": "interrection",
+        "description": "interrection",
+        "peekOfCode": "ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\nplayer = FirstPersonController()\ntexts = [\"안녕하세요.\", \"My name is Minjun.\", \"Can you help me?\"]\nclass InteractableCube(Entity):\n    def __init__(self, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), **kwargs):\n        super().__init__(\n            model='man.obj',\n            color=color.azure,\n            collider='box',\n            position=position,",
+        "detail": "interrection",
+        "documentation": {}
+    },
+    {
+        "label": "player",
+        "kind": 5,
+        "importPath": "interrection",
+        "description": "interrection",
+        "peekOfCode": "player = FirstPersonController()\ntexts = [\"안녕하세요.\", \"My name is Minjun.\", \"Can you help me?\"]\nclass InteractableCube(Entity):\n    def __init__(self, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), **kwargs):\n        super().__init__(\n            model='man.obj',\n            color=color.azure,\n            collider='box',\n            position=position,\n            scale=scale,",
+        "detail": "interrection",
+        "documentation": {}
+    },
+    {
+        "label": "texts",
+        "kind": 5,
+        "importPath": "interrection",
+        "description": "interrection",
+        "peekOfCode": "texts = [\"안녕하세요.\", \"My name is Minjun.\", \"Can you help me?\"]\nclass InteractableCube(Entity):\n    def __init__(self, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), **kwargs):\n        super().__init__(\n            model='man.obj',\n            color=color.azure,\n            collider='box',\n            position=position,\n            scale=scale,\n            rotation=rotation,",
+        "detail": "interrection",
+        "documentation": {}
+    },
+    {
+        "label": "cube1",
+        "kind": 5,
+        "importPath": "interrection",
+        "description": "interrection",
+        "peekOfCode": "cube1 = InteractableCube(position=(3, 0, 3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\ncube2 = InteractableCube(position=(-3, 0, -3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nprevious_hovered_entity = None\ndef update():\n    global previous_hovered_entity\n    hit_info = raycast(camera.world_position, camera.forward, distance=3)\n    if hit_info.hit and isinstance(hit_info.entity, InteractableCube):\n        hovered_entity = hit_info.entity\n        if held_keys['e']:\n            hovered_entity.interact()",
+        "detail": "interrection",
+        "documentation": {}
+    },
+    {
+        "label": "cube2",
+        "kind": 5,
+        "importPath": "interrection",
+        "description": "interrection",
+        "peekOfCode": "cube2 = InteractableCube(position=(-3, 0, -3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nprevious_hovered_entity = None\ndef update():\n    global previous_hovered_entity\n    hit_info = raycast(camera.world_position, camera.forward, distance=3)\n    if hit_info.hit and isinstance(hit_info.entity, InteractableCube):\n        hovered_entity = hit_info.entity\n        if held_keys['e']:\n            hovered_entity.interact()\n        if previous_hovered_entity and previous_hovered_entity != hovered_entity:",
+        "detail": "interrection",
+        "documentation": {}
+    },
+    {
+        "label": "previous_hovered_entity",
+        "kind": 5,
+        "importPath": "interrection",
+        "description": "interrection",
+        "peekOfCode": "previous_hovered_entity = None\ndef update():\n    global previous_hovered_entity\n    hit_info = raycast(camera.world_position, camera.forward, distance=3)\n    if hit_info.hit and isinstance(hit_info.entity, InteractableCube):\n        hovered_entity = hit_info.entity\n        if held_keys['e']:\n            hovered_entity.interact()\n        if previous_hovered_entity and previous_hovered_entity != hovered_entity:\n            previous_hovered_entity.color = previous_hovered_entity.original_color",
+        "detail": "interrection",
         "documentation": {}
     },
     {
@@ -108,6 +240,42 @@
         "description": "quterview",
         "peekOfCode": "model_visible = True\ndef update():\n    global model_visible\n    # 스페이스 키를 눌러서 모델 숨기기 또는 보이기\n    if held_keys['space']:\n        if model_visible:\n            model_entity.visible = False\n        else:\n            model_entity.visible = True\n        model_visible = not model_visible  # 상태 반전",
         "detail": "quterview",
+        "documentation": {}
+    },
+    {
+        "label": "show_temporary_text",
+        "kind": 2,
+        "importPath": "Text_test",
+        "description": "Text_test",
+        "peekOfCode": "def show_temporary_text(text, duration=2):\n    # 텍스트 생성\n    message = Text(text, position=(0, 0.4), origin=(0, 0), scale=2)\n    # 일정 시간 후에 텍스트 제거\n    invoke(message.disable, delay=duration)\n    return duration  # 다음 텍스트를 표시할 시간을 위해 duration 반환\ndef show_text_sequence(texts, interval=2):\n    total_time = 0\n    for text in texts:\n        # 각 텍스트를 표시하는 함수를 invoke로 예약",
+        "detail": "Text_test",
+        "documentation": {}
+    },
+    {
+        "label": "show_text_sequence",
+        "kind": 2,
+        "importPath": "Text_test",
+        "description": "Text_test",
+        "peekOfCode": "def show_text_sequence(texts, interval=2):\n    total_time = 0\n    for text in texts:\n        # 각 텍스트를 표시하는 함수를 invoke로 예약\n        invoke(show_temporary_text, text, interval, delay=total_time)\n        total_time += interval  # 각 텍스트가 표시되는 시간을 누적\n# 텍스트 시퀀스 예제\ntexts = [\"Hello, World!\", \"Welcome to Ursina!\", \"This is a sequence of messages.\"]\n# 텍스트를 순차적으로 2초 간격으로 표시\nshow_text_sequence(texts, interval=2)",
+        "detail": "Text_test",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "Text_test",
+        "description": "Text_test",
+        "peekOfCode": "app = Ursina()\ndef show_temporary_text(text, duration=2):\n    # 텍스트 생성\n    message = Text(text, position=(0, 0.4), origin=(0, 0), scale=2)\n    # 일정 시간 후에 텍스트 제거\n    invoke(message.disable, delay=duration)\n    return duration  # 다음 텍스트를 표시할 시간을 위해 duration 반환\ndef show_text_sequence(texts, interval=2):\n    total_time = 0\n    for text in texts:",
+        "detail": "Text_test",
+        "documentation": {}
+    },
+    {
+        "label": "texts",
+        "kind": 5,
+        "importPath": "Text_test",
+        "description": "Text_test",
+        "peekOfCode": "texts = [\"Hello, World!\", \"Welcome to Ursina!\", \"This is a sequence of messages.\"]\n# 텍스트를 순차적으로 2초 간격으로 표시\nshow_text_sequence(texts, interval=2)\napp.run()",
+        "detail": "Text_test",
         "documentation": {}
     },
     {
