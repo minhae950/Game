@@ -27,22 +27,18 @@ class InteractableCube(Entity):
 
     def on_hover(self):
         self.color = color.green
+        show_text(self.name, 0.01, (0, -0.1))
 
     def on_unhover(self):
         self.color = self.original_color
-
-
-
-
-
+        
 
 #map
 ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')
 
-model_entity = Entity(model=model_path, scale=(0.4, 0.4, 0.4), color=color.orange, rotation=(-90, 0, 90), position=(0, 0, 0))
 
-cube1 = InteractableCube(name='man1', position=(3, 0, 3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
-cube2 = InteractableCube(name='man2', position=(-3, 0, -3), scale=(0.4, 0.4, 0.4), rotation=(-90, 90, 90))
+Humman1 = InteractableCube(name='man1', position=(3, 0, 3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
+Humman2 = InteractableCube(name='man2', position=(-3, 0, -3), scale=(0.4, 0.4, 0.4), rotation=(-90, 90, 90))
 
 #Tab UI
 card = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)
@@ -64,16 +60,17 @@ cursur_lock = False
 card_visible = False
 previous_hovered_entity = None
 
-
 def input(key):
     global hand_visable
     global cursur_lock
     
+    #run key
     if key == 'left shift':
         player.speed = 10
     if key == 'left shift up': 
         player.speed = 5
     
+    #item uses
     if key == '1':
         hand.color = color.white
         if hand_visable == False:
@@ -82,7 +79,6 @@ def input(key):
         elif hand_visable == True:
             hand.visible = False
             hand_visable = not hand_visable
-
     if key == '2':
         hand.color = color.yellow
         if hand_visable == False:
@@ -91,7 +87,6 @@ def input(key):
         elif hand_visable == True:
             hand.visible = False
             hand_visable = not hand_visable
-
     if key == '3':
         hand.color = color.orange
         if hand_visable == False:
@@ -101,6 +96,7 @@ def input(key):
             hand.visible = False
             hand_visable = not hand_visable        
 
+    #ID card check
     if key == 'tab':
         if cursur_lock == False:
             mouse.locked = False
@@ -116,8 +112,8 @@ def input(key):
     if key =='escape':
         quit_game()
 
-def show_text(text, duration=2):
-    message = Text(text, position=(0, -0.2), origin=(0, 0), scale=2)
+def show_text(text, duration=2, position=(0, 0, 0)):
+    message = Text(text, position=position, origin=(0, 0), scale=2, color=color.black)
     invoke(message.disable, delay=duration)
     return duration
 
@@ -126,8 +122,6 @@ def show_text_sequence(texts, interval=2):
     for text in texts:
         invoke(show_text, text, interval, delay=total_time)
         total_time += interval
-
-
 
 def update():
     global previous_hovered_entity
@@ -141,9 +135,9 @@ def update():
         if held_keys['e']:
             hovered_entity.interact()
             if hovered_entity.name == 'man1':
-                show_text("hello, I'm 1", 2)
+                show_text("hello, I'm 1", 2, (0, -0.2))
             if hovered_entity.name == 'man2':
-                show_text("hello, I'm 2", 2)
+                show_text("hello, I'm 2", 2, (0, -0.2))
 
         if previous_hovered_entity and previous_hovered_entity != hovered_entity:
             previous_hovered_entity.on_unhover()

@@ -13,10 +13,10 @@ class InteractableCube(Entity):
             color=color,
             collider='box',
             position=position,
-            name=name,  # 엔티티 이름 지정
+            name=name,
             **kwargs
         )
-        self.original_color = self.color  # 원래 색상 저장
+        self.original_color = self.color
 
     def interact(self):
         print(f"Interacted with {self.name}")
