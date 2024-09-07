@@ -40,11 +40,11 @@
         "documentation": {}
     },
     {
-        "label": "FirstPersonController",
-        "importPath": "ursina.prefabs.first_person_controller",
-        "description": "ursina.prefabs.first_person_controller",
+        "label": "*",
+        "importPath": "ursina",
+        "description": "ursina",
         "isExtraImport": true,
-        "detail": "ursina.prefabs.first_person_controller",
+        "detail": "ursina",
         "documentation": {}
     },
     {
@@ -72,12 +72,91 @@
         "documentation": {}
     },
     {
-        "label": "time",
+        "label": "FirstPersonController",
+        "importPath": "ursina.prefabs.first_person_controller",
+        "description": "ursina.prefabs.first_person_controller",
+        "isExtraImport": true,
+        "detail": "ursina.prefabs.first_person_controller",
+        "documentation": {}
+    },
+    {
+        "label": "FirstPersonController",
+        "importPath": "ursina.prefabs.first_person_controller",
+        "description": "ursina.prefabs.first_person_controller",
+        "isExtraImport": true,
+        "detail": "ursina.prefabs.first_person_controller",
+        "documentation": {}
+    },
+    {
+        "label": "InteractableCube",
         "kind": 6,
-        "isExtraImport": true,
-        "importPath": "time",
-        "description": "time",
-        "detail": "time",
+        "importPath": "hoverring",
+        "description": "hoverring",
+        "peekOfCode": "class InteractableCube(Entity):\n    def __init__(self, name, color=color.azure, position=(0, 0, 0), **kwargs):\n        super().__init__(\n            model='cube',\n            color=color,\n            collider='box',\n            position=position,\n            name=name,  # 엔티티 이름 지정\n            **kwargs\n        )",
+        "detail": "hoverring",
+        "documentation": {}
+    },
+    {
+        "label": "update",
+        "kind": 2,
+        "importPath": "hoverring",
+        "description": "hoverring",
+        "peekOfCode": "def update():\n    global previous_hovered_entity\n    hit_info = raycast(camera.world_position, camera.forward, distance=3)\n    if hit_info.hit and isinstance(hit_info.entity, InteractableCube):\n        hovered_entity = hit_info.entity\n        # 마우스 커서를 올린 오브젝트에서 on_hover 메서드 호출\n        hovered_entity.on_hover()\n        if held_keys['e']:  # 'E' 키를 눌러 상호작용\n            hovered_entity.interact()\n        # 이전에 다른 오브젝트를 가리키고 있었을 경우, on_unhover 메서드 호출",
+        "detail": "hoverring",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "hoverring",
+        "description": "hoverring",
+        "peekOfCode": "app = Ursina()\nground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\n# InteractableCube 클래스 정의\nclass InteractableCube(Entity):\n    def __init__(self, name, color=color.azure, position=(0, 0, 0), **kwargs):\n        super().__init__(\n            model='cube',\n            color=color,\n            collider='box',\n            position=position,",
+        "detail": "hoverring",
+        "documentation": {}
+    },
+    {
+        "label": "ground",
+        "kind": 5,
+        "importPath": "hoverring",
+        "description": "hoverring",
+        "peekOfCode": "ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\n# InteractableCube 클래스 정의\nclass InteractableCube(Entity):\n    def __init__(self, name, color=color.azure, position=(0, 0, 0), **kwargs):\n        super().__init__(\n            model='cube',\n            color=color,\n            collider='box',\n            position=position,\n            name=name,  # 엔티티 이름 지정",
+        "detail": "hoverring",
+        "documentation": {}
+    },
+    {
+        "label": "player",
+        "kind": 5,
+        "importPath": "hoverring",
+        "description": "hoverring",
+        "peekOfCode": "player = FirstPersonController()\n# 상호작용할 수 있는 큐브 생성\ncube1 = InteractableCube(name='Cube 1', color=color.azure, position=(3, 1, 3))\ncube2 = InteractableCube(name='Cube 2', color=color.orange, position=(-3, 1, -3))\n# 이전에 마우스 커서를 올렸던 오브젝트를 추적하기 위한 변수\nprevious_hovered_entity = None\ndef update():\n    global previous_hovered_entity\n    hit_info = raycast(camera.world_position, camera.forward, distance=3)\n    if hit_info.hit and isinstance(hit_info.entity, InteractableCube):",
+        "detail": "hoverring",
+        "documentation": {}
+    },
+    {
+        "label": "cube1",
+        "kind": 5,
+        "importPath": "hoverring",
+        "description": "hoverring",
+        "peekOfCode": "cube1 = InteractableCube(name='Cube 1', color=color.azure, position=(3, 1, 3))\ncube2 = InteractableCube(name='Cube 2', color=color.orange, position=(-3, 1, -3))\n# 이전에 마우스 커서를 올렸던 오브젝트를 추적하기 위한 변수\nprevious_hovered_entity = None\ndef update():\n    global previous_hovered_entity\n    hit_info = raycast(camera.world_position, camera.forward, distance=3)\n    if hit_info.hit and isinstance(hit_info.entity, InteractableCube):\n        hovered_entity = hit_info.entity\n        # 마우스 커서를 올린 오브젝트에서 on_hover 메서드 호출",
+        "detail": "hoverring",
+        "documentation": {}
+    },
+    {
+        "label": "cube2",
+        "kind": 5,
+        "importPath": "hoverring",
+        "description": "hoverring",
+        "peekOfCode": "cube2 = InteractableCube(name='Cube 2', color=color.orange, position=(-3, 1, -3))\n# 이전에 마우스 커서를 올렸던 오브젝트를 추적하기 위한 변수\nprevious_hovered_entity = None\ndef update():\n    global previous_hovered_entity\n    hit_info = raycast(camera.world_position, camera.forward, distance=3)\n    if hit_info.hit and isinstance(hit_info.entity, InteractableCube):\n        hovered_entity = hit_info.entity\n        # 마우스 커서를 올린 오브젝트에서 on_hover 메서드 호출\n        hovered_entity.on_hover()",
+        "detail": "hoverring",
+        "documentation": {}
+    },
+    {
+        "label": "previous_hovered_entity",
+        "kind": 5,
+        "importPath": "hoverring",
+        "description": "hoverring",
+        "peekOfCode": "previous_hovered_entity = None\ndef update():\n    global previous_hovered_entity\n    hit_info = raycast(camera.world_position, camera.forward, distance=3)\n    if hit_info.hit and isinstance(hit_info.entity, InteractableCube):\n        hovered_entity = hit_info.entity\n        # 마우스 커서를 올린 오브젝트에서 on_hover 메서드 호출\n        hovered_entity.on_hover()\n        if held_keys['e']:  # 'E' 키를 눌러 상호작용\n            hovered_entity.interact()",
+        "detail": "hoverring",
         "documentation": {}
     },
     {
@@ -85,7 +164,7 @@
         "kind": 6,
         "importPath": "interrection",
         "description": "interrection",
-        "peekOfCode": "class InteractableCube(Entity):\n    def __init__(self, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), **kwargs):\n        super().__init__(\n            model='man.obj',\n            color=color.azure,\n            collider='box',\n            position=position,\n            scale=scale,\n            rotation=rotation,\n            **kwargs",
+        "peekOfCode": "class InteractableCube(Entity):\n    def __init__(self, name, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), **kwargs):\n        super().__init__(\n            model='man.obj',\n            name=name,\n            color=color.azure,\n            collider='box',\n            position=position,\n            scale=scale,\n            rotation=rotation,",
         "detail": "interrection",
         "documentation": {}
     },
@@ -94,7 +173,7 @@
         "kind": 2,
         "importPath": "interrection",
         "description": "interrection",
-        "peekOfCode": "def show_text(text, duration=2, ):\n    message = Text(text, position=(0, -0.2), origin=(0, 0), scale=2)\n    invoke(message.disable, delay=duration)\n    return duration\ndef show_text_sequence(texts, interval=2):\n    total_time = 0\n    for text in texts:\n        invoke(show_text, text, interval, delay=total_time)\n        total_time += interval\ncube1 = InteractableCube(position=(3, 0, 3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))",
+        "peekOfCode": "def show_text(text, duration=2):\n    message = Text(text, position=(0, -0.2), origin=(0, 0), scale=2)\n    invoke(message.disable, delay=duration)\n    return duration\ndef show_text_sequence(texts, interval=2):\n    total_time = 0\n    for text in texts:\n        invoke(show_text, text, interval, delay=total_time)\n        total_time += interval\ncube1 = InteractableCube(name='man1', position=(3, 0, 3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))",
         "detail": "interrection",
         "documentation": {}
     },
@@ -103,7 +182,7 @@
         "kind": 2,
         "importPath": "interrection",
         "description": "interrection",
-        "peekOfCode": "def show_text_sequence(texts, interval=2):\n    total_time = 0\n    for text in texts:\n        invoke(show_text, text, interval, delay=total_time)\n        total_time += interval\ncube1 = InteractableCube(position=(3, 0, 3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\ncube2 = InteractableCube(position=(-3, 0, -3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nprevious_hovered_entity = None\ndef update():\n    global previous_hovered_entity",
+        "peekOfCode": "def show_text_sequence(texts, interval=2):\n    total_time = 0\n    for text in texts:\n        invoke(show_text, text, interval, delay=total_time)\n        total_time += interval\ncube1 = InteractableCube(name='man1', position=(3, 0, 3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\ncube2 = InteractableCube(name='man2', position=(-3, 0, -3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nprevious_hovered_entity = None\ndef update():\n    global previous_hovered_entity",
         "detail": "interrection",
         "documentation": {}
     },
@@ -112,7 +191,7 @@
         "kind": 2,
         "importPath": "interrection",
         "description": "interrection",
-        "peekOfCode": "def update():\n    global previous_hovered_entity\n    hit_info = raycast(camera.world_position, camera.forward, distance=3)\n    if hit_info.hit and isinstance(hit_info.entity, InteractableCube):\n        hovered_entity = hit_info.entity\n        if held_keys['e']:\n            hovered_entity.interact()\n        if previous_hovered_entity and previous_hovered_entity != hovered_entity:\n            previous_hovered_entity.color = previous_hovered_entity.original_color\n        previous_hovered_entity = hovered_entity",
+        "peekOfCode": "def update():\n    global previous_hovered_entity\n    hit_info = raycast(camera.world_position, camera.forward, distance=3)\n    if hit_info.hit and isinstance(hit_info.entity, InteractableCube):\n        hovered_entity = hit_info.entity\n        hovered_entity.on_hover()\n        if held_keys['e']:\n            hovered_entity.interact()\n            if hovered_entity.name == 'man1':\n                show_text(\"hello, I'm 1\", 2)",
         "detail": "interrection",
         "documentation": {}
     },
@@ -121,7 +200,7 @@
         "kind": 5,
         "importPath": "interrection",
         "description": "interrection",
-        "peekOfCode": "app = Ursina()\nground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\nplayer = FirstPersonController()\ntexts = [\"안녕하세요.\", \"My name is Minjun.\", \"Can you help me?\"]\nclass InteractableCube(Entity):\n    def __init__(self, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), **kwargs):\n        super().__init__(\n            model='man.obj',\n            color=color.azure,\n            collider='box',",
+        "peekOfCode": "app = Ursina()\nground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\nplayer = FirstPersonController()\ntexts = [\"Hello, Doctor!\", \"Can you help me?\"]\nclass InteractableCube(Entity):\n    def __init__(self, name, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), **kwargs):\n        super().__init__(\n            model='man.obj',\n            name=name,\n            color=color.azure,",
         "detail": "interrection",
         "documentation": {}
     },
@@ -130,7 +209,7 @@
         "kind": 5,
         "importPath": "interrection",
         "description": "interrection",
-        "peekOfCode": "ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\nplayer = FirstPersonController()\ntexts = [\"안녕하세요.\", \"My name is Minjun.\", \"Can you help me?\"]\nclass InteractableCube(Entity):\n    def __init__(self, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), **kwargs):\n        super().__init__(\n            model='man.obj',\n            color=color.azure,\n            collider='box',\n            position=position,",
+        "peekOfCode": "ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\nplayer = FirstPersonController()\ntexts = [\"Hello, Doctor!\", \"Can you help me?\"]\nclass InteractableCube(Entity):\n    def __init__(self, name, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), **kwargs):\n        super().__init__(\n            model='man.obj',\n            name=name,\n            color=color.azure,\n            collider='box',",
         "detail": "interrection",
         "documentation": {}
     },
@@ -139,7 +218,7 @@
         "kind": 5,
         "importPath": "interrection",
         "description": "interrection",
-        "peekOfCode": "player = FirstPersonController()\ntexts = [\"안녕하세요.\", \"My name is Minjun.\", \"Can you help me?\"]\nclass InteractableCube(Entity):\n    def __init__(self, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), **kwargs):\n        super().__init__(\n            model='man.obj',\n            color=color.azure,\n            collider='box',\n            position=position,\n            scale=scale,",
+        "peekOfCode": "player = FirstPersonController()\ntexts = [\"Hello, Doctor!\", \"Can you help me?\"]\nclass InteractableCube(Entity):\n    def __init__(self, name, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), **kwargs):\n        super().__init__(\n            model='man.obj',\n            name=name,\n            color=color.azure,\n            collider='box',\n            position=position,",
         "detail": "interrection",
         "documentation": {}
     },
@@ -148,7 +227,7 @@
         "kind": 5,
         "importPath": "interrection",
         "description": "interrection",
-        "peekOfCode": "texts = [\"안녕하세요.\", \"My name is Minjun.\", \"Can you help me?\"]\nclass InteractableCube(Entity):\n    def __init__(self, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), **kwargs):\n        super().__init__(\n            model='man.obj',\n            color=color.azure,\n            collider='box',\n            position=position,\n            scale=scale,\n            rotation=rotation,",
+        "peekOfCode": "texts = [\"Hello, Doctor!\", \"Can you help me?\"]\nclass InteractableCube(Entity):\n    def __init__(self, name, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), **kwargs):\n        super().__init__(\n            model='man.obj',\n            name=name,\n            color=color.azure,\n            collider='box',\n            position=position,\n            scale=scale,",
         "detail": "interrection",
         "documentation": {}
     },
@@ -157,7 +236,7 @@
         "kind": 5,
         "importPath": "interrection",
         "description": "interrection",
-        "peekOfCode": "cube1 = InteractableCube(position=(3, 0, 3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\ncube2 = InteractableCube(position=(-3, 0, -3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nprevious_hovered_entity = None\ndef update():\n    global previous_hovered_entity\n    hit_info = raycast(camera.world_position, camera.forward, distance=3)\n    if hit_info.hit and isinstance(hit_info.entity, InteractableCube):\n        hovered_entity = hit_info.entity\n        if held_keys['e']:\n            hovered_entity.interact()",
+        "peekOfCode": "cube1 = InteractableCube(name='man1', position=(3, 0, 3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\ncube2 = InteractableCube(name='man2', position=(-3, 0, -3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nprevious_hovered_entity = None\ndef update():\n    global previous_hovered_entity\n    hit_info = raycast(camera.world_position, camera.forward, distance=3)\n    if hit_info.hit and isinstance(hit_info.entity, InteractableCube):\n        hovered_entity = hit_info.entity\n        hovered_entity.on_hover()\n        if held_keys['e']:",
         "detail": "interrection",
         "documentation": {}
     },
@@ -166,7 +245,7 @@
         "kind": 5,
         "importPath": "interrection",
         "description": "interrection",
-        "peekOfCode": "cube2 = InteractableCube(position=(-3, 0, -3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nprevious_hovered_entity = None\ndef update():\n    global previous_hovered_entity\n    hit_info = raycast(camera.world_position, camera.forward, distance=3)\n    if hit_info.hit and isinstance(hit_info.entity, InteractableCube):\n        hovered_entity = hit_info.entity\n        if held_keys['e']:\n            hovered_entity.interact()\n        if previous_hovered_entity and previous_hovered_entity != hovered_entity:",
+        "peekOfCode": "cube2 = InteractableCube(name='man2', position=(-3, 0, -3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nprevious_hovered_entity = None\ndef update():\n    global previous_hovered_entity\n    hit_info = raycast(camera.world_position, camera.forward, distance=3)\n    if hit_info.hit and isinstance(hit_info.entity, InteractableCube):\n        hovered_entity = hit_info.entity\n        hovered_entity.on_hover()\n        if held_keys['e']:\n            hovered_entity.interact()",
         "detail": "interrection",
         "documentation": {}
     },
@@ -175,7 +254,7 @@
         "kind": 5,
         "importPath": "interrection",
         "description": "interrection",
-        "peekOfCode": "previous_hovered_entity = None\ndef update():\n    global previous_hovered_entity\n    hit_info = raycast(camera.world_position, camera.forward, distance=3)\n    if hit_info.hit and isinstance(hit_info.entity, InteractableCube):\n        hovered_entity = hit_info.entity\n        if held_keys['e']:\n            hovered_entity.interact()\n        if previous_hovered_entity and previous_hovered_entity != hovered_entity:\n            previous_hovered_entity.color = previous_hovered_entity.original_color",
+        "peekOfCode": "previous_hovered_entity = None\ndef update():\n    global previous_hovered_entity\n    hit_info = raycast(camera.world_position, camera.forward, distance=3)\n    if hit_info.hit and isinstance(hit_info.entity, InteractableCube):\n        hovered_entity = hit_info.entity\n        hovered_entity.on_hover()\n        if held_keys['e']:\n            hovered_entity.interact()\n            if hovered_entity.name == 'man1':",
         "detail": "interrection",
         "documentation": {}
     },
@@ -369,11 +448,47 @@
         "documentation": {}
     },
     {
+        "label": "InteractableCube",
+        "kind": 6,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "class InteractableCube(Entity):\n    def __init__(self, name, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), **kwargs):\n        super().__init__(\n            model='man.obj',\n            name=name,\n            color=color.azure,\n            collider='box',\n            position=position,\n            scale=scale,\n            rotation=rotation,",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
         "label": "input",
         "kind": 2,
         "importPath": "ursina_test",
         "description": "ursina_test",
         "peekOfCode": "def input(key):\n    global hand_visable\n    global cursur_lock\n    if key == 'left shift':\n        player.speed = 10\n    if key == 'left shift up': \n        player.speed = 5\n    if key == '1':\n        hand.color = color.white\n        if hand_visable == False:",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "show_text",
+        "kind": 2,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "def show_text(text, duration=2):\n    message = Text(text, position=(0, -0.2), origin=(0, 0), scale=2)\n    invoke(message.disable, delay=duration)\n    return duration\ndef show_text_sequence(texts, interval=2):\n    total_time = 0\n    for text in texts:\n        invoke(show_text, text, interval, delay=total_time)\n        total_time += interval\ndef update():",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "show_text_sequence",
+        "kind": 2,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "def show_text_sequence(texts, interval=2):\n    total_time = 0\n    for text in texts:\n        invoke(show_text, text, interval, delay=total_time)\n        total_time += interval\ndef update():\n    global previous_hovered_entity\n    hit_info = raycast(camera.world_position, camera.forward, distance=3)\n    if hit_info.hit and isinstance(hit_info.entity, InteractableCube):\n        hovered_entity = hit_info.entity",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "update",
+        "kind": 2,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "def update():\n    global previous_hovered_entity\n    hit_info = raycast(camera.world_position, camera.forward, distance=3)\n    if hit_info.hit and isinstance(hit_info.entity, InteractableCube):\n        hovered_entity = hit_info.entity\n        hovered_entity.on_hover()\n        if held_keys['e']:\n            hovered_entity.interact()\n            if hovered_entity.name == 'man1':\n                show_text(\"hello, I'm 1\", 2)",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -391,7 +506,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "app = Ursina()\n#model import\nmodel_path = 'man.obj'\n#map\nground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\nmodel_entity = Entity(model=model_path, scale=(0.4, 0.4, 0.4), color=color.orange, rotation=(-90, 0, 90), position=(0, 0, 0))\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings",
+        "peekOfCode": "app = Ursina()\n#model import\nmodel_path = 'man.obj'\n#class\nclass InteractableCube(Entity):\n    def __init__(self, name, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), **kwargs):\n        super().__init__(\n            model='man.obj',\n            name=name,\n            color=color.azure,",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -400,7 +515,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "model_path = 'man.obj'\n#map\nground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\nmodel_entity = Entity(model=model_path, scale=(0.4, 0.4, 0.4), color=color.orange, rotation=(-90, 0, 90), position=(0, 0, 0))\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncamera.fov = 100",
+        "peekOfCode": "model_path = 'man.obj'\n#class\nclass InteractableCube(Entity):\n    def __init__(self, name, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), **kwargs):\n        super().__init__(\n            model='man.obj',\n            name=name,\n            color=color.azure,\n            collider='box',\n            position=position,",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -409,7 +524,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\nmodel_entity = Entity(model=model_path, scale=(0.4, 0.4, 0.4), color=color.orange, rotation=(-90, 0, 90), position=(0, 0, 0))\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))",
+        "peekOfCode": "ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\nmodel_entity = Entity(model=model_path, scale=(0.4, 0.4, 0.4), color=color.orange, rotation=(-90, 0, 90), position=(0, 0, 0))\ncube1 = InteractableCube(name='man1', position=(3, 0, 3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\ncube2 = InteractableCube(name='man2', position=(-3, 0, -3), scale=(0.4, 0.4, 0.4), rotation=(-90, 90, 90))\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncamera.fov = 100",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -418,7 +533,25 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "model_entity = Entity(model=model_path, scale=(0.4, 0.4, 0.4), color=color.orange, rotation=(-90, 0, 90), position=(0, 0, 0))\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)",
+        "peekOfCode": "model_entity = Entity(model=model_path, scale=(0.4, 0.4, 0.4), color=color.orange, rotation=(-90, 0, 90), position=(0, 0, 0))\ncube1 = InteractableCube(name='man1', position=(3, 0, 3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\ncube2 = InteractableCube(name='man2', position=(-3, 0, -3), scale=(0.4, 0.4, 0.4), rotation=(-90, 90, 90))\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncamera.fov = 100\n#UI",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "cube1",
+        "kind": 5,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "cube1 = InteractableCube(name='man1', position=(3, 0, 3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\ncube2 = InteractableCube(name='man2', position=(-3, 0, -3), scale=(0.4, 0.4, 0.4), rotation=(-90, 90, 90))\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "cube2",
+        "kind": 5,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "cube2 = InteractableCube(name='man2', position=(-3, 0, -3), scale=(0.4, 0.4, 0.4), rotation=(-90, 90, 90))\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -463,7 +596,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "hand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visable = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\ndef input(key):\n    global hand_visable",
+        "peekOfCode": "hand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visable = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\ndef input(key):",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -472,7 +605,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "hand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visable = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\ndef input(key):\n    global hand_visable\n    global cursur_lock",
+        "peekOfCode": "hand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visable = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\ndef input(key):\n    global hand_visable",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -481,7 +614,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "hand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visable = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\ndef input(key):\n    global hand_visable\n    global cursur_lock\n    if key == 'left shift':",
+        "peekOfCode": "hand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visable = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\ndef input(key):\n    global hand_visable\n    global cursur_lock",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -490,7 +623,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "hand_visable = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\ndef input(key):\n    global hand_visable\n    global cursur_lock\n    if key == 'left shift':\n        player.speed = 10\n    if key == 'left shift up': ",
+        "peekOfCode": "hand_visable = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\ndef input(key):\n    global hand_visable\n    global cursur_lock\n    if key == 'left shift':\n        player.speed = 10",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -499,7 +632,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "hand.visible = False\ncursur_lock = False\ncard_visible = False\ndef input(key):\n    global hand_visable\n    global cursur_lock\n    if key == 'left shift':\n        player.speed = 10\n    if key == 'left shift up': \n        player.speed = 5",
+        "peekOfCode": "hand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\ndef input(key):\n    global hand_visable\n    global cursur_lock\n    if key == 'left shift':\n        player.speed = 10\n    if key == 'left shift up': ",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -508,7 +641,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "cursur_lock = False\ncard_visible = False\ndef input(key):\n    global hand_visable\n    global cursur_lock\n    if key == 'left shift':\n        player.speed = 10\n    if key == 'left shift up': \n        player.speed = 5\n    if key == '1':",
+        "peekOfCode": "cursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\ndef input(key):\n    global hand_visable\n    global cursur_lock\n    if key == 'left shift':\n        player.speed = 10\n    if key == 'left shift up': \n        player.speed = 5",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -517,7 +650,16 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "card_visible = False\ndef input(key):\n    global hand_visable\n    global cursur_lock\n    if key == 'left shift':\n        player.speed = 10\n    if key == 'left shift up': \n        player.speed = 5\n    if key == '1':\n        hand.color = color.white",
+        "peekOfCode": "card_visible = False\nprevious_hovered_entity = None\ndef input(key):\n    global hand_visable\n    global cursur_lock\n    if key == 'left shift':\n        player.speed = 10\n    if key == 'left shift up': \n        player.speed = 5\n    if key == '1':",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "previous_hovered_entity",
+        "kind": 5,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "previous_hovered_entity = None\ndef input(key):\n    global hand_visable\n    global cursur_lock\n    if key == 'left shift':\n        player.speed = 10\n    if key == 'left shift up': \n        player.speed = 5\n    if key == '1':\n        hand.color = color.white",
         "detail": "ursina_test",
         "documentation": {}
     }
