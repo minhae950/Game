@@ -8,7 +8,7 @@ man = 'man.obj'
 
 #class
 class InteractableCube(Entity):
-    def __init__(self, name, model, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), **kwargs):
+    def __init__(self, name, model, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), texture='', **kwargs):
         super().__init__(
             model=model,
             name=name,
@@ -17,6 +17,7 @@ class InteractableCube(Entity):
             position=position,
             scale=scale,
             rotation=rotation,
+            texture=texture,
             **kwargs
         )
         self.original_color = self.color
@@ -36,7 +37,7 @@ class InteractableCube(Entity):
 ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')
 
 
-Humman1 = InteractableCube(name='man1', model='man', position=(3, 0, 3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
+Humman1 = InteractableCube(name='man1', model='man', position=(3, 0, 3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90), texture='white_cube')
 Humman2 = InteractableCube(name='man2', model='man', position=(-3, 0, -3), scale=(0.4, 0.4, 0.4), rotation=(-90, 90, 90))
 
 #Tab UI
@@ -151,7 +152,6 @@ def update():
         if previous_hovered_entity:
             previous_hovered_entity.on_unhover()
             previous_hovered_entity = None
-
 
 def quit_game():
     application.quit()
