@@ -36,7 +36,7 @@ Model_chair4 = Entity(model = model_chair4, scale = (0.37, 0.37, 0.37), position
 Model_chair5 = Entity(model = model_chair5, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#의자
 Model_chair6 = Entity(model = model_chair6, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#의자
 Model_chair7 = Entity(model = model_chair7, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#의자
-Model_ceiling = Entity(model = model_ceiling, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#천장
+#천장을 쓰면 어두워짐#Model_ceiling = Entity(model = model_ceiling, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#천장
 Model_Left_Wall = Entity(model = model_Left_Wall, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#왼쪽벽
 Model_Front_Wall = Entity(model = model_Front_Wall, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#정멱벽
 Model_Right_Wall = Entity(model = model_Right_Wall, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#오른쪽벽
