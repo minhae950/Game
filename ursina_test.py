@@ -5,14 +5,8 @@ app = Ursina()
 
 #모델 가져오기
 model_man = 'man.obj'
-model_ground = 'ground.obj'
 model_door = 'door.obj'
-model_Dressing_room_door = 'Dressing room door.obj'
-model_Front_Wall = 'Front Wall.obj'
-model_Left_Wall = 'Left Wall.obj'
-model_Right_Wall = 'Right Wall.obj'
-model_Central_Wall = 'Central Wall.obj'
-model_ceiling = 'ceiling.obj'
+model_ground = 'ground.obj'
 model_stairs = 'stairs.obj'
 model_chair0 = 'chair0.obj'
 model_chair1 = 'chair1.obj'
@@ -22,9 +16,15 @@ model_chair4 = 'chair4.obj'
 model_chair5 = 'chair5.obj'
 model_chair6 = 'chair6.obj'
 model_chair7 = 'chair7.obj'
+model_ceiling = 'ceiling.obj'
+model_Left_Wall = 'Left Wall.obj'
+model_Right_Wall = 'Right Wall.obj'
+model_Front_Wall = 'Front Wall.obj'
+model_Central_Wall = 'Central Wall.obj'
+model_Dressing_room_door = 'Dressing room door.obj'
+
 
 #맵 생성
-
 Model_door = Entity(model = model_door, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#문
 Model_ground = Entity(model = model_ground, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#땅
 Model_stairs = Entity(model = model_stairs, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#의자
@@ -59,12 +59,14 @@ hand.rotation = Vec3(0, 90, 0)  # 손 모양을 약간 회전
 
 #blogal variables
 hand_visable = False
-hand.visible = False 
-weapon_state = 'none'
+hand.visible = False
+cursor_visable = False
+
 
 def input(key):
     global hand_visable
-    
+    global cursor_visable
+
     if key == 'left shift':
         player.speed = 10
     if key == 'left shift up': 
@@ -74,11 +76,19 @@ def input(key):
         if hand_visable == False:
             hand.visible = True
             hand_visable = True
-            weapon_state = 'hand'
         elif hand_visable == True:
             hand.visible = False
             hand_visable = not hand_visable
             
+    if key == 'tab':
+        if cursor_visable == False:
+            mouse.locked = False
+            cursor_visable == True
+        elif cursor_visable == True:
+            mouse.locked = True
+            cursor_visable = False
+
+
     if key =='escape':
         quit_game()
 
