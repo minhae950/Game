@@ -27,7 +27,7 @@ model_Dressing_room_door = 'Dressing room door.obj'
 #맵 생성
 Model_door = Entity(model = model_door, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#문
 Model_ground = Entity(model = model_ground, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#땅
-Model_stairs = Entity(model = model_stairs, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#의자
+Model_stairs = Entity(model = model_stairs, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box', color=color.blue)#계단
 Model_chair0 = Entity(model = model_chair0, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#의자
 Model_chair1 = Entity(model = model_chair1, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#의자
 Model_chair2 = Entity(model = model_chair2, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#의자
@@ -36,14 +36,14 @@ Model_chair4 = Entity(model = model_chair4, scale = (0.37, 0.37, 0.37), position
 Model_chair5 = Entity(model = model_chair5, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#의자
 Model_chair6 = Entity(model = model_chair6, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#의자
 Model_chair7 = Entity(model = model_chair7, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#의자
-#천장을 쓰면 어두워짐#Model_ceiling = Entity(model = model_ceiling, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#천장
+Model_ceiling = Entity(model = model_ceiling, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box', color=color.orange)#천장
 Model_Left_Wall = Entity(model = model_Left_Wall, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#왼쪽벽
 Model_Front_Wall = Entity(model = model_Front_Wall, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#정멱벽
 Model_Right_Wall = Entity(model = model_Right_Wall, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#오른쪽벽
 Model_Central_Wall = Entity(model = model_Central_Wall, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#중앙벽
 Model_Dressing_room_door = Entity(model = model_Dressing_room_door, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#탈의실 문
 
-model_entity = Entity(model = model_man, scale = (0.4, 0.4, 0.4), color = color.orange, rotation = (-90, 0, 90), position = (0, 0, 0))#사람
+#model_entity = Entity(model = model_man, scale = (0.4, 0.4, 0.4), color = color.orange, rotation = (-90, 0, 90), position = (0, 0, 0)) # 사람
 
 #player settings
 player = FirstPersonController()
