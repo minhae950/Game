@@ -49,6 +49,9 @@ Model_Dressing_room_door = Entity(model = model_Dressing_room_door, scale = (0.3
 player = FirstPersonController()
 crosshair = Entity(model = 'cube', color = color.red, scale = (0.003, 0.003), position = (10, 10, 10))
 camera.fov = 100
+player.jump_height = 1.5
+
+
 
 #cube = Entity(model='cube', color=color.white, scale=(2, 2, 2), position=(0, 1, 5), collider='box')
 
@@ -79,23 +82,11 @@ def input(key):
         elif hand_visable == True:
             hand.visible = False
             hand_visable = not hand_visable
-            
-    if key == 'tab':
-        if cursor_visable == False:
-            mouse.locked = False
-            cursor_visable == True
-        elif cursor_visable == True:
-            mouse.locked = True
-            cursor_visable = False
-
 
     if key =='escape':
         quit_game()
 
 def quit_game():
     application.quit()
-
-
-crosshair.parent = camera.ui
 
 app.run()
