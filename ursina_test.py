@@ -22,7 +22,8 @@ model_Right_Wall = 'Right Wall.obj'
 model_Front_Wall = 'Front Wall.obj'
 model_Central_Wall = 'Central Wall.obj'
 model_Dressing_room_door = 'Dressing room door.obj'
-
+model_Numbers_1_4 = 'Numbers 1-4.obj'
+model_Numbers_5_8 = 'Numbers 5-8.obj'
 
 #맵 생성
 Model_door = Entity(model = model_door, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#문
@@ -40,6 +41,8 @@ Model_ceiling = Entity(model = model_ceiling, scale = (0.37, 0.37, 0.37), positi
 Model_Left_Wall = Entity(model = model_Left_Wall, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#왼쪽벽
 Model_Front_Wall = Entity(model = model_Front_Wall, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#정멱벽
 Model_Right_Wall = Entity(model = model_Right_Wall, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#오른쪽벽
+Model_Numbers_1_4 = Entity(model = model_Numbers_1_4, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#탈의실 문
+Model_Numbers_5_8 = Entity(model = model_Numbers_5_8, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#탈의실 문
 Model_Central_Wall = Entity(model = model_Central_Wall, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#중앙벽
 Model_Dressing_room_door = Entity(model = model_Dressing_room_door, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, 10), collider='box')#탈의실 문
 
