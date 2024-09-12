@@ -7,7 +7,7 @@ app = Ursina()
 man = 'man.obj'
 
 #class
-class InteractableCube(Entity):
+class Human(Entity):
     def __init__(self, name, model, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), texture='', **kwargs):
         super().__init__(
             model=model,
@@ -28,7 +28,7 @@ class InteractableCube(Entity):
         self.color = color.red
     def on_hover(self):
         self.color = color.green
-        show_text(self.name, 0.01, (0, -0.1))
+        show_text(self.name, 0.1, (0, -0.1))
     def on_unhover(self):
         self.color = self.original_color
         
@@ -37,8 +37,27 @@ class InteractableCube(Entity):
 ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')
 
 
-Humman1 = InteractableCube(name='man1', model='man', position=(3, 0, 3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90), texture='white_cube')
-Humman2 = InteractableCube(name='man2', model='man', position=(-3, 0, -3), scale=(0.4, 0.4, 0.4), rotation=(-90, 90, 90))
+James = Human(name='James', model='man', position=(2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
+Jhon = Human(name='Jhon', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
+Robert = Human(name='Robert', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
+David = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
+
+#dialog
+"""
+X-ray: James, Jessica, Dorothy
+Stethoscope: Robert, Jhon, Elizabeth
+Ringer: David, Margaret
+"""
+#Man
+text_James = ["I feel like I have parasites in my body." "Please take out parasites."]
+text_Robert = ["I've been running too much,", "my heart has gotten faster.", "Please help."]
+text_Jhon = ["I broke up with my girlfriend. It's so sad.", "Please check what's wrong with my body."]
+text_David = ["I lost too much blood in the accident.", "I need to get a blood transfusion pack, please help."]
+#Woman
+text_Jessica = ["My son swallowed the toy." "He can't breathe. Please help."]
+text_Dorothy = ["My.. body.... wrong..", "ghost.... hel..p"]
+text_Elizabeth = ["I am an office worker who usually drinks coffee and cigarettes.", "My heart is beating fast these days.", "Is there something wrong with me?"]
+text_Margaret = ["I'm on an IV because I caught a cold. But I feel dizzy and weird.", "I heard you need to get an A-pack, is everything going well?"]
 
 #Tab UI
 card = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)
@@ -46,6 +65,8 @@ card.visible = False
 
 #fucking player settings
 player = FirstPersonController()
+player.jump_height = 0.8
+player.jump_up_duration = 0.2
 camera.fov = 100
 
 #UI
@@ -54,17 +75,14 @@ hand.position = Vec3(0.5, -0.3, 0.5)
 hand.rotation = Vec3(0, 90, 0)
 
 #blogal variables
-hand_visable = False
+hand_visible = False
 hand.visible = False
 cursur_lock = False
 card_visible = False
 previous_hovered_entity = None
 
-#dialog
-texts = ["Hello Doctor,", "Can you help me?"]
-
 def input(key):
-    global hand_visable
+    global hand_visible
     global cursur_lock
     
     #run key
@@ -76,28 +94,12 @@ def input(key):
     #item uses
     if key == '1':
         hand.color = color.white
-        if hand_visable == False:
+        if hand_visible == False:
             hand.visible = True
-            hand_visable = True
-        elif hand_visable == True:
+            hand_visible = True
+        elif hand_visible == True:
             hand.visible = False
-            hand_visable = not hand_visable
-    if key == '2':
-        hand.color = color.yellow
-        if hand_visable == False:
-            hand.visible = True
-            hand_visable = True
-        elif hand_visable == True:
-            hand.visible = False
-            hand_visable = not hand_visable
-    if key == '3':
-        hand.color = color.orange
-        if hand_visable == False:
-            hand.visible = True
-            hand_visable = True
-        elif hand_visable == True:
-            hand.visible = False
-            hand_visable = not hand_visable        
+            hand_visible = not hand_visible      
 
     #ID card check
     if key == 'tab':
@@ -115,6 +117,7 @@ def input(key):
     if key =='escape':
         quit_game()
 
+
 def show_text(text, duration=2, position=(0, -0.2)):
     message = Text(text, position=position, origin=(0, 0), scale=2, color=color.black)
     invoke(message.disable, delay=duration)
@@ -130,18 +133,21 @@ def update():
     global previous_hovered_entity
     hit_info = raycast(camera.world_position, camera.forward, distance=3)
     
-    if hit_info.hit and isinstance(hit_info.entity, InteractableCube):
+    if hit_info.hit and isinstance(hit_info.entity, Human):
         hovered_entity = hit_info.entity
         
         hovered_entity.on_hover()
         
         if held_keys['e']:
             hovered_entity.interact()
-            if hovered_entity.name == 'man1':
-                show_text_sequence(texts, interval=2)
-                
-            if hovered_entity.name == 'man2':
-                show_text_sequence(texts, interval=2)
+            if hovered_entity == James:
+                show_text_sequence(text_James, interval=2)
+            if hovered_entity == Jhon:
+                show_text_sequence(text_Jhon, interval=2)
+            if hovered_entity == Robert:
+                show_text_sequence(text_Robert, interval=2)
+            if hovered_entity == David:
+                show_text_sequence(text_David, interval=2)
 
         if previous_hovered_entity and previous_hovered_entity != hovered_entity:
             previous_hovered_entity.on_unhover()
