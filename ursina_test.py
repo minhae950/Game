@@ -36,11 +36,17 @@ class Human(Entity):
 #map
 ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')
 
+cube = Entity(model='cube', scale=(1, 1, 1), position=(0, 0.5, 5), color=color.red, collider='box')
 
 James = Human(name='James', model='man', position=(2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
-Jhon = Human(name='Jhon', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
-Robert = Human(name='Robert', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
+Robert = Human(name='Jhon', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
+Jhon = Human(name='Robert', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
 David = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
+
+Jessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
+Dorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
+Elizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
+Margaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
 
 #dialog
 """
@@ -49,7 +55,7 @@ Stethoscope: Robert, Jhon, Elizabeth
 Ringer: David, Margaret
 """
 #Man
-text_James = ["I feel like I have parasites in my body." "Please take out parasites."]
+text_James = ["I feel like I have parasites in my body.", "Please take out parasites."]
 text_Robert = ["I've been running too much,", "my heart has gotten faster.", "Please help."]
 text_Jhon = ["I broke up with my girlfriend. It's so sad.", "Please check what's wrong with my body."]
 text_David = ["I lost too much blood in the accident.", "I need to get a blood transfusion pack, please help."]
@@ -58,6 +64,9 @@ text_Jessica = ["My son swallowed the toy." "He can't breathe. Please help."]
 text_Dorothy = ["My.. body.... wrong..", "ghost.... hel..p"]
 text_Elizabeth = ["I am an office worker who usually drinks coffee and cigarettes.", "My heart is beating fast these days.", "Is there something wrong with me?"]
 text_Margaret = ["I'm on an IV because I caught a cold. But I feel dizzy and weird.", "I heard you need to get an A-pack, is everything going well?"]
+
+#Sounds
+main_theme = Audio(sound_file_name='night-in-kyoto.mp3', volume=0.2, autoplay=False)
 
 #Tab UI
 card = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)
@@ -142,6 +151,7 @@ def update():
             hovered_entity.interact()
             if hovered_entity == James:
                 show_text_sequence(text_James, interval=2)
+                main_theme.play()
             if hovered_entity == Jhon:
                 show_text_sequence(text_Jhon, interval=2)
             if hovered_entity == Robert:

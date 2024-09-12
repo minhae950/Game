@@ -24,6 +24,78 @@
         "documentation": {}
     },
     {
+        "label": "Ursina",
+        "importPath": "ursina",
+        "description": "ursina",
+        "isExtraImport": true,
+        "detail": "ursina",
+        "documentation": {}
+    },
+    {
+        "label": "Entity",
+        "importPath": "ursina",
+        "description": "ursina",
+        "isExtraImport": true,
+        "detail": "ursina",
+        "documentation": {}
+    },
+    {
+        "label": "Pipe",
+        "importPath": "ursina",
+        "description": "ursina",
+        "isExtraImport": true,
+        "detail": "ursina",
+        "documentation": {}
+    },
+    {
+        "label": "Circle",
+        "importPath": "ursina",
+        "description": "ursina",
+        "isExtraImport": true,
+        "detail": "ursina",
+        "documentation": {}
+    },
+    {
+        "label": "Button",
+        "importPath": "ursina",
+        "description": "ursina",
+        "isExtraImport": true,
+        "detail": "ursina",
+        "documentation": {}
+    },
+    {
+        "label": "scene",
+        "importPath": "ursina",
+        "description": "ursina",
+        "isExtraImport": true,
+        "detail": "ursina",
+        "documentation": {}
+    },
+    {
+        "label": "EditorCamera",
+        "importPath": "ursina",
+        "description": "ursina",
+        "isExtraImport": true,
+        "detail": "ursina",
+        "documentation": {}
+    },
+    {
+        "label": "color",
+        "importPath": "ursina",
+        "description": "ursina",
+        "isExtraImport": true,
+        "detail": "ursina",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "ursina",
+        "description": "ursina",
+        "isExtraImport": true,
+        "detail": "ursina",
+        "documentation": {}
+    },
+    {
         "label": "*",
         "importPath": "ursina",
         "description": "ursina",
@@ -243,6 +315,150 @@
         "documentation": {}
     },
     {
+        "label": "input",
+        "kind": 2,
+        "importPath": "mesh_collider",
+        "description": "mesh_collider",
+        "peekOfCode": "def input(key):\n    if key == 'c':\n        e.collider = None\napp.run()",
+        "detail": "mesh_collider",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "mesh_collider",
+        "description": "mesh_collider",
+        "peekOfCode": "app = Ursina()\ne = Button(parent=scene, model='sphere', x=2)\ne.collider = 'box'          # add BoxCollider based on entity's bounds.\ne.collider = 'sphere'       # add SphereCollider based on entity's bounds.\ne.collider = 'capsule'      # add CapsuleCollider based on entity's bounds.\ne.collider = 'mesh'         # add MeshCollider matching the entity's model.\ne.collider = 'file_name'    # load a model and us it as MeshCollider.\ne.collider = e.model        # copy target model/Mesh and use it as MeshCollider.\ne.collider = BoxCollider(e, center=Vec3(0,0,0), size=Vec3(1,1,1))           # add BoxCollider at custom positions and size.\ne.collider = SphereCollider(e, center=Vec3(0,0,0), radius=.75)              # add SphereCollider at custom positions and size.",
+        "detail": "mesh_collider",
+        "documentation": {}
+    },
+    {
+        "label": "e",
+        "kind": 5,
+        "importPath": "mesh_collider",
+        "description": "mesh_collider",
+        "peekOfCode": "e = Button(parent=scene, model='sphere', x=2)\ne.collider = 'box'          # add BoxCollider based on entity's bounds.\ne.collider = 'sphere'       # add SphereCollider based on entity's bounds.\ne.collider = 'capsule'      # add CapsuleCollider based on entity's bounds.\ne.collider = 'mesh'         # add MeshCollider matching the entity's model.\ne.collider = 'file_name'    # load a model and us it as MeshCollider.\ne.collider = e.model        # copy target model/Mesh and use it as MeshCollider.\ne.collider = BoxCollider(e, center=Vec3(0,0,0), size=Vec3(1,1,1))           # add BoxCollider at custom positions and size.\ne.collider = SphereCollider(e, center=Vec3(0,0,0), radius=.75)              # add SphereCollider at custom positions and size.\ne.collider = CapsuleCollider(e, center=Vec3(0,0,0), height=3, radius=.75)   # add CapsuleCollider at custom positions and size.",
+        "detail": "mesh_collider",
+        "documentation": {}
+    },
+    {
+        "label": "e.collider",
+        "kind": 5,
+        "importPath": "mesh_collider",
+        "description": "mesh_collider",
+        "peekOfCode": "e.collider = 'box'          # add BoxCollider based on entity's bounds.\ne.collider = 'sphere'       # add SphereCollider based on entity's bounds.\ne.collider = 'capsule'      # add CapsuleCollider based on entity's bounds.\ne.collider = 'mesh'         # add MeshCollider matching the entity's model.\ne.collider = 'file_name'    # load a model and us it as MeshCollider.\ne.collider = e.model        # copy target model/Mesh and use it as MeshCollider.\ne.collider = BoxCollider(e, center=Vec3(0,0,0), size=Vec3(1,1,1))           # add BoxCollider at custom positions and size.\ne.collider = SphereCollider(e, center=Vec3(0,0,0), radius=.75)              # add SphereCollider at custom positions and size.\ne.collider = CapsuleCollider(e, center=Vec3(0,0,0), height=3, radius=.75)   # add CapsuleCollider at custom positions and size.\ne.collider = MeshCollider(e, mesh=e.model, center=Vec3(0,0,0))              # add MeshCollider with custom shape and center.",
+        "detail": "mesh_collider",
+        "documentation": {}
+    },
+    {
+        "label": "e.collider",
+        "kind": 5,
+        "importPath": "mesh_collider",
+        "description": "mesh_collider",
+        "peekOfCode": "e.collider = 'sphere'       # add SphereCollider based on entity's bounds.\ne.collider = 'capsule'      # add CapsuleCollider based on entity's bounds.\ne.collider = 'mesh'         # add MeshCollider matching the entity's model.\ne.collider = 'file_name'    # load a model and us it as MeshCollider.\ne.collider = e.model        # copy target model/Mesh and use it as MeshCollider.\ne.collider = BoxCollider(e, center=Vec3(0,0,0), size=Vec3(1,1,1))           # add BoxCollider at custom positions and size.\ne.collider = SphereCollider(e, center=Vec3(0,0,0), radius=.75)              # add SphereCollider at custom positions and size.\ne.collider = CapsuleCollider(e, center=Vec3(0,0,0), height=3, radius=.75)   # add CapsuleCollider at custom positions and size.\ne.collider = MeshCollider(e, mesh=e.model, center=Vec3(0,0,0))              # add MeshCollider with custom shape and center.\nm = Pipe(base_shape=Circle(6), thicknesses=(1, .5))",
+        "detail": "mesh_collider",
+        "documentation": {}
+    },
+    {
+        "label": "e.collider",
+        "kind": 5,
+        "importPath": "mesh_collider",
+        "description": "mesh_collider",
+        "peekOfCode": "e.collider = 'capsule'      # add CapsuleCollider based on entity's bounds.\ne.collider = 'mesh'         # add MeshCollider matching the entity's model.\ne.collider = 'file_name'    # load a model and us it as MeshCollider.\ne.collider = e.model        # copy target model/Mesh and use it as MeshCollider.\ne.collider = BoxCollider(e, center=Vec3(0,0,0), size=Vec3(1,1,1))           # add BoxCollider at custom positions and size.\ne.collider = SphereCollider(e, center=Vec3(0,0,0), radius=.75)              # add SphereCollider at custom positions and size.\ne.collider = CapsuleCollider(e, center=Vec3(0,0,0), height=3, radius=.75)   # add CapsuleCollider at custom positions and size.\ne.collider = MeshCollider(e, mesh=e.model, center=Vec3(0,0,0))              # add MeshCollider with custom shape and center.\nm = Pipe(base_shape=Circle(6), thicknesses=(1, .5))\ne = Button(parent=scene, model='cube', collider='mesh', color=color.red, highlight_color=color.yellow)",
+        "detail": "mesh_collider",
+        "documentation": {}
+    },
+    {
+        "label": "e.collider",
+        "kind": 5,
+        "importPath": "mesh_collider",
+        "description": "mesh_collider",
+        "peekOfCode": "e.collider = 'mesh'         # add MeshCollider matching the entity's model.\ne.collider = 'file_name'    # load a model and us it as MeshCollider.\ne.collider = e.model        # copy target model/Mesh and use it as MeshCollider.\ne.collider = BoxCollider(e, center=Vec3(0,0,0), size=Vec3(1,1,1))           # add BoxCollider at custom positions and size.\ne.collider = SphereCollider(e, center=Vec3(0,0,0), radius=.75)              # add SphereCollider at custom positions and size.\ne.collider = CapsuleCollider(e, center=Vec3(0,0,0), height=3, radius=.75)   # add CapsuleCollider at custom positions and size.\ne.collider = MeshCollider(e, mesh=e.model, center=Vec3(0,0,0))              # add MeshCollider with custom shape and center.\nm = Pipe(base_shape=Circle(6), thicknesses=(1, .5))\ne = Button(parent=scene, model='cube', collider='mesh', color=color.red, highlight_color=color.yellow)\nsphere = Button(parent=scene, model='icosphere', collider='mesh', color=color.red, highlight_color=color.yellow, x=4)",
+        "detail": "mesh_collider",
+        "documentation": {}
+    },
+    {
+        "label": "e.collider",
+        "kind": 5,
+        "importPath": "mesh_collider",
+        "description": "mesh_collider",
+        "peekOfCode": "e.collider = 'file_name'    # load a model and us it as MeshCollider.\ne.collider = e.model        # copy target model/Mesh and use it as MeshCollider.\ne.collider = BoxCollider(e, center=Vec3(0,0,0), size=Vec3(1,1,1))           # add BoxCollider at custom positions and size.\ne.collider = SphereCollider(e, center=Vec3(0,0,0), radius=.75)              # add SphereCollider at custom positions and size.\ne.collider = CapsuleCollider(e, center=Vec3(0,0,0), height=3, radius=.75)   # add CapsuleCollider at custom positions and size.\ne.collider = MeshCollider(e, mesh=e.model, center=Vec3(0,0,0))              # add MeshCollider with custom shape and center.\nm = Pipe(base_shape=Circle(6), thicknesses=(1, .5))\ne = Button(parent=scene, model='cube', collider='mesh', color=color.red, highlight_color=color.yellow)\nsphere = Button(parent=scene, model='icosphere', collider='mesh', color=color.red, highlight_color=color.yellow, x=4)\nEditorCamera()",
+        "detail": "mesh_collider",
+        "documentation": {}
+    },
+    {
+        "label": "e.collider",
+        "kind": 5,
+        "importPath": "mesh_collider",
+        "description": "mesh_collider",
+        "peekOfCode": "e.collider = e.model        # copy target model/Mesh and use it as MeshCollider.\ne.collider = BoxCollider(e, center=Vec3(0,0,0), size=Vec3(1,1,1))           # add BoxCollider at custom positions and size.\ne.collider = SphereCollider(e, center=Vec3(0,0,0), radius=.75)              # add SphereCollider at custom positions and size.\ne.collider = CapsuleCollider(e, center=Vec3(0,0,0), height=3, radius=.75)   # add CapsuleCollider at custom positions and size.\ne.collider = MeshCollider(e, mesh=e.model, center=Vec3(0,0,0))              # add MeshCollider with custom shape and center.\nm = Pipe(base_shape=Circle(6), thicknesses=(1, .5))\ne = Button(parent=scene, model='cube', collider='mesh', color=color.red, highlight_color=color.yellow)\nsphere = Button(parent=scene, model='icosphere', collider='mesh', color=color.red, highlight_color=color.yellow, x=4)\nEditorCamera()\ndef input(key):",
+        "detail": "mesh_collider",
+        "documentation": {}
+    },
+    {
+        "label": "e.collider",
+        "kind": 5,
+        "importPath": "mesh_collider",
+        "description": "mesh_collider",
+        "peekOfCode": "e.collider = BoxCollider(e, center=Vec3(0,0,0), size=Vec3(1,1,1))           # add BoxCollider at custom positions and size.\ne.collider = SphereCollider(e, center=Vec3(0,0,0), radius=.75)              # add SphereCollider at custom positions and size.\ne.collider = CapsuleCollider(e, center=Vec3(0,0,0), height=3, radius=.75)   # add CapsuleCollider at custom positions and size.\ne.collider = MeshCollider(e, mesh=e.model, center=Vec3(0,0,0))              # add MeshCollider with custom shape and center.\nm = Pipe(base_shape=Circle(6), thicknesses=(1, .5))\ne = Button(parent=scene, model='cube', collider='mesh', color=color.red, highlight_color=color.yellow)\nsphere = Button(parent=scene, model='icosphere', collider='mesh', color=color.red, highlight_color=color.yellow, x=4)\nEditorCamera()\ndef input(key):\n    if key == 'c':",
+        "detail": "mesh_collider",
+        "documentation": {}
+    },
+    {
+        "label": "e.collider",
+        "kind": 5,
+        "importPath": "mesh_collider",
+        "description": "mesh_collider",
+        "peekOfCode": "e.collider = SphereCollider(e, center=Vec3(0,0,0), radius=.75)              # add SphereCollider at custom positions and size.\ne.collider = CapsuleCollider(e, center=Vec3(0,0,0), height=3, radius=.75)   # add CapsuleCollider at custom positions and size.\ne.collider = MeshCollider(e, mesh=e.model, center=Vec3(0,0,0))              # add MeshCollider with custom shape and center.\nm = Pipe(base_shape=Circle(6), thicknesses=(1, .5))\ne = Button(parent=scene, model='cube', collider='mesh', color=color.red, highlight_color=color.yellow)\nsphere = Button(parent=scene, model='icosphere', collider='mesh', color=color.red, highlight_color=color.yellow, x=4)\nEditorCamera()\ndef input(key):\n    if key == 'c':\n        e.collider = None",
+        "detail": "mesh_collider",
+        "documentation": {}
+    },
+    {
+        "label": "e.collider",
+        "kind": 5,
+        "importPath": "mesh_collider",
+        "description": "mesh_collider",
+        "peekOfCode": "e.collider = CapsuleCollider(e, center=Vec3(0,0,0), height=3, radius=.75)   # add CapsuleCollider at custom positions and size.\ne.collider = MeshCollider(e, mesh=e.model, center=Vec3(0,0,0))              # add MeshCollider with custom shape and center.\nm = Pipe(base_shape=Circle(6), thicknesses=(1, .5))\ne = Button(parent=scene, model='cube', collider='mesh', color=color.red, highlight_color=color.yellow)\nsphere = Button(parent=scene, model='icosphere', collider='mesh', color=color.red, highlight_color=color.yellow, x=4)\nEditorCamera()\ndef input(key):\n    if key == 'c':\n        e.collider = None\napp.run()",
+        "detail": "mesh_collider",
+        "documentation": {}
+    },
+    {
+        "label": "e.collider",
+        "kind": 5,
+        "importPath": "mesh_collider",
+        "description": "mesh_collider",
+        "peekOfCode": "e.collider = MeshCollider(e, mesh=e.model, center=Vec3(0,0,0))              # add MeshCollider with custom shape and center.\nm = Pipe(base_shape=Circle(6), thicknesses=(1, .5))\ne = Button(parent=scene, model='cube', collider='mesh', color=color.red, highlight_color=color.yellow)\nsphere = Button(parent=scene, model='icosphere', collider='mesh', color=color.red, highlight_color=color.yellow, x=4)\nEditorCamera()\ndef input(key):\n    if key == 'c':\n        e.collider = None\napp.run()",
+        "detail": "mesh_collider",
+        "documentation": {}
+    },
+    {
+        "label": "m",
+        "kind": 5,
+        "importPath": "mesh_collider",
+        "description": "mesh_collider",
+        "peekOfCode": "m = Pipe(base_shape=Circle(6), thicknesses=(1, .5))\ne = Button(parent=scene, model='cube', collider='mesh', color=color.red, highlight_color=color.yellow)\nsphere = Button(parent=scene, model='icosphere', collider='mesh', color=color.red, highlight_color=color.yellow, x=4)\nEditorCamera()\ndef input(key):\n    if key == 'c':\n        e.collider = None\napp.run()",
+        "detail": "mesh_collider",
+        "documentation": {}
+    },
+    {
+        "label": "e",
+        "kind": 5,
+        "importPath": "mesh_collider",
+        "description": "mesh_collider",
+        "peekOfCode": "e = Button(parent=scene, model='cube', collider='mesh', color=color.red, highlight_color=color.yellow)\nsphere = Button(parent=scene, model='icosphere', collider='mesh', color=color.red, highlight_color=color.yellow, x=4)\nEditorCamera()\ndef input(key):\n    if key == 'c':\n        e.collider = None\napp.run()",
+        "detail": "mesh_collider",
+        "documentation": {}
+    },
+    {
+        "label": "sphere",
+        "kind": 5,
+        "importPath": "mesh_collider",
+        "description": "mesh_collider",
+        "peekOfCode": "sphere = Button(parent=scene, model='icosphere', collider='mesh', color=color.red, highlight_color=color.yellow, x=4)\nEditorCamera()\ndef input(key):\n    if key == 'c':\n        e.collider = None\napp.run()",
+        "detail": "mesh_collider",
+        "documentation": {}
+    },
+    {
         "label": "show_temporary_text",
         "kind": 2,
         "importPath": "Text_test",
@@ -369,11 +585,11 @@
         "documentation": {}
     },
     {
-        "label": "InteractableCube",
+        "label": "Human",
         "kind": 6,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "class InteractableCube(Entity):\n    def __init__(self, name, model, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), texture='', **kwargs):\n        super().__init__(\n            model=model,\n            name=name,\n            color=color.azure,\n            collider='box',\n            position=position,\n            scale=scale,\n            rotation=rotation,",
+        "peekOfCode": "class Human(Entity):\n    def __init__(self, name, model, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), texture='', **kwargs):\n        super().__init__(\n            model=model,\n            name=name,\n            color=color.azure,\n            collider='box',\n            position=position,\n            scale=scale,\n            rotation=rotation,",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -382,7 +598,7 @@
         "kind": 2,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "def input(key):\n    global hand_visable\n    global cursur_lock\n    #run key\n    if key == 'left shift':\n        player.speed = 10\n    if key == 'left shift up': \n        player.speed = 5\n    #item uses\n    if key == '1':",
+        "peekOfCode": "def input(key):\n    global hand_visible\n    global cursur_lock\n    #run key\n    if key == 'left shift':\n        player.speed = 10\n    if key == 'left shift up': \n        player.speed = 5\n    #item uses\n    if key == '1':",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -400,7 +616,7 @@
         "kind": 2,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "def show_text_sequence(texts, interval=2):\n    total_time = 0\n    for text in texts:\n        invoke(show_text, text, interval, delay=total_time)\n        total_time += interval\ndef update():\n    global previous_hovered_entity\n    hit_info = raycast(camera.world_position, camera.forward, distance=3)\n    if hit_info.hit and isinstance(hit_info.entity, InteractableCube):\n        hovered_entity = hit_info.entity",
+        "peekOfCode": "def show_text_sequence(texts, interval=2):\n    total_time = 0\n    for text in texts:\n        invoke(show_text, text, interval, delay=total_time)\n        total_time += interval\ndef update():\n    global previous_hovered_entity\n    hit_info = raycast(camera.world_position, camera.forward, distance=3)\n    if hit_info.hit and isinstance(hit_info.entity, Human):\n        hovered_entity = hit_info.entity",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -409,7 +625,7 @@
         "kind": 2,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "def update():\n    global previous_hovered_entity\n    hit_info = raycast(camera.world_position, camera.forward, distance=3)\n    if hit_info.hit and isinstance(hit_info.entity, InteractableCube):\n        hovered_entity = hit_info.entity\n        hovered_entity.on_hover()\n        if held_keys['e']:\n            hovered_entity.interact()\n            if hovered_entity.name == 'man1':\n                show_text_sequence(texts, interval=2)",
+        "peekOfCode": "def update():\n    global previous_hovered_entity\n    hit_info = raycast(camera.world_position, camera.forward, distance=3)\n    if hit_info.hit and isinstance(hit_info.entity, Human):\n        hovered_entity = hit_info.entity\n        hovered_entity.on_hover()\n        if held_keys['e']:\n            hovered_entity.interact()\n            if hovered_entity == James:\n                show_text_sequence(text_James, interval=2)",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -427,7 +643,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "app = Ursina()\n#model import\nman = 'man.obj'\n#class\nclass InteractableCube(Entity):\n    def __init__(self, name, model, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), texture='', **kwargs):\n        super().__init__(\n            model=model,\n            name=name,\n            color=color.azure,",
+        "peekOfCode": "app = Ursina()\n#model import\nman = 'man.obj'\n#class\nclass Human(Entity):\n    def __init__(self, name, model, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), texture='', **kwargs):\n        super().__init__(\n            model=model,\n            name=name,\n            color=color.azure,",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -436,7 +652,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "man = 'man.obj'\n#class\nclass InteractableCube(Entity):\n    def __init__(self, name, model, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), texture='', **kwargs):\n        super().__init__(\n            model=model,\n            name=name,\n            color=color.azure,\n            collider='box',\n            position=position,",
+        "peekOfCode": "man = 'man.obj'\n#class\nclass Human(Entity):\n    def __init__(self, name, model, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), texture='', **kwargs):\n        super().__init__(\n            model=model,\n            name=name,\n            color=color.azure,\n            collider='box',\n            position=position,",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -445,25 +661,169 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\nHumman1 = InteractableCube(name='man1', model='man', position=(3, 0, 3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90), texture='white_cube')\nHumman2 = InteractableCube(name='man2', model='man', position=(-3, 0, -3), scale=(0.4, 0.4, 0.4), rotation=(-90, 90, 90))\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncamera.fov = 100\n#UI",
+        "peekOfCode": "ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\ncube = Entity(model='cube', scale=(1, 1, 1), position=(0, 0.5, 5), color=color.red, collider='box')\nJames = Human(name='James', model='man', position=(2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nRobert = Human(name='Jhon', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='Robert', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))",
         "detail": "ursina_test",
         "documentation": {}
     },
     {
-        "label": "Humman1",
+        "label": "cube",
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "Humman1 = InteractableCube(name='man1', model='man', position=(3, 0, 3), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90), texture='white_cube')\nHumman2 = InteractableCube(name='man2', model='man', position=(-3, 0, -3), scale=(0.4, 0.4, 0.4), rotation=(-90, 90, 90))\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))",
+        "peekOfCode": "cube = Entity(model='cube', scale=(1, 1, 1), position=(0, 0.5, 5), color=color.red, collider='box')\nJames = Human(name='James', model='man', position=(2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nRobert = Human(name='Jhon', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='Robert', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog",
         "detail": "ursina_test",
         "documentation": {}
     },
     {
-        "label": "Humman2",
+        "label": "James",
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "Humman2 = InteractableCube(name='man2', model='man', position=(-3, 0, -3), scale=(0.4, 0.4, 0.4), rotation=(-90, 90, 90))\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)",
+        "peekOfCode": "James = Human(name='James', model='man', position=(2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nRobert = Human(name='Jhon', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='Robert', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "Robert",
+        "kind": 5,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "Robert = Human(name='Jhon', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='Robert', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "Jhon",
+        "kind": 5,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "Jhon = Human(name='Robert', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "David",
+        "kind": 5,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "David = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "Jessica",
+        "kind": 5,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "Jessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret\n\"\"\"",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "Dorothy",
+        "kind": 5,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "Dorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret\n\"\"\"\n#Man",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "Elizabeth",
+        "kind": 5,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "Elizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret\n\"\"\"\n#Man\ntext_James = [\"I feel like I have parasites in my body.\", \"Please take out parasites.\"]",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "Margaret",
+        "kind": 5,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "Margaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret\n\"\"\"\n#Man\ntext_James = [\"I feel like I have parasites in my body.\", \"Please take out parasites.\"]\ntext_Robert = [\"I've been running too much,\", \"my heart has gotten faster.\", \"Please help.\"]",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "text_James",
+        "kind": 5,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "text_James = [\"I feel like I have parasites in my body.\", \"Please take out parasites.\"]\ntext_Robert = [\"I've been running too much,\", \"my heart has gotten faster.\", \"Please help.\"]\ntext_Jhon = [\"I broke up with my girlfriend. It's so sad.\", \"Please check what's wrong with my body.\"]\ntext_David = [\"I lost too much blood in the accident.\", \"I need to get a blood transfusion pack, please help.\"]\n#Woman\ntext_Jessica = [\"My son swallowed the toy.\" \"He can't breathe. Please help.\"]\ntext_Dorothy = [\"My.. body.... wrong..\", \"ghost.... hel..p\"]\ntext_Elizabeth = [\"I am an office worker who usually drinks coffee and cigarettes.\", \"My heart is beating fast these days.\", \"Is there something wrong with me?\"]\ntext_Margaret = [\"I'm on an IV because I caught a cold. But I feel dizzy and weird.\", \"I heard you need to get an A-pack, is everything going well?\"]\n#Sounds",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "text_Robert",
+        "kind": 5,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "text_Robert = [\"I've been running too much,\", \"my heart has gotten faster.\", \"Please help.\"]\ntext_Jhon = [\"I broke up with my girlfriend. It's so sad.\", \"Please check what's wrong with my body.\"]\ntext_David = [\"I lost too much blood in the accident.\", \"I need to get a blood transfusion pack, please help.\"]\n#Woman\ntext_Jessica = [\"My son swallowed the toy.\" \"He can't breathe. Please help.\"]\ntext_Dorothy = [\"My.. body.... wrong..\", \"ghost.... hel..p\"]\ntext_Elizabeth = [\"I am an office worker who usually drinks coffee and cigarettes.\", \"My heart is beating fast these days.\", \"Is there something wrong with me?\"]\ntext_Margaret = [\"I'm on an IV because I caught a cold. But I feel dizzy and weird.\", \"I heard you need to get an A-pack, is everything going well?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='night-in-kyoto.mp3', volume=0.2, autoplay=False)",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "text_Jhon",
+        "kind": 5,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "text_Jhon = [\"I broke up with my girlfriend. It's so sad.\", \"Please check what's wrong with my body.\"]\ntext_David = [\"I lost too much blood in the accident.\", \"I need to get a blood transfusion pack, please help.\"]\n#Woman\ntext_Jessica = [\"My son swallowed the toy.\" \"He can't breathe. Please help.\"]\ntext_Dorothy = [\"My.. body.... wrong..\", \"ghost.... hel..p\"]\ntext_Elizabeth = [\"I am an office worker who usually drinks coffee and cigarettes.\", \"My heart is beating fast these days.\", \"Is there something wrong with me?\"]\ntext_Margaret = [\"I'm on an IV because I caught a cold. But I feel dizzy and weird.\", \"I heard you need to get an A-pack, is everything going well?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='night-in-kyoto.mp3', volume=0.2, autoplay=False)\n#Tab UI",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "text_David",
+        "kind": 5,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "text_David = [\"I lost too much blood in the accident.\", \"I need to get a blood transfusion pack, please help.\"]\n#Woman\ntext_Jessica = [\"My son swallowed the toy.\" \"He can't breathe. Please help.\"]\ntext_Dorothy = [\"My.. body.... wrong..\", \"ghost.... hel..p\"]\ntext_Elizabeth = [\"I am an office worker who usually drinks coffee and cigarettes.\", \"My heart is beating fast these days.\", \"Is there something wrong with me?\"]\ntext_Margaret = [\"I'm on an IV because I caught a cold. But I feel dizzy and weird.\", \"I heard you need to get an A-pack, is everything going well?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='night-in-kyoto.mp3', volume=0.2, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "text_Jessica",
+        "kind": 5,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "text_Jessica = [\"My son swallowed the toy.\" \"He can't breathe. Please help.\"]\ntext_Dorothy = [\"My.. body.... wrong..\", \"ghost.... hel..p\"]\ntext_Elizabeth = [\"I am an office worker who usually drinks coffee and cigarettes.\", \"My heart is beating fast these days.\", \"Is there something wrong with me?\"]\ntext_Margaret = [\"I'm on an IV because I caught a cold. But I feel dizzy and weird.\", \"I heard you need to get an A-pack, is everything going well?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='night-in-kyoto.mp3', volume=0.2, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "text_Dorothy",
+        "kind": 5,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "text_Dorothy = [\"My.. body.... wrong..\", \"ghost.... hel..p\"]\ntext_Elizabeth = [\"I am an office worker who usually drinks coffee and cigarettes.\", \"My heart is beating fast these days.\", \"Is there something wrong with me?\"]\ntext_Margaret = [\"I'm on an IV because I caught a cold. But I feel dizzy and weird.\", \"I heard you need to get an A-pack, is everything going well?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='night-in-kyoto.mp3', volume=0.2, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "text_Elizabeth",
+        "kind": 5,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "text_Elizabeth = [\"I am an office worker who usually drinks coffee and cigarettes.\", \"My heart is beating fast these days.\", \"Is there something wrong with me?\"]\ntext_Margaret = [\"I'm on an IV because I caught a cold. But I feel dizzy and weird.\", \"I heard you need to get an A-pack, is everything going well?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='night-in-kyoto.mp3', volume=0.2, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\nplayer.jump_height = 0.8",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "text_Margaret",
+        "kind": 5,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "text_Margaret = [\"I'm on an IV because I caught a cold. But I feel dizzy and weird.\", \"I heard you need to get an A-pack, is everything going well?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='night-in-kyoto.mp3', volume=0.2, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\nplayer.jump_height = 0.8\nplayer.jump_up_duration = 0.2",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "main_theme",
+        "kind": 5,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "main_theme = Audio(sound_file_name='night-in-kyoto.mp3', volume=0.2, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\nplayer.jump_height = 0.8\nplayer.jump_up_duration = 0.2\ncamera.fov = 100\n#UI",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -472,7 +832,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "card = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables",
+        "peekOfCode": "card = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\nplayer.jump_height = 0.8\nplayer.jump_up_duration = 0.2\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -481,7 +841,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "card.visible = False\n#fucking player settings\nplayer = FirstPersonController()\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visable = False",
+        "peekOfCode": "card.visible = False\n#fucking player settings\nplayer = FirstPersonController()\nplayer.jump_height = 0.8\nplayer.jump_up_duration = 0.2\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -490,7 +850,25 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "player = FirstPersonController()\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visable = False\nhand.visible = False\ncursur_lock = False",
+        "peekOfCode": "player = FirstPersonController()\nplayer.jump_height = 0.8\nplayer.jump_up_duration = 0.2\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visible = False",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "player.jump_height",
+        "kind": 5,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "player.jump_height = 0.8\nplayer.jump_up_duration = 0.2\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visible = False\nhand.visible = False",
+        "detail": "ursina_test",
+        "documentation": {}
+    },
+    {
+        "label": "player.jump_up_duration",
+        "kind": 5,
+        "importPath": "ursina_test",
+        "description": "ursina_test",
+        "peekOfCode": "player.jump_up_duration = 0.2\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visible = False\nhand.visible = False\ncursur_lock = False",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -499,7 +877,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "camera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visable = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False",
+        "peekOfCode": "camera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visible = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -508,7 +886,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "hand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visable = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\n#dialog",
+        "peekOfCode": "hand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visible = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\ndef input(key):",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -517,7 +895,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "hand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visable = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\n#dialog\ntexts = [\"Hello Doctor,\", \"Can you help me?\"]",
+        "peekOfCode": "hand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visible = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\ndef input(key):\n    global hand_visible",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -526,16 +904,16 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "hand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visable = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\n#dialog\ntexts = [\"Hello Doctor,\", \"Can you help me?\"]\ndef input(key):",
+        "peekOfCode": "hand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visible = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\ndef input(key):\n    global hand_visible\n    global cursur_lock",
         "detail": "ursina_test",
         "documentation": {}
     },
     {
-        "label": "hand_visable",
+        "label": "hand_visible",
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "hand_visable = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\n#dialog\ntexts = [\"Hello Doctor,\", \"Can you help me?\"]\ndef input(key):\n    global hand_visable\n    global cursur_lock",
+        "peekOfCode": "hand_visible = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\ndef input(key):\n    global hand_visible\n    global cursur_lock\n    #run key\n    if key == 'left shift':",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -544,7 +922,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "hand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\n#dialog\ntexts = [\"Hello Doctor,\", \"Can you help me?\"]\ndef input(key):\n    global hand_visable\n    global cursur_lock\n    #run key",
+        "peekOfCode": "hand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\ndef input(key):\n    global hand_visible\n    global cursur_lock\n    #run key\n    if key == 'left shift':\n        player.speed = 10",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -553,7 +931,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "cursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\n#dialog\ntexts = [\"Hello Doctor,\", \"Can you help me?\"]\ndef input(key):\n    global hand_visable\n    global cursur_lock\n    #run key\n    if key == 'left shift':",
+        "peekOfCode": "cursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\ndef input(key):\n    global hand_visible\n    global cursur_lock\n    #run key\n    if key == 'left shift':\n        player.speed = 10\n    if key == 'left shift up': ",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -562,7 +940,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "card_visible = False\nprevious_hovered_entity = None\n#dialog\ntexts = [\"Hello Doctor,\", \"Can you help me?\"]\ndef input(key):\n    global hand_visable\n    global cursur_lock\n    #run key\n    if key == 'left shift':\n        player.speed = 10",
+        "peekOfCode": "card_visible = False\nprevious_hovered_entity = None\ndef input(key):\n    global hand_visible\n    global cursur_lock\n    #run key\n    if key == 'left shift':\n        player.speed = 10\n    if key == 'left shift up': \n        player.speed = 5",
         "detail": "ursina_test",
         "documentation": {}
     },
@@ -571,16 +949,7 @@
         "kind": 5,
         "importPath": "ursina_test",
         "description": "ursina_test",
-        "peekOfCode": "previous_hovered_entity = None\n#dialog\ntexts = [\"Hello Doctor,\", \"Can you help me?\"]\ndef input(key):\n    global hand_visable\n    global cursur_lock\n    #run key\n    if key == 'left shift':\n        player.speed = 10\n    if key == 'left shift up': ",
-        "detail": "ursina_test",
-        "documentation": {}
-    },
-    {
-        "label": "texts",
-        "kind": 5,
-        "importPath": "ursina_test",
-        "description": "ursina_test",
-        "peekOfCode": "texts = [\"Hello Doctor,\", \"Can you help me?\"]\ndef input(key):\n    global hand_visable\n    global cursur_lock\n    #run key\n    if key == 'left shift':\n        player.speed = 10\n    if key == 'left shift up': \n        player.speed = 5\n    #item uses",
+        "peekOfCode": "previous_hovered_entity = None\ndef input(key):\n    global hand_visible\n    global cursur_lock\n    #run key\n    if key == 'left shift':\n        player.speed = 10\n    if key == 'left shift up': \n        player.speed = 5\n    #item uses",
         "detail": "ursina_test",
         "documentation": {}
     }
