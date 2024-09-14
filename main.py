@@ -7,6 +7,13 @@ import time
 import PIL
 PIL.Image.ANTIALIAS = PIL.Image.LANCZOS
 
+execPath = sys.executable + " ./gamert.py"
+
+def runChildProcessTarget(vol, width, height):
+    # exec(open('gamert.py').read())
+    os.system(execPath + " " + str(vol) + " " + str(width) + " " + str(height))
+    # pygame.quit()
+
 def main():
     pygame.init()
     screen = pygame.display.set_mode((1366, 768))
@@ -14,7 +21,6 @@ def main():
     _intro_vid = mp.VideoFileClip("assets/videos/intro.mp4")
     intro_vid = _intro_vid.resize(height=768)
     keepRunning = True
-    execPath = sys.executable + " ./gamert.py"
     clk = pygame.time.Clock() # Sorry for dirty names; clock was already defined in other module
     pixelFont_128 = pygame.font.Font("assets/fonts/neodgm.ttf", 128)
     pixelFont_64 = pygame.font.Font("assets/fonts/neodgm.ttf", 64)
@@ -46,7 +52,7 @@ def main():
     screen.blit(playText, (600, 400))
     screen.blit(quitText, (600, 600))
     screen.blit(creditText, (600, 500))
-    screen.blit(helpText, (600, 1000))
+    screen.blit(helpText, (300, 730))
     pygame.display.update()
 
     selXPos = 500
@@ -73,15 +79,36 @@ def main():
                 """
                 if event.key == pygame.K_SPACE:
                     if posStatus == 1:
-                        # exec(open('./gamert.py').read())
-                        os.system(execPath + " 0 1366 768")
-                        # pygame.quit()
-                        sys.exit()
+                        runChildProcessTarget(100, 1366, 768)
+                        keepRunning = False
                     elif posStatus == 2:
-                        pass # TODO: insert here
+                        # pass # TODO: insert here
+                        pygame.draw.rect(screen, (0, 0, 0), (100, 100, 1170, 600))
+                        crTitleText = pixelFont_80.render("Credits", False, (255, 255, 255))
+                        screen.blit(crTitleText, (560, 150))
+                        crMainText1l1 = pixelFont_32.render("사용한 폰트:", False, (255, 255, 255))
+                        crMainText1l2 = pixelFont_32.render("- Copyright (c) 2017-2024, Eunbin Jeong (Dalgona.) ", False, (255, 255, 255))
+                        crMainText1l3 = pixelFont_32.render(" <project-neodgm@dalgona.dev> / with reserved font name", False, (255, 255, 255))
+                        crMainText1l4 = pixelFont_32.render(" \"Neo둥근모\" and \"NeoDunggeunmo\"", False, (255, 255, 255))
+                        crMainText2 = pixelFont_32.render("Credit Text 2", False, (255, 255, 255))
+                        # crContinueText = pixelFont_32.render("스페이스를 눌러 계속...", False, (255, 255, 255))
+                        screen.blit(crMainText1l1, (200, 250))
+                        screen.blit(crMainText1l2, (200, 290))
+                        screen.blit(crMainText1l3, (200, 330))
+                        screen.blit(crMainText1l4, (200, 370))
+                        # screen.blit(crContinueText, (500, 650))
+                        pygame.display.update()
+                        time.sleep(2)
+                        pygame.draw.rect(screen, (0, 0, 0), (100, 100, 1170, 600))
+                        screen.blit(crTitleText, (560, 150))
+                        screen.blit(crMainText2, (200, 250))
+                        pygame.display.update()
+                        time.sleep(2)
+                        
                     elif posStatus == 3:
-                        pygame.quit()
-                        sys.exit()
+                        # pygame.quit()
+                        # sys.exit()
+                        keepRunning = False
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 pass
                 # x = random.randrange(0, 1800)
@@ -90,8 +117,16 @@ def main():
                 # bzdzph_molecule = pygame.transform.rotate(bzdzph_molecule, deg)
                 # screen.blit(bzdzph_molecule, (x, y))
 
+            screen.fill((255, 255, 255))
+            screen.blit(titleText, (250, 100))
+            screen.blit(titleText_kor, (500, 250))
+            screen.blit(playText, (600, 400))
+            screen.blit(quitText, (600, 600))
+            screen.blit(creditText, (600, 500))
+            screen.blit(helpText, (300, 730))
+            pygame.display.update()
 
-            pygame.draw.rect(screen, (255, 255, 255), (500, 400, 95, 350))
+            # pygame.draw.rect(screen, (255, 255, 255), (500, 400, 95, 300))
             screen.blit(selectText, (selXPos, selYPos))
             pygame.display.update()
 
