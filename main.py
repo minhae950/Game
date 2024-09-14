@@ -1,17 +1,18 @@
 import pygame
-import random
+# import random
 import moviepy.editor as mp
 import sys
-import os
+# import os
+import subprocess
 import time
 import PIL
 PIL.Image.ANTIALIAS = PIL.Image.LANCZOS
 
-execPath = sys.executable + " ./gamert.py"
-
 def runChildProcessTarget(vol, width, height):
     # exec(open('gamert.py').read())
-    os.system(execPath + " " + str(vol) + " " + str(width) + " " + str(height))
+    # os.system(execPath + " " + str(vol) + " " + str(width) + " " + str(height))
+    subprocess.Popen(args=[sys.executable, "gamert.py", str(vol), str(width), str(height)])
+    # print("SubProcess POPENed") # For Debugging Purpose
     # pygame.quit()
 
 def main():
