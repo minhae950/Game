@@ -8,7 +8,7 @@ import time
 import PIL
 PIL.Image.ANTIALIAS = PIL.Image.LANCZOS
 
-bacKground_music = pygame.mixer.Sound('./alone-musikal.mp3')
+bacKground_music = pygame.mixer.Sound('assets/music/alone-musikal.mp3')
 
 def runChildProcessTarget(vol, width, height):
     # exec(open('gamert.py').read())
@@ -40,7 +40,7 @@ def main():
     intro_vid.preview()
     
     time.sleep(2)
-    bacKground_music.set_volume(0.5)
+    bacKground_music.set_volume(0.3)
     bacKground_music.play()
     print(bacKground_music.get_volume())
     

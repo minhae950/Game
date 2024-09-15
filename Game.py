@@ -72,7 +72,7 @@ text_Elizabeth = ["평소에 커피와 담배를 가까이 하는 직장인이�
 text_Margaret = ["감기에 걸려서 링거를 맞고있어요.", "근데 어지럽고 이상한 느낌이 들어요.", "듣기로는 A팩을 받아야한다는데, 잘 진행되고 있는건가요?"]
 
 #Sounds
-main_theme = Audio(sound_file_name='night-in-kyoto.mp3', volume=0.1, autoplay=False)
+main_theme = Audio(sound_file_name='assets/music/night-in-kyoto.mp3', volume=0.1, autoplay=False)
 
 #Tab UI
 card = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)

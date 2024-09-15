@@ -814,7 +814,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "text_Doyun = [\"너무 많이 뛰었더니,\", \"심장이 빨라져서 돌아오지 않아요.\", \"도와주세요.\"]\ntext_Jhon = [\"제가 아끼는 여자친구와 헤어졌어요.\", \"너무 슬퍼서 힘들어요.\", \"몸에 무슨 문제가 있는지 확인해주세요.\"]\ntext_David = [\"사고로 피를 너무 많이 흘렸어요.\", \"수혈팩을 맞아야하는데, 도와주세요.\"]\n#Woman\ntext_Jessica = [\"아들이 장난감을 삼켰어요.\", \"숨을 못쉬고 있어요.\", \"제발 도와주세요.\"]\ntext_Dorothy = [\"저.. 몸.. 귀신..\", \"도와주세..요\"]\ntext_Elizabeth = [\"평소에 커피와 담배를 가까이 하는 직장인이에요.\", \"요즘들어 심장이 빨리뛰는 것 같아요.\", \"제게 문제가 있는걸까요?\"]\ntext_Margaret = [\"감기에 걸려서 링거를 맞고있어요.\", \"근데 어지럽고 이상한 느낌이 들어요.\", \"듣기로는 A팩을 받아야한다는데, 잘 진행되고 있는건가요?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='night-in-kyoto.mp3', volume=0.1, autoplay=False)",
+        "peekOfCode": "text_Doyun = [\"너무 많이 뛰었더니,\", \"심장이 빨라져서 돌아오지 않아요.\", \"도와주세요.\"]\ntext_Jhon = [\"제가 아끼는 여자친구와 헤어졌어요.\", \"너무 슬퍼서 힘들어요.\", \"몸에 무슨 문제가 있는지 확인해주세요.\"]\ntext_David = [\"사고로 피를 너무 많이 흘렸어요.\", \"수혈팩을 맞아야하는데, 도와주세요.\"]\n#Woman\ntext_Jessica = [\"아들이 장난감을 삼켰어요.\", \"숨을 못쉬고 있어요.\", \"제발 도와주세요.\"]\ntext_Dorothy = [\"저.. 몸.. 귀신..\", \"도와주세..요\"]\ntext_Elizabeth = [\"평소에 커피와 담배를 가까이 하는 직장인이에요.\", \"요즘들어 심장이 빨리뛰는 것 같아요.\", \"제게 문제가 있는걸까요?\"]\ntext_Margaret = [\"감기에 걸려서 링거를 맞고있어요.\", \"근데 어지럽고 이상한 느낌이 들어요.\", \"듣기로는 A팩을 받아야한다는데, 잘 진행되고 있는건가요?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='assets/music/night-in-kyoto.mp3', volume=0.1, autoplay=False)",
         "detail": "Game",
         "documentation": {}
     },
@@ -823,7 +823,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "text_Jhon = [\"제가 아끼는 여자친구와 헤어졌어요.\", \"너무 슬퍼서 힘들어요.\", \"몸에 무슨 문제가 있는지 확인해주세요.\"]\ntext_David = [\"사고로 피를 너무 많이 흘렸어요.\", \"수혈팩을 맞아야하는데, 도와주세요.\"]\n#Woman\ntext_Jessica = [\"아들이 장난감을 삼켰어요.\", \"숨을 못쉬고 있어요.\", \"제발 도와주세요.\"]\ntext_Dorothy = [\"저.. 몸.. 귀신..\", \"도와주세..요\"]\ntext_Elizabeth = [\"평소에 커피와 담배를 가까이 하는 직장인이에요.\", \"요즘들어 심장이 빨리뛰는 것 같아요.\", \"제게 문제가 있는걸까요?\"]\ntext_Margaret = [\"감기에 걸려서 링거를 맞고있어요.\", \"근데 어지럽고 이상한 느낌이 들어요.\", \"듣기로는 A팩을 받아야한다는데, 잘 진행되고 있는건가요?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='night-in-kyoto.mp3', volume=0.1, autoplay=False)\n#Tab UI",
+        "peekOfCode": "text_Jhon = [\"제가 아끼는 여자친구와 헤어졌어요.\", \"너무 슬퍼서 힘들어요.\", \"몸에 무슨 문제가 있는지 확인해주세요.\"]\ntext_David = [\"사고로 피를 너무 많이 흘렸어요.\", \"수혈팩을 맞아야하는데, 도와주세요.\"]\n#Woman\ntext_Jessica = [\"아들이 장난감을 삼켰어요.\", \"숨을 못쉬고 있어요.\", \"제발 도와주세요.\"]\ntext_Dorothy = [\"저.. 몸.. 귀신..\", \"도와주세..요\"]\ntext_Elizabeth = [\"평소에 커피와 담배를 가까이 하는 직장인이에요.\", \"요즘들어 심장이 빨리뛰는 것 같아요.\", \"제게 문제가 있는걸까요?\"]\ntext_Margaret = [\"감기에 걸려서 링거를 맞고있어요.\", \"근데 어지럽고 이상한 느낌이 들어요.\", \"듣기로는 A팩을 받아야한다는데, 잘 진행되고 있는건가요?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='assets/music/night-in-kyoto.mp3', volume=0.1, autoplay=False)\n#Tab UI",
         "detail": "Game",
         "documentation": {}
     },
@@ -832,7 +832,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "text_David = [\"사고로 피를 너무 많이 흘렸어요.\", \"수혈팩을 맞아야하는데, 도와주세요.\"]\n#Woman\ntext_Jessica = [\"아들이 장난감을 삼켰어요.\", \"숨을 못쉬고 있어요.\", \"제발 도와주세요.\"]\ntext_Dorothy = [\"저.. 몸.. 귀신..\", \"도와주세..요\"]\ntext_Elizabeth = [\"평소에 커피와 담배를 가까이 하는 직장인이에요.\", \"요즘들어 심장이 빨리뛰는 것 같아요.\", \"제게 문제가 있는걸까요?\"]\ntext_Margaret = [\"감기에 걸려서 링거를 맞고있어요.\", \"근데 어지럽고 이상한 느낌이 들어요.\", \"듣기로는 A팩을 받아야한다는데, 잘 진행되고 있는건가요?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='night-in-kyoto.mp3', volume=0.1, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)",
+        "peekOfCode": "text_David = [\"사고로 피를 너무 많이 흘렸어요.\", \"수혈팩을 맞아야하는데, 도와주세요.\"]\n#Woman\ntext_Jessica = [\"아들이 장난감을 삼켰어요.\", \"숨을 못쉬고 있어요.\", \"제발 도와주세요.\"]\ntext_Dorothy = [\"저.. 몸.. 귀신..\", \"도와주세..요\"]\ntext_Elizabeth = [\"평소에 커피와 담배를 가까이 하는 직장인이에요.\", \"요즘들어 심장이 빨리뛰는 것 같아요.\", \"제게 문제가 있는걸까요?\"]\ntext_Margaret = [\"감기에 걸려서 링거를 맞고있어요.\", \"근데 어지럽고 이상한 느낌이 들어요.\", \"듣기로는 A팩을 받아야한다는데, 잘 진행되고 있는건가요?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='assets/music/night-in-kyoto.mp3', volume=0.1, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)",
         "detail": "Game",
         "documentation": {}
     },
@@ -841,7 +841,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "text_Jessica = [\"아들이 장난감을 삼켰어요.\", \"숨을 못쉬고 있어요.\", \"제발 도와주세요.\"]\ntext_Dorothy = [\"저.. 몸.. 귀신..\", \"도와주세..요\"]\ntext_Elizabeth = [\"평소에 커피와 담배를 가까이 하는 직장인이에요.\", \"요즘들어 심장이 빨리뛰는 것 같아요.\", \"제게 문제가 있는걸까요?\"]\ntext_Margaret = [\"감기에 걸려서 링거를 맞고있어요.\", \"근데 어지럽고 이상한 느낌이 들어요.\", \"듣기로는 A팩을 받아야한다는데, 잘 진행되고 있는건가요?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='night-in-kyoto.mp3', volume=0.1, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings",
+        "peekOfCode": "text_Jessica = [\"아들이 장난감을 삼켰어요.\", \"숨을 못쉬고 있어요.\", \"제발 도와주세요.\"]\ntext_Dorothy = [\"저.. 몸.. 귀신..\", \"도와주세..요\"]\ntext_Elizabeth = [\"평소에 커피와 담배를 가까이 하는 직장인이에요.\", \"요즘들어 심장이 빨리뛰는 것 같아요.\", \"제게 문제가 있는걸까요?\"]\ntext_Margaret = [\"감기에 걸려서 링거를 맞고있어요.\", \"근데 어지럽고 이상한 느낌이 들어요.\", \"듣기로는 A팩을 받아야한다는데, 잘 진행되고 있는건가요?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='assets/music/night-in-kyoto.mp3', volume=0.1, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings",
         "detail": "Game",
         "documentation": {}
     },
@@ -850,7 +850,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "text_Dorothy = [\"저.. 몸.. 귀신..\", \"도와주세..요\"]\ntext_Elizabeth = [\"평소에 커피와 담배를 가까이 하는 직장인이에요.\", \"요즘들어 심장이 빨리뛰는 것 같아요.\", \"제게 문제가 있는걸까요?\"]\ntext_Margaret = [\"감기에 걸려서 링거를 맞고있어요.\", \"근데 어지럽고 이상한 느낌이 들어요.\", \"듣기로는 A팩을 받아야한다는데, 잘 진행되고 있는건가요?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='night-in-kyoto.mp3', volume=0.1, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()",
+        "peekOfCode": "text_Dorothy = [\"저.. 몸.. 귀신..\", \"도와주세..요\"]\ntext_Elizabeth = [\"평소에 커피와 담배를 가까이 하는 직장인이에요.\", \"요즘들어 심장이 빨리뛰는 것 같아요.\", \"제게 문제가 있는걸까요?\"]\ntext_Margaret = [\"감기에 걸려서 링거를 맞고있어요.\", \"근데 어지럽고 이상한 느낌이 들어요.\", \"듣기로는 A팩을 받아야한다는데, 잘 진행되고 있는건가요?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='assets/music/night-in-kyoto.mp3', volume=0.1, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()",
         "detail": "Game",
         "documentation": {}
     },
@@ -859,7 +859,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "text_Elizabeth = [\"평소에 커피와 담배를 가까이 하는 직장인이에요.\", \"요즘들어 심장이 빨리뛰는 것 같아요.\", \"제게 문제가 있는걸까요?\"]\ntext_Margaret = [\"감기에 걸려서 링거를 맞고있어요.\", \"근데 어지럽고 이상한 느낌이 들어요.\", \"듣기로는 A팩을 받아야한다는데, 잘 진행되고 있는건가요?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='night-in-kyoto.mp3', volume=0.1, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\nplayer.jump_height = 0.8",
+        "peekOfCode": "text_Elizabeth = [\"평소에 커피와 담배를 가까이 하는 직장인이에요.\", \"요즘들어 심장이 빨리뛰는 것 같아요.\", \"제게 문제가 있는걸까요?\"]\ntext_Margaret = [\"감기에 걸려서 링거를 맞고있어요.\", \"근데 어지럽고 이상한 느낌이 들어요.\", \"듣기로는 A팩을 받아야한다는데, 잘 진행되고 있는건가요?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='assets/music/night-in-kyoto.mp3', volume=0.1, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\nplayer.jump_height = 0.8",
         "detail": "Game",
         "documentation": {}
     },
@@ -868,7 +868,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "text_Margaret = [\"감기에 걸려서 링거를 맞고있어요.\", \"근데 어지럽고 이상한 느낌이 들어요.\", \"듣기로는 A팩을 받아야한다는데, 잘 진행되고 있는건가요?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='night-in-kyoto.mp3', volume=0.1, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\nplayer.jump_height = 0.8\nplayer.jump_up_duration = 0.2",
+        "peekOfCode": "text_Margaret = [\"감기에 걸려서 링거를 맞고있어요.\", \"근데 어지럽고 이상한 느낌이 들어요.\", \"듣기로는 A팩을 받아야한다는데, 잘 진행되고 있는건가요?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='assets/music/night-in-kyoto.mp3', volume=0.1, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\nplayer.jump_height = 0.8\nplayer.jump_up_duration = 0.2",
         "detail": "Game",
         "documentation": {}
     },
@@ -877,7 +877,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "main_theme = Audio(sound_file_name='night-in-kyoto.mp3', volume=0.1, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\nplayer.jump_height = 0.8\nplayer.jump_up_duration = 0.2\ncamera.fov = 100\n#UI",
+        "peekOfCode": "main_theme = Audio(sound_file_name='assets/music/night-in-kyoto.mp3', volume=0.1, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\nplayer.jump_height = 0.8\nplayer.jump_up_duration = 0.2\ncamera.fov = 100\n#UI",
         "detail": "Game",
         "documentation": {}
     },
@@ -1030,7 +1030,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "PIL.Image.ANTIALIAS = PIL.Image.LANCZOS\nbacKground_music = pygame.mixer.Sound('./alone-musikal.mp3')\ndef runChildProcessTarget(vol, width, height):\n    # exec(open('gamert.py').read())\n    # os.system(execPath + \" \" + str(vol) + \" \" + str(width) + \" \" + str(height))\n    subprocess.Popen(args=[sys.executable, \"Game.py\", str(vol), str(width), str(height)])\n    # print(\"SubProcess POPENed\") # For Debugging Purpose\n    # pygame.quit()\ndef main():\n    pygame.init()",
+        "peekOfCode": "PIL.Image.ANTIALIAS = PIL.Image.LANCZOS\nbacKground_music = pygame.mixer.Sound('assets/music/alone-musikal.mp3')\ndef runChildProcessTarget(vol, width, height):\n    # exec(open('gamert.py').read())\n    # os.system(execPath + \" \" + str(vol) + \" \" + str(width) + \" \" + str(height))\n    subprocess.Popen(args=[sys.executable, \"Game.py\", str(vol), str(width), str(height)])\n    # print(\"SubProcess POPENed\") # For Debugging Purpose\n    # pygame.quit()\ndef main():\n    pygame.init()",
         "detail": "main",
         "documentation": {}
     },
@@ -1039,7 +1039,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "bacKground_music = pygame.mixer.Sound('./alone-musikal.mp3')\ndef runChildProcessTarget(vol, width, height):\n    # exec(open('gamert.py').read())\n    # os.system(execPath + \" \" + str(vol) + \" \" + str(width) + \" \" + str(height))\n    subprocess.Popen(args=[sys.executable, \"Game.py\", str(vol), str(width), str(height)])\n    # print(\"SubProcess POPENed\") # For Debugging Purpose\n    # pygame.quit()\ndef main():\n    pygame.init()\n    screen = pygame.display.set_mode((1366, 768))",
+        "peekOfCode": "bacKground_music = pygame.mixer.Sound('assets/music/alone-musikal.mp3')\ndef runChildProcessTarget(vol, width, height):\n    # exec(open('gamert.py').read())\n    # os.system(execPath + \" \" + str(vol) + \" \" + str(width) + \" \" + str(height))\n    subprocess.Popen(args=[sys.executable, \"Game.py\", str(vol), str(width), str(height)])\n    # print(\"SubProcess POPENed\") # For Debugging Purpose\n    # pygame.quit()\ndef main():\n    pygame.init()\n    screen = pygame.display.set_mode((1366, 768))",
         "detail": "main",
         "documentation": {}
     }
