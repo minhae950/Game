@@ -1,7 +1,13 @@
 from ursina import *
 from ursina.prefabs.first_person_controller import FirstPersonController
+import sys
+import time
 
 app = Ursina()
+
+# if __name__ == "__main__":
+#     print("Arguments Are: " + sys.argv[1] + " / " + sys.argv[2] + " / " + sys.argv[3])
+#     time.sleep(3)
 
 #model import
 man = 'man.obj'
@@ -39,8 +45,8 @@ ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_
 cube = Entity(model='cube', scale=(1, 1, 1), position=(0, 0.5, 5), color=color.red, collider='box')
 
 James = Human(name='James', model='man', position=(2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
-Doyun = Human(name='Jhon', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
-Jhon = Human(name='도윤', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
+Doyun = Human(name='도윤', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
+Jhon = Human(name='Jhon', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
 David = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
 
 Jessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))

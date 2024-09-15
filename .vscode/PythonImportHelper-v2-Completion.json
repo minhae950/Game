@@ -144,6 +144,24 @@
         "documentation": {}
     },
     {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
         "label": "pygame",
         "kind": 6,
         "isExtraImport": true,
@@ -162,30 +180,12 @@
         "documentation": {}
     },
     {
-        "label": "sys",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
-        "documentation": {}
-    },
-    {
         "label": "subprocess",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "subprocess",
         "description": "subprocess",
         "detail": "subprocess",
-        "documentation": {}
-    },
-    {
-        "label": "time",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "time",
-        "description": "time",
-        "detail": "time",
         "documentation": {}
     },
     {
@@ -697,7 +697,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "app = Ursina()\n#model import\nman = 'man.obj'\n#class\nclass Human(Entity):\n    def __init__(self, name, model, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), texture='', **kwargs):\n        super().__init__(\n            model=model,\n            name=name,\n            color=color.azure,",
+        "peekOfCode": "app = Ursina()\n# if __name__ == \"__main__\":\n#     print(\"Arguments Are: \" + sys.argv[1] + \" / \" + sys.argv[2] + \" / \" + sys.argv[3])\n#     time.sleep(3)\n#model import\nman = 'man.obj'\n#class\nclass Human(Entity):\n    def __init__(self, name, model, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), texture='', **kwargs):\n        super().__init__(",
         "detail": "Game",
         "documentation": {}
     },
@@ -715,7 +715,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\ncube = Entity(model='cube', scale=(1, 1, 1), position=(0, 0.5, 5), color=color.red, collider='box')\nJames = Human(name='James', model='man', position=(2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDoyun = Human(name='Jhon', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='도윤', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))",
+        "peekOfCode": "ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\ncube = Entity(model='cube', scale=(1, 1, 1), position=(0, 0.5, 5), color=color.red, collider='box')\nJames = Human(name='James', model='man', position=(2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDoyun = Human(name='도윤', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='Jhon', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))",
         "detail": "Game",
         "documentation": {}
     },
@@ -724,7 +724,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "cube = Entity(model='cube', scale=(1, 1, 1), position=(0, 0.5, 5), color=color.red, collider='box')\nJames = Human(name='James', model='man', position=(2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDoyun = Human(name='Jhon', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='도윤', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog",
+        "peekOfCode": "cube = Entity(model='cube', scale=(1, 1, 1), position=(0, 0.5, 5), color=color.red, collider='box')\nJames = Human(name='James', model='man', position=(2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDoyun = Human(name='도윤', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='Jhon', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog",
         "detail": "Game",
         "documentation": {}
     },
@@ -733,7 +733,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "James = Human(name='James', model='man', position=(2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDoyun = Human(name='Jhon', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='도윤', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"",
+        "peekOfCode": "James = Human(name='James', model='man', position=(2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDoyun = Human(name='도윤', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='Jhon', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"",
         "detail": "Game",
         "documentation": {}
     },
@@ -742,7 +742,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "Doyun = Human(name='Jhon', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='도윤', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy",
+        "peekOfCode": "Doyun = Human(name='도윤', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='Jhon', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy",
         "detail": "Game",
         "documentation": {}
     },
@@ -751,7 +751,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "Jhon = Human(name='도윤', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth",
+        "peekOfCode": "Jhon = Human(name='Jhon', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth",
         "detail": "Game",
         "documentation": {}
     },
@@ -1030,16 +1030,16 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "PIL.Image.ANTIALIAS = PIL.Image.LANCZOS\nbacground_music = pygame.mixer.Sound('./alone-musikal.mp3')\ndef runChildProcessTarget(vol, width, height):\n    # exec(open('gamert.py').read())\n    # os.system(execPath + \" \" + str(vol) + \" \" + str(width) + \" \" + str(height))\n    subprocess.Popen(args=[sys.executable, \"Game.py\", str(vol), str(width), str(height)])\n    # print(\"SubProcess POPENed\") # For Debugging Purpose\n    # pygame.quit()\ndef main():\n    pygame.init()",
+        "peekOfCode": "PIL.Image.ANTIALIAS = PIL.Image.LANCZOS\nbacKground_music = pygame.mixer.Sound('./alone-musikal.mp3')\ndef runChildProcessTarget(vol, width, height):\n    # exec(open('gamert.py').read())\n    # os.system(execPath + \" \" + str(vol) + \" \" + str(width) + \" \" + str(height))\n    subprocess.Popen(args=[sys.executable, \"Game.py\", str(vol), str(width), str(height)])\n    # print(\"SubProcess POPENed\") # For Debugging Purpose\n    # pygame.quit()\ndef main():\n    pygame.init()",
         "detail": "main",
         "documentation": {}
     },
     {
-        "label": "bacground_music",
+        "label": "bacKground_music",
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "bacground_music = pygame.mixer.Sound('./alone-musikal.mp3')\ndef runChildProcessTarget(vol, width, height):\n    # exec(open('gamert.py').read())\n    # os.system(execPath + \" \" + str(vol) + \" \" + str(width) + \" \" + str(height))\n    subprocess.Popen(args=[sys.executable, \"Game.py\", str(vol), str(width), str(height)])\n    # print(\"SubProcess POPENed\") # For Debugging Purpose\n    # pygame.quit()\ndef main():\n    pygame.init()\n    screen = pygame.display.set_mode((1366, 768))",
+        "peekOfCode": "bacKground_music = pygame.mixer.Sound('./alone-musikal.mp3')\ndef runChildProcessTarget(vol, width, height):\n    # exec(open('gamert.py').read())\n    # os.system(execPath + \" \" + str(vol) + \" \" + str(width) + \" \" + str(height))\n    subprocess.Popen(args=[sys.executable, \"Game.py\", str(vol), str(width), str(height)])\n    # print(\"SubProcess POPENed\") # For Debugging Purpose\n    # pygame.quit()\ndef main():\n    pygame.init()\n    screen = pygame.display.set_mode((1366, 768))",
         "detail": "main",
         "documentation": {}
     }
