@@ -8,14 +8,27 @@ import time
 import PIL
 PIL.Image.ANTIALIAS = PIL.Image.LANCZOS
 
+execPath = sys.executable + " gamert.py"
+
 def runChildProcessTarget(vol, width, height):
     # exec(open('gamert.py').read())
     # os.system(execPath + " " + str(vol) + " " + str(width) + " " + str(height))
-    subprocess.Popen(args=[sys.executable, "gamert.py", str(vol), str(width), str(height)])
+    subprocess.Popen(args=[sys.executable, "gamert.py", vol, width, height])
     # print("SubProcess POPENed") # For Debugging Purpose
     # pygame.quit()
 
 def main():
+    try:
+        configfile = open("config.txt", 'r')
+    except:
+        print("Config File Not Found: This Program might be corrupt.\n Download the Full Package again and Continue...")
+        sys.exit()
+
+    config = configfile.readlines()
+    volumeCfg = config[1][:-1]
+    widthCfg = config[4][:-1]
+    heightCfg = config[5]
+
     pygame.init()
     screen = pygame.display.set_mode((1366, 768))
     pygame.display.set_caption("벤조디아제핀")
@@ -80,7 +93,8 @@ def main():
                 """
                 if event.key == pygame.K_SPACE:
                     if posStatus == 1:
-                        runChildProcessTarget(100, 1366, 768)
+                        runChildProcessTarget(volumeCfg, widthCfg, heightCfg)
+                        configfile.close()
                         keepRunning = False
                     elif posStatus == 2:
                         # pass # TODO: insert here
@@ -109,6 +123,7 @@ def main():
                     elif posStatus == 3:
                         # pygame.quit()
                         # sys.exit()
+                        configfile.close()
                         keepRunning = False
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 pass
