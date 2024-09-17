@@ -8,7 +8,7 @@ d 1
 
 Ns 0
 
-newmtl Part17Mtl
+newmtl Part13Mtl
 Material Color
 Ka 0.353741 0.363604 0.420508
 Kd 0.353741 0.363604 0.420508
@@ -38,7 +38,7 @@ d 1
 
 Ns 0
 
-newmtl Part25Mtl
+newmtl Part26Mtl
 Material Color
 Ka 0.00258583 0.00258583 0.00258583
 Kd 0.00258583 0.00258583 0.00258583

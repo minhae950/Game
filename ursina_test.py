@@ -17,6 +17,14 @@ stair_wall1 = 'stair wall1.obj'
 stair_wall2 = 'stair wall2.obj'
 stair_wall3 = 'stair wall3.obj'
 stair_wall4 = 'stair wall4.obj'
+chair1 = 'chair1.obj'
+chair2 = 'chair2.obj'
+chair3 = 'chair3.obj'
+chair4 = 'chair4.obj'
+chair5 = 'chair5.obj'
+chair6 = 'chair6.obj'
+chair7 = 'chair7.obj'
+chair8 = 'chair8.obj'
 
 #왼쪽벽, 중앙벽 다시 만들기(빼먹은 블록이 있음)
 
@@ -33,6 +41,14 @@ Model_stair_wall1 = Entity(model = stair_wall1, scale = (0.37, 0.37, 0.37), posi
 Model_stair_wall2 = Entity(model = stair_wall2, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
 Model_stair_wall3 = Entity(model = stair_wall3, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
 Model_stair_wall4 = Entity(model = stair_wall4, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_chair1 = Entity(model = chair1, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_chair2 = Entity(model = chair2, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_chair3 = Entity(model = chair3, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_chair4 = Entity(model = chair4, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_chair5 = Entity(model = chair5, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_chair6 = Entity(model = chair6, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_chair7 = Entity(model = chair7, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_chair8 = Entity(model = chair8, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
 
 model_entity = Entity(model = model_man, scale = (0.4, 0.4, 0.4), color = color.orange, rotation = (-90, 0, 90), position = (0, 0, 0))#사람
 
