@@ -10,6 +10,7 @@ app = Ursina()
 #model import
 man = 'man.obj'
 
+
 #class
 class Human(Entity):
     def __init__(self, name, model, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), texture='', **kwargs):
@@ -49,20 +50,39 @@ class Interactable(Entity):
             **kwargs
         )
 
-#map
-ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')
+#Map
+Model_ground = Entity(model = 'ground.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_ceiling = Entity(model = 'ceiling.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_front_wall = Entity(model = 'front wall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_door = Entity(model = 'door.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_left_wall = Entity(model = 'leftwall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_right_wall = Entity(model = 'right wall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_central_wall = Entity(model = 'central wall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_stairs = Entity(model = 'stairs.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_stair_wall1 = Entity(model = 'stair wall1.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_stair_wall2 = Entity(model = 'stair wall2.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_stair_wall3 = Entity(model = 'stair wall3.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_stair_wall4 = Entity(model = 'stair wall4.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_chair1 = Entity(model = 'chair1.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_chair2 = Entity(model = 'chair2.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_chair3 = Entity(model = 'chair3.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_chair4 = Entity(model = 'chair4.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_chair5 = Entity(model = 'chair5.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_chair6 = Entity(model = 'chair6.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_chair7 = Entity(model = 'chair7.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
+Model_chair8 = Entity(model = 'chair8.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
 
-cube = Entity(model='cube', scale=(1, 1, 1), position=(0, 0.5, 5), color=color.red, collider='box')
 
-James = Human(name='James', model='man', position=(2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
-Doyun = Human(name='도윤', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
-Jhon = Human(name='Jhon', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
-David = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
+#Human
+James = Human(name='James', model='man', position=(-2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))
+Doyun = Human(name='도윤', model='man', position=(-2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))
+Jhon = Human(name='Jhon', model='man', position=(-2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))
+David = Human(name='David', model='man', position=(-2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))
 
-Jessica = Human(name='David', model='man', position=(4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
-Dorothy = Human(name='David', model='man', position=(4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
-Elizabeth = Human(name='David', model='man', position=(4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
-Margaret = Human(name='David', model='man', position=(4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
+Jessica = Human(name='David', model='man', position=(-4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))
+Dorothy = Human(name='David', model='man', position=(-4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))
+Elizabeth = Human(name='David', model='man', position=(-4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))
+Margaret = Human(name='David', model='man', position=(-4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))
 
 #dialog
 """
@@ -70,6 +90,7 @@ X-ray: James, Jessica, Dorothy
 Stethoscope: Robert, Jhon, Elizabeth
 Ringer: David, Margaret
 """
+
 #Man
 text_James = ["제 몸에 기생충이 있는것 같아요.", "위를 갉아먹는 느낌이에요.", "기생충 좀 빼주세요."]
 text_Doyun = ["너무 많이 뛰었더니,", "심장이 빨라져서 돌아오지 않아요.", "도와주세요."]
@@ -90,8 +111,7 @@ card.visible = False
 
 #fucking player settings
 player = FirstPersonController()
-player.jump_height = 0.8
-player.jump_up_duration = 0.2
+player.jump_height = 1.5
 camera.fov = 100
 
 #UI
@@ -105,6 +125,10 @@ hand.visible = False
 cursur_lock = False
 card_visible = False
 previous_hovered_entity = None
+
+
+#start
+main_theme.play()
 
 def input(key):
     global hand_visible
@@ -167,7 +191,6 @@ def update():
             hovered_entity.interact()
             if hovered_entity == James:
                 show_text_sequence(text_James, interval=2)
-                main_theme.play()
             if hovered_entity == Jhon:
                 show_text_sequence(text_Jhon, interval=2)
             if hovered_entity == Doyun:

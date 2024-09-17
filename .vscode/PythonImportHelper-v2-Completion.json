@@ -720,20 +720,182 @@
         "documentation": {}
     },
     {
-        "label": "ground",
+        "label": "Model_ground",
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\ncube = Entity(model='cube', scale=(1, 1, 1), position=(0, 0.5, 5), color=color.red, collider='box')\nJames = Human(name='James', model='man', position=(2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDoyun = Human(name='도윤', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='Jhon', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))",
+        "peekOfCode": "Model_ground = Entity(model = 'ground.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_ceiling = Entity(model = 'ceiling.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_front_wall = Entity(model = 'front wall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_door = Entity(model = 'door.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_left_wall = Entity(model = 'leftwall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_right_wall = Entity(model = 'right wall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_central_wall = Entity(model = 'central wall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stairs = Entity(model = 'stairs.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall1 = Entity(model = 'stair wall1.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall2 = Entity(model = 'stair wall2.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')",
         "detail": "Game",
         "documentation": {}
     },
     {
-        "label": "cube",
+        "label": "Model_ceiling",
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "cube = Entity(model='cube', scale=(1, 1, 1), position=(0, 0.5, 5), color=color.red, collider='box')\nJames = Human(name='James', model='man', position=(2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDoyun = Human(name='도윤', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='Jhon', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog",
+        "peekOfCode": "Model_ceiling = Entity(model = 'ceiling.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_front_wall = Entity(model = 'front wall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_door = Entity(model = 'door.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_left_wall = Entity(model = 'leftwall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_right_wall = Entity(model = 'right wall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_central_wall = Entity(model = 'central wall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stairs = Entity(model = 'stairs.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall1 = Entity(model = 'stair wall1.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall2 = Entity(model = 'stair wall2.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall3 = Entity(model = 'stair wall3.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')",
+        "detail": "Game",
+        "documentation": {}
+    },
+    {
+        "label": "Model_front_wall",
+        "kind": 5,
+        "importPath": "Game",
+        "description": "Game",
+        "peekOfCode": "Model_front_wall = Entity(model = 'front wall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_door = Entity(model = 'door.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_left_wall = Entity(model = 'leftwall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_right_wall = Entity(model = 'right wall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_central_wall = Entity(model = 'central wall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stairs = Entity(model = 'stairs.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall1 = Entity(model = 'stair wall1.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall2 = Entity(model = 'stair wall2.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall3 = Entity(model = 'stair wall3.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall4 = Entity(model = 'stair wall4.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')",
+        "detail": "Game",
+        "documentation": {}
+    },
+    {
+        "label": "Model_door",
+        "kind": 5,
+        "importPath": "Game",
+        "description": "Game",
+        "peekOfCode": "Model_door = Entity(model = 'door.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_left_wall = Entity(model = 'leftwall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_right_wall = Entity(model = 'right wall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_central_wall = Entity(model = 'central wall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stairs = Entity(model = 'stairs.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall1 = Entity(model = 'stair wall1.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall2 = Entity(model = 'stair wall2.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall3 = Entity(model = 'stair wall3.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall4 = Entity(model = 'stair wall4.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair1 = Entity(model = 'chair1.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')",
+        "detail": "Game",
+        "documentation": {}
+    },
+    {
+        "label": "Model_left_wall",
+        "kind": 5,
+        "importPath": "Game",
+        "description": "Game",
+        "peekOfCode": "Model_left_wall = Entity(model = 'leftwall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_right_wall = Entity(model = 'right wall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_central_wall = Entity(model = 'central wall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stairs = Entity(model = 'stairs.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall1 = Entity(model = 'stair wall1.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall2 = Entity(model = 'stair wall2.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall3 = Entity(model = 'stair wall3.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall4 = Entity(model = 'stair wall4.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair1 = Entity(model = 'chair1.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair2 = Entity(model = 'chair2.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')",
+        "detail": "Game",
+        "documentation": {}
+    },
+    {
+        "label": "Model_right_wall",
+        "kind": 5,
+        "importPath": "Game",
+        "description": "Game",
+        "peekOfCode": "Model_right_wall = Entity(model = 'right wall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_central_wall = Entity(model = 'central wall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stairs = Entity(model = 'stairs.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall1 = Entity(model = 'stair wall1.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall2 = Entity(model = 'stair wall2.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall3 = Entity(model = 'stair wall3.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall4 = Entity(model = 'stair wall4.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair1 = Entity(model = 'chair1.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair2 = Entity(model = 'chair2.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair3 = Entity(model = 'chair3.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')",
+        "detail": "Game",
+        "documentation": {}
+    },
+    {
+        "label": "Model_central_wall",
+        "kind": 5,
+        "importPath": "Game",
+        "description": "Game",
+        "peekOfCode": "Model_central_wall = Entity(model = 'central wall.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stairs = Entity(model = 'stairs.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall1 = Entity(model = 'stair wall1.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall2 = Entity(model = 'stair wall2.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall3 = Entity(model = 'stair wall3.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall4 = Entity(model = 'stair wall4.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair1 = Entity(model = 'chair1.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair2 = Entity(model = 'chair2.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair3 = Entity(model = 'chair3.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair4 = Entity(model = 'chair4.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')",
+        "detail": "Game",
+        "documentation": {}
+    },
+    {
+        "label": "Model_stairs",
+        "kind": 5,
+        "importPath": "Game",
+        "description": "Game",
+        "peekOfCode": "Model_stairs = Entity(model = 'stairs.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall1 = Entity(model = 'stair wall1.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall2 = Entity(model = 'stair wall2.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall3 = Entity(model = 'stair wall3.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall4 = Entity(model = 'stair wall4.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair1 = Entity(model = 'chair1.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair2 = Entity(model = 'chair2.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair3 = Entity(model = 'chair3.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair4 = Entity(model = 'chair4.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair5 = Entity(model = 'chair5.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')",
+        "detail": "Game",
+        "documentation": {}
+    },
+    {
+        "label": "Model_stair_wall1",
+        "kind": 5,
+        "importPath": "Game",
+        "description": "Game",
+        "peekOfCode": "Model_stair_wall1 = Entity(model = 'stair wall1.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall2 = Entity(model = 'stair wall2.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall3 = Entity(model = 'stair wall3.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall4 = Entity(model = 'stair wall4.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair1 = Entity(model = 'chair1.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair2 = Entity(model = 'chair2.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair3 = Entity(model = 'chair3.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair4 = Entity(model = 'chair4.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair5 = Entity(model = 'chair5.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair6 = Entity(model = 'chair6.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')",
+        "detail": "Game",
+        "documentation": {}
+    },
+    {
+        "label": "Model_stair_wall2",
+        "kind": 5,
+        "importPath": "Game",
+        "description": "Game",
+        "peekOfCode": "Model_stair_wall2 = Entity(model = 'stair wall2.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall3 = Entity(model = 'stair wall3.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall4 = Entity(model = 'stair wall4.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair1 = Entity(model = 'chair1.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair2 = Entity(model = 'chair2.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair3 = Entity(model = 'chair3.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair4 = Entity(model = 'chair4.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair5 = Entity(model = 'chair5.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair6 = Entity(model = 'chair6.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair7 = Entity(model = 'chair7.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')",
+        "detail": "Game",
+        "documentation": {}
+    },
+    {
+        "label": "Model_stair_wall3",
+        "kind": 5,
+        "importPath": "Game",
+        "description": "Game",
+        "peekOfCode": "Model_stair_wall3 = Entity(model = 'stair wall3.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_stair_wall4 = Entity(model = 'stair wall4.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair1 = Entity(model = 'chair1.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair2 = Entity(model = 'chair2.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair3 = Entity(model = 'chair3.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair4 = Entity(model = 'chair4.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair5 = Entity(model = 'chair5.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair6 = Entity(model = 'chair6.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair7 = Entity(model = 'chair7.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair8 = Entity(model = 'chair8.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')",
+        "detail": "Game",
+        "documentation": {}
+    },
+    {
+        "label": "Model_stair_wall4",
+        "kind": 5,
+        "importPath": "Game",
+        "description": "Game",
+        "peekOfCode": "Model_stair_wall4 = Entity(model = 'stair wall4.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair1 = Entity(model = 'chair1.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair2 = Entity(model = 'chair2.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair3 = Entity(model = 'chair3.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair4 = Entity(model = 'chair4.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair5 = Entity(model = 'chair5.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair6 = Entity(model = 'chair6.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair7 = Entity(model = 'chair7.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair8 = Entity(model = 'chair8.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\n#Human",
+        "detail": "Game",
+        "documentation": {}
+    },
+    {
+        "label": "Model_chair1",
+        "kind": 5,
+        "importPath": "Game",
+        "description": "Game",
+        "peekOfCode": "Model_chair1 = Entity(model = 'chair1.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair2 = Entity(model = 'chair2.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair3 = Entity(model = 'chair3.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair4 = Entity(model = 'chair4.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair5 = Entity(model = 'chair5.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair6 = Entity(model = 'chair6.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair7 = Entity(model = 'chair7.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair8 = Entity(model = 'chair8.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\n#Human\nJames = Human(name='James', model='man', position=(-2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))",
+        "detail": "Game",
+        "documentation": {}
+    },
+    {
+        "label": "Model_chair2",
+        "kind": 5,
+        "importPath": "Game",
+        "description": "Game",
+        "peekOfCode": "Model_chair2 = Entity(model = 'chair2.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair3 = Entity(model = 'chair3.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair4 = Entity(model = 'chair4.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair5 = Entity(model = 'chair5.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair6 = Entity(model = 'chair6.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair7 = Entity(model = 'chair7.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair8 = Entity(model = 'chair8.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\n#Human\nJames = Human(name='James', model='man', position=(-2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDoyun = Human(name='도윤', model='man', position=(-2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))",
+        "detail": "Game",
+        "documentation": {}
+    },
+    {
+        "label": "Model_chair3",
+        "kind": 5,
+        "importPath": "Game",
+        "description": "Game",
+        "peekOfCode": "Model_chair3 = Entity(model = 'chair3.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair4 = Entity(model = 'chair4.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair5 = Entity(model = 'chair5.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair6 = Entity(model = 'chair6.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair7 = Entity(model = 'chair7.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair8 = Entity(model = 'chair8.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\n#Human\nJames = Human(name='James', model='man', position=(-2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDoyun = Human(name='도윤', model='man', position=(-2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nJhon = Human(name='Jhon', model='man', position=(-2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))",
+        "detail": "Game",
+        "documentation": {}
+    },
+    {
+        "label": "Model_chair4",
+        "kind": 5,
+        "importPath": "Game",
+        "description": "Game",
+        "peekOfCode": "Model_chair4 = Entity(model = 'chair4.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair5 = Entity(model = 'chair5.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair6 = Entity(model = 'chair6.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair7 = Entity(model = 'chair7.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair8 = Entity(model = 'chair8.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\n#Human\nJames = Human(name='James', model='man', position=(-2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDoyun = Human(name='도윤', model='man', position=(-2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nJhon = Human(name='Jhon', model='man', position=(-2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDavid = Human(name='David', model='man', position=(-2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))",
+        "detail": "Game",
+        "documentation": {}
+    },
+    {
+        "label": "Model_chair5",
+        "kind": 5,
+        "importPath": "Game",
+        "description": "Game",
+        "peekOfCode": "Model_chair5 = Entity(model = 'chair5.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair6 = Entity(model = 'chair6.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair7 = Entity(model = 'chair7.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair8 = Entity(model = 'chair8.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\n#Human\nJames = Human(name='James', model='man', position=(-2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDoyun = Human(name='도윤', model='man', position=(-2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nJhon = Human(name='Jhon', model='man', position=(-2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDavid = Human(name='David', model='man', position=(-2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nJessica = Human(name='David', model='man', position=(-4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))",
+        "detail": "Game",
+        "documentation": {}
+    },
+    {
+        "label": "Model_chair6",
+        "kind": 5,
+        "importPath": "Game",
+        "description": "Game",
+        "peekOfCode": "Model_chair6 = Entity(model = 'chair6.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair7 = Entity(model = 'chair7.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair8 = Entity(model = 'chair8.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\n#Human\nJames = Human(name='James', model='man', position=(-2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDoyun = Human(name='도윤', model='man', position=(-2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nJhon = Human(name='Jhon', model='man', position=(-2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDavid = Human(name='David', model='man', position=(-2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nJessica = Human(name='David', model='man', position=(-4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDorothy = Human(name='David', model='man', position=(-4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))",
+        "detail": "Game",
+        "documentation": {}
+    },
+    {
+        "label": "Model_chair7",
+        "kind": 5,
+        "importPath": "Game",
+        "description": "Game",
+        "peekOfCode": "Model_chair7 = Entity(model = 'chair7.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\nModel_chair8 = Entity(model = 'chair8.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\n#Human\nJames = Human(name='James', model='man', position=(-2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDoyun = Human(name='도윤', model='man', position=(-2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nJhon = Human(name='Jhon', model='man', position=(-2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDavid = Human(name='David', model='man', position=(-2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nJessica = Human(name='David', model='man', position=(-4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDorothy = Human(name='David', model='man', position=(-4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nElizabeth = Human(name='David', model='man', position=(-4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))",
+        "detail": "Game",
+        "documentation": {}
+    },
+    {
+        "label": "Model_chair8",
+        "kind": 5,
+        "importPath": "Game",
+        "description": "Game",
+        "peekOfCode": "Model_chair8 = Entity(model = 'chair8.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')\n#Human\nJames = Human(name='James', model='man', position=(-2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDoyun = Human(name='도윤', model='man', position=(-2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nJhon = Human(name='Jhon', model='man', position=(-2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDavid = Human(name='David', model='man', position=(-2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nJessica = Human(name='David', model='man', position=(-4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDorothy = Human(name='David', model='man', position=(-4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nElizabeth = Human(name='David', model='man', position=(-4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nMargaret = Human(name='David', model='man', position=(-4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))",
         "detail": "Game",
         "documentation": {}
     },
@@ -742,7 +904,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "James = Human(name='James', model='man', position=(2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDoyun = Human(name='도윤', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='Jhon', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"",
+        "peekOfCode": "James = Human(name='James', model='man', position=(-2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDoyun = Human(name='도윤', model='man', position=(-2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nJhon = Human(name='Jhon', model='man', position=(-2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDavid = Human(name='David', model='man', position=(-2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nJessica = Human(name='David', model='man', position=(-4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDorothy = Human(name='David', model='man', position=(-4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nElizabeth = Human(name='David', model='man', position=(-4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nMargaret = Human(name='David', model='man', position=(-4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\n#dialog\n\"\"\"",
         "detail": "Game",
         "documentation": {}
     },
@@ -751,7 +913,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "Doyun = Human(name='도윤', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='Jhon', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy",
+        "peekOfCode": "Doyun = Human(name='도윤', model='man', position=(-2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nJhon = Human(name='Jhon', model='man', position=(-2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDavid = Human(name='David', model='man', position=(-2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nJessica = Human(name='David', model='man', position=(-4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDorothy = Human(name='David', model='man', position=(-4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nElizabeth = Human(name='David', model='man', position=(-4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nMargaret = Human(name='David', model='man', position=(-4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy",
         "detail": "Game",
         "documentation": {}
     },
@@ -760,7 +922,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "Jhon = Human(name='Jhon', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth",
+        "peekOfCode": "Jhon = Human(name='Jhon', model='man', position=(-2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDavid = Human(name='David', model='man', position=(-2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nJessica = Human(name='David', model='man', position=(-4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDorothy = Human(name='David', model='man', position=(-4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nElizabeth = Human(name='David', model='man', position=(-4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nMargaret = Human(name='David', model='man', position=(-4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth",
         "detail": "Game",
         "documentation": {}
     },
@@ -769,7 +931,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "David = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret",
+        "peekOfCode": "David = Human(name='David', model='man', position=(-2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nJessica = Human(name='David', model='man', position=(-4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDorothy = Human(name='David', model='man', position=(-4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nElizabeth = Human(name='David', model='man', position=(-4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nMargaret = Human(name='David', model='man', position=(-4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret",
         "detail": "Game",
         "documentation": {}
     },
@@ -778,7 +940,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "Jessica = Human(name='David', model='man', position=(4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret\n\"\"\"",
+        "peekOfCode": "Jessica = Human(name='David', model='man', position=(-4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nDorothy = Human(name='David', model='man', position=(-4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nElizabeth = Human(name='David', model='man', position=(-4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nMargaret = Human(name='David', model='man', position=(-4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret\n\"\"\"",
         "detail": "Game",
         "documentation": {}
     },
@@ -787,7 +949,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "Dorothy = Human(name='David', model='man', position=(4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret\n\"\"\"\n#Man",
+        "peekOfCode": "Dorothy = Human(name='David', model='man', position=(-4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nElizabeth = Human(name='David', model='man', position=(-4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nMargaret = Human(name='David', model='man', position=(-4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret\n\"\"\"\n#Man",
         "detail": "Game",
         "documentation": {}
     },
@@ -796,7 +958,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "Elizabeth = Human(name='David', model='man', position=(4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret\n\"\"\"\n#Man\ntext_James = [\"제 몸에 기생충이 있는것 같아요.\", \"위를 갉아먹는 느낌이에요.\", \"기생충 좀 빼주세요.\"]",
+        "peekOfCode": "Elizabeth = Human(name='David', model='man', position=(-4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\nMargaret = Human(name='David', model='man', position=(-4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret\n\"\"\"\n#Man\ntext_James = [\"제 몸에 기생충이 있는것 같아요.\", \"위를 갉아먹는 느낌이에요.\", \"기생충 좀 빼주세요.\"]",
         "detail": "Game",
         "documentation": {}
     },
@@ -805,7 +967,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "Margaret = Human(name='David', model='man', position=(4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret\n\"\"\"\n#Man\ntext_James = [\"제 몸에 기생충이 있는것 같아요.\", \"위를 갉아먹는 느낌이에요.\", \"기생충 좀 빼주세요.\"]\ntext_Doyun = [\"너무 많이 뛰었더니,\", \"심장이 빨라져서 돌아오지 않아요.\", \"도와주세요.\"]",
+        "peekOfCode": "Margaret = Human(name='David', model='man', position=(-4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret\n\"\"\"\n#Man\ntext_James = [\"제 몸에 기생충이 있는것 같아요.\", \"위를 갉아먹는 느낌이에요.\", \"기생충 좀 빼주세요.\"]\ntext_Doyun = [\"너무 많이 뛰었더니,\", \"심장이 빨라져서 돌아오지 않아요.\", \"도와주세요.\"]",
         "detail": "Game",
         "documentation": {}
     },
@@ -868,7 +1030,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "text_Elizabeth = [\"평소에 커피와 담배를 가까이 하는 직장인이에요.\", \"요즘들어 심장이 빨리뛰는 것 같아요.\", \"제게 문제가 있는걸까요?\"]\ntext_Margaret = [\"감기에 걸려서 링거를 맞고있어요.\", \"근데 어지럽고 이상한 느낌이 들어요.\", \"듣기로는 A팩을 받아야한다는데, 잘 진행되고 있는건가요?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='assets/music/night-in-kyoto.mp3', volume=0.1, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\nplayer.jump_height = 0.8",
+        "peekOfCode": "text_Elizabeth = [\"평소에 커피와 담배를 가까이 하는 직장인이에요.\", \"요즘들어 심장이 빨리뛰는 것 같아요.\", \"제게 문제가 있는걸까요?\"]\ntext_Margaret = [\"감기에 걸려서 링거를 맞고있어요.\", \"근데 어지럽고 이상한 느낌이 들어요.\", \"듣기로는 A팩을 받아야한다는데, 잘 진행되고 있는건가요?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='assets/music/night-in-kyoto.mp3', volume=0.1, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\nplayer.jump_height = 1.5",
         "detail": "Game",
         "documentation": {}
     },
@@ -877,7 +1039,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "text_Margaret = [\"감기에 걸려서 링거를 맞고있어요.\", \"근데 어지럽고 이상한 느낌이 들어요.\", \"듣기로는 A팩을 받아야한다는데, 잘 진행되고 있는건가요?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='assets/music/night-in-kyoto.mp3', volume=0.1, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\nplayer.jump_height = 0.8\nplayer.jump_up_duration = 0.2",
+        "peekOfCode": "text_Margaret = [\"감기에 걸려서 링거를 맞고있어요.\", \"근데 어지럽고 이상한 느낌이 들어요.\", \"듣기로는 A팩을 받아야한다는데, 잘 진행되고 있는건가요?\"]\n#Sounds\nmain_theme = Audio(sound_file_name='assets/music/night-in-kyoto.mp3', volume=0.1, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\nplayer.jump_height = 1.5\ncamera.fov = 100",
         "detail": "Game",
         "documentation": {}
     },
@@ -886,7 +1048,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "main_theme = Audio(sound_file_name='assets/music/night-in-kyoto.mp3', volume=0.1, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\nplayer.jump_height = 0.8\nplayer.jump_up_duration = 0.2\ncamera.fov = 100\n#UI",
+        "peekOfCode": "main_theme = Audio(sound_file_name='assets/music/night-in-kyoto.mp3', volume=0.1, autoplay=False)\n#Tab UI\ncard = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\nplayer.jump_height = 1.5\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))",
         "detail": "Game",
         "documentation": {}
     },
@@ -895,7 +1057,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "card = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\nplayer.jump_height = 0.8\nplayer.jump_up_duration = 0.2\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)",
+        "peekOfCode": "card = Entity(model='quad', color=color.gray, scale=(1, 0.6), position=(0, 0), parent=camera.ui)\ncard.visible = False\n#fucking player settings\nplayer = FirstPersonController()\nplayer.jump_height = 1.5\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)",
         "detail": "Game",
         "documentation": {}
     },
@@ -904,7 +1066,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "card.visible = False\n#fucking player settings\nplayer = FirstPersonController()\nplayer.jump_height = 0.8\nplayer.jump_up_duration = 0.2\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)",
+        "peekOfCode": "card.visible = False\n#fucking player settings\nplayer = FirstPersonController()\nplayer.jump_height = 1.5\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables",
         "detail": "Game",
         "documentation": {}
     },
@@ -913,7 +1075,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "player = FirstPersonController()\nplayer.jump_height = 0.8\nplayer.jump_up_duration = 0.2\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visible = False",
+        "peekOfCode": "player = FirstPersonController()\nplayer.jump_height = 1.5\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visible = False\nhand.visible = False",
         "detail": "Game",
         "documentation": {}
     },
@@ -922,16 +1084,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "player.jump_height = 0.8\nplayer.jump_up_duration = 0.2\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visible = False\nhand.visible = False",
-        "detail": "Game",
-        "documentation": {}
-    },
-    {
-        "label": "player.jump_up_duration",
-        "kind": 5,
-        "importPath": "Game",
-        "description": "Game",
-        "peekOfCode": "player.jump_up_duration = 0.2\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visible = False\nhand.visible = False\ncursur_lock = False",
+        "peekOfCode": "player.jump_height = 1.5\ncamera.fov = 100\n#UI\nhand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visible = False\nhand.visible = False\ncursur_lock = False",
         "detail": "Game",
         "documentation": {}
     },
@@ -949,7 +1102,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "hand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visible = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\ndef input(key):",
+        "peekOfCode": "hand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))\nhand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visible = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\n#start",
         "detail": "Game",
         "documentation": {}
     },
@@ -958,7 +1111,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "hand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visible = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\ndef input(key):\n    global hand_visible",
+        "peekOfCode": "hand.position = Vec3(0.5, -0.3, 0.5)\nhand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visible = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\n#start\nmain_theme.play()",
         "detail": "Game",
         "documentation": {}
     },
@@ -967,7 +1120,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "hand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visible = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\ndef input(key):\n    global hand_visible\n    global cursur_lock",
+        "peekOfCode": "hand.rotation = Vec3(0, 90, 0)\n#blogal variables\nhand_visible = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\n#start\nmain_theme.play()\ndef input(key):",
         "detail": "Game",
         "documentation": {}
     },
@@ -976,7 +1129,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "hand_visible = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\ndef input(key):\n    global hand_visible\n    global cursur_lock\n    #run key\n    if key == 'left shift':",
+        "peekOfCode": "hand_visible = False\nhand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\n#start\nmain_theme.play()\ndef input(key):\n    global hand_visible\n    global cursur_lock",
         "detail": "Game",
         "documentation": {}
     },
@@ -985,7 +1138,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "hand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\ndef input(key):\n    global hand_visible\n    global cursur_lock\n    #run key\n    if key == 'left shift':\n        player.speed = 10",
+        "peekOfCode": "hand.visible = False\ncursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\n#start\nmain_theme.play()\ndef input(key):\n    global hand_visible\n    global cursur_lock\n    #run key",
         "detail": "Game",
         "documentation": {}
     },
@@ -994,7 +1147,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "cursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\ndef input(key):\n    global hand_visible\n    global cursur_lock\n    #run key\n    if key == 'left shift':\n        player.speed = 10\n    if key == 'left shift up': ",
+        "peekOfCode": "cursur_lock = False\ncard_visible = False\nprevious_hovered_entity = None\n#start\nmain_theme.play()\ndef input(key):\n    global hand_visible\n    global cursur_lock\n    #run key\n    if key == 'left shift':",
         "detail": "Game",
         "documentation": {}
     },
@@ -1003,7 +1156,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "card_visible = False\nprevious_hovered_entity = None\ndef input(key):\n    global hand_visible\n    global cursur_lock\n    #run key\n    if key == 'left shift':\n        player.speed = 10\n    if key == 'left shift up': \n        player.speed = 5",
+        "peekOfCode": "card_visible = False\nprevious_hovered_entity = None\n#start\nmain_theme.play()\ndef input(key):\n    global hand_visible\n    global cursur_lock\n    #run key\n    if key == 'left shift':\n        player.speed = 10",
         "detail": "Game",
         "documentation": {}
     },
@@ -1012,7 +1165,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "previous_hovered_entity = None\ndef input(key):\n    global hand_visible\n    global cursur_lock\n    #run key\n    if key == 'left shift':\n        player.speed = 10\n    if key == 'left shift up': \n        player.speed = 5\n    #item uses",
+        "peekOfCode": "previous_hovered_entity = None\n#start\nmain_theme.play()\ndef input(key):\n    global hand_visible\n    global cursur_lock\n    #run key\n    if key == 'left shift':\n        player.speed = 10\n    if key == 'left shift up': ",
         "detail": "Game",
         "documentation": {}
     },
