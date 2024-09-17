@@ -1,5 +1,8 @@
 # TODO(branch - gimbogyeom):
- - [ ] Add Volume 
- - [ ] Add Preference File IO / GUI Editor
- - [ ] Add Resolution Editor ------ May take some time
+ - [x] Add Volume 
+ - [x] Add Config File IO
+ - [x] Add Config file GUI Editor / Entry
+ - [x] Add Resolution Editor ------ May take some time
  - [x] Add Background Execution
+ - [ ] Add App Icon
+ - [ ] Complete Credits
