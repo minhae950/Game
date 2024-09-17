@@ -1,21 +1,10 @@
 import pygame
-# import random
 import moviepy.editor as mp
 import sys
-# import os
 import subprocess
 import time
 import PIL
 PIL.Image.ANTIALIAS = PIL.Image.LANCZOS
-
-execPath = sys.executable + " gamert.py"
-
-def runChildProcessTarget(vol, width, height):
-    # exec(open('gamert.py').read())
-    # os.system(execPath + " " + str(vol) + " " + str(width) + " " + str(height))
-    subprocess.Popen(args=[sys.executable, "gamert.py", vol, width, height])
-    # print("SubProcess POPENed") # For Debugging Purpose
-    # pygame.quit()
 
 def main():
     try:
@@ -28,6 +17,7 @@ def main():
     volumeCfg = config[1][:-1]
     widthCfg = config[4][:-1]
     heightCfg = config[5]
+    configfile.close()
 
     pygame.init()
     screen = pygame.display.set_mode((1366, 768))
@@ -35,7 +25,7 @@ def main():
     _intro_vid = mp.VideoFileClip("assets/videos/intro.mp4")
     intro_vid = _intro_vid.resize(height=768)
     keepRunning = True
-    clk = pygame.time.Clock() # Sorry for dirty names; clock was already defined in other module
+    clk = pygame.time.Clock()
     pixelFont_128 = pygame.font.Font("assets/fonts/neodgm.ttf", 128)
     pixelFont_64 = pygame.font.Font("assets/fonts/neodgm.ttf", 64)
     pixelFont_32 = pygame.font.Font("assets/fonts/neodgm.ttf", 32)
@@ -47,18 +37,17 @@ def main():
     pygame.mouse.set_visible(False)
 
     # Draw Screen Here:
-    # introvidrect = pygame.Rect(100, 100, 640, 360)
     intro_vid.preview()
-    # screen.fill((255, 255, 255))
     screen.fill((0, 0, 0))
     pygame.display.update()
-    time.sleep(1)
+    time.sleep(0.5)
     screen.fill((255, 255, 255))
     titleText = pixelFont_128.render("Benzodiazepine", False, (0, 0, 0))
     titleText_kor = pixelFont_64.render("벤조디아제핀", False, (0, 0, 0))
     playText = pixelFont_80.render("플레이", False, (0, 0, 0))
     creditText = pixelFont_80.render("크레딧", False, (0, 0, 0))
     quitText = pixelFont_80.render("종료", False, (0, 0, 0))
+    settingsText = pixelFont_64.render("설정", False, (0, 0, 0))
     helpText = pixelFont_32.render("WASD 또는 방향키로 조작하고 스페이스바로 선택", True, (0, 0, 0))
     selectText = pixelFont_80.render("►", False, (0, 0, 0))
     screen.blit(titleText, (250, 100))
@@ -66,12 +55,14 @@ def main():
     screen.blit(playText, (600, 400))
     screen.blit(quitText, (600, 600))
     screen.blit(creditText, (600, 500))
+    screen.blit(settingsText, (1200, 680))
     screen.blit(helpText, (300, 730))
     pygame.display.update()
 
     selXPos = 500
     selYPos = 400
     posStatus = 1
+    isSettingSelected = False
 
     while keepRunning:
         clk.tick(60)
@@ -80,24 +71,30 @@ def main():
             if event.type == pygame.QUIT:
                 keepRunning = False
             elif event.type == pygame.KEYUP:
-                if (event.key == pygame.K_DOWN or event.key == pygame.K_s) and 390 < selYPos < 510:
+                if (event.key == pygame.K_RIGHT or event.key == pygame.K_d) or (event.key == pygame.K_LEFT or event.key == pygame.K_a):
+                    isSettingSelected = not isSettingSelected
+                    if selXPos == 500:
+                        selXPos = 1100
+                        selYPos = 670
+                    else:
+                        selXPos = 500
+                        selYPos = 400
+                        posStatus = 1
+                elif (event.key == pygame.K_DOWN or event.key == pygame.K_s) and 390 < selYPos < 510 and isSettingSelected == False:
                     selYPos = selYPos + 100
                     posStatus += 1
-                if (event.key == pygame.K_UP or event.key == pygame.K_w) and 490 < selYPos < 610:
+                elif (event.key == pygame.K_UP or event.key == pygame.K_w) and 490 < selYPos < 610 and isSettingSelected == False:
                     selYPos = selYPos - 100
                     posStatus -= 1
-                """
-                ---------TODO--------
-                 - add main program launch sequence
-                 - add credits screen
-                """
+               
                 if event.key == pygame.K_SPACE:
-                    if posStatus == 1:
-                        runChildProcessTarget(volumeCfg, widthCfg, heightCfg)
-                        configfile.close()
-                        keepRunning = False
+                    if isSettingSelected == True:
+                        # subprocess.Popen(args=[sys.executable, "editPref.py"])
+                        # exec(open('editPref.py').read())
+                        subprocess.Popen(args=[sys.executable, "editPref.py"])
+                    elif posStatus == 1:
+                        subprocess.Popen(args=[sys.executable, "gamert.py", volumeCfg, widthCfg, heightCfg])
                     elif posStatus == 2:
-                        # pass # TODO: insert here
                         pygame.draw.rect(screen, (0, 0, 0), (100, 100, 1170, 600))
                         crTitleText = pixelFont_80.render("Credits", False, (255, 255, 255))
                         screen.blit(crTitleText, (560, 150))
@@ -121,17 +118,9 @@ def main():
                         time.sleep(2)
                         
                     elif posStatus == 3:
-                        # pygame.quit()
-                        # sys.exit()
-                        configfile.close()
+                        pygame.quit()
+                        sys.exit()
                         keepRunning = False
-            elif event.type == pygame.MOUSEBUTTONDOWN:
-                pass
-                # x = random.randrange(0, 1800)
-                # y = random.randrange(0, 900)
-                # deg = random.randrange(0, 360)
-                # bzdzph_molecule = pygame.transform.rotate(bzdzph_molecule, deg)
-                # screen.blit(bzdzph_molecule, (x, y))
 
             screen.fill((255, 255, 255))
             screen.blit(titleText, (250, 100))
@@ -140,9 +129,9 @@ def main():
             screen.blit(quitText, (600, 600))
             screen.blit(creditText, (600, 500))
             screen.blit(helpText, (300, 730))
+            screen.blit(settingsText, (1200, 680))
             pygame.display.update()
 
-            # pygame.draw.rect(screen, (255, 255, 255), (500, 400, 95, 300))
             screen.blit(selectText, (selXPos, selYPos))
             pygame.display.update()
 
