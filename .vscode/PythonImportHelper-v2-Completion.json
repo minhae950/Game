@@ -648,6 +648,15 @@
         "documentation": {}
     },
     {
+        "label": "Interactable",
+        "kind": 6,
+        "importPath": "Game",
+        "description": "Game",
+        "peekOfCode": "class Interactable(Entity):\n    def __init__(self, type, model, position=(), scale=(), rotation=(), texture='', **kwargs):\n        super().__init__(\n            type = type,\n            model = model,\n            position=position,\n            collider = MeshCollider(self),\n            scale=scale,\n            rotation=rotation,\n            texture=texture,",
+        "detail": "Game",
+        "documentation": {}
+    },
+    {
         "label": "input",
         "kind": 2,
         "importPath": "Game",
@@ -697,7 +706,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "app = Ursina()\n# if __name__ == \"__main__\":\n#     print(\"Arguments Are: \" + sys.argv[1] + \" / \" + sys.argv[2] + \" / \" + sys.argv[3])\n#     time.sleep(3)\n#model import\nman = 'man.obj'\n#class\nclass Human(Entity):\n    def __init__(self, name, model, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), texture='', **kwargs):\n        super().__init__(",
+        "peekOfCode": "app = Ursina()\n# window.size = (sys.argv[2], sys.argv[3])\n#model import\nman = 'man.obj'\n#class\nclass Human(Entity):\n    def __init__(self, name, model, position=(0, 0, 0), scale=(0, 0, 0), rotation=(0, 0, 0), texture='', **kwargs):\n        super().__init__(\n            model=model,\n            name=name,",
         "detail": "Game",
         "documentation": {}
     },
@@ -715,7 +724,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\ncube = Entity(model='cube', scale=(1, 1, 1), position=(0, 0.5, 5), color=color.red, collider='box')\nJames = Human(name='James', model='man', position=(2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDoyun = Human(name='도윤', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='Jhon', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))",
+        "peekOfCode": "ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')\ncube = Entity(model='cube', scale=(1, 1, 1), position=(0, 0.5, 5), color=color.red, collider='box')\nJames = Human(name='James', model='man', position=(2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDoyun = Human(name='도윤', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='Jhon', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))",
         "detail": "Game",
         "documentation": {}
     },
@@ -724,7 +733,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "cube = Entity(model='cube', scale=(1, 1, 1), position=(0, 0.5, 5), color=color.red, collider='box')\nJames = Human(name='James', model='man', position=(2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDoyun = Human(name='도윤', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='Jhon', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog",
+        "peekOfCode": "cube = Entity(model='cube', scale=(1, 1, 1), position=(0, 0.5, 5), color=color.red, collider='box')\nJames = Human(name='James', model='man', position=(2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDoyun = Human(name='도윤', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='Jhon', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog",
         "detail": "Game",
         "documentation": {}
     },
@@ -733,7 +742,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "James = Human(name='James', model='man', position=(2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDoyun = Human(name='도윤', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='Jhon', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"",
+        "peekOfCode": "James = Human(name='James', model='man', position=(2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDoyun = Human(name='도윤', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='Jhon', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"",
         "detail": "Game",
         "documentation": {}
     },
@@ -742,7 +751,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "Doyun = Human(name='도윤', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='Jhon', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy",
+        "peekOfCode": "Doyun = Human(name='도윤', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJhon = Human(name='Jhon', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy",
         "detail": "Game",
         "documentation": {}
     },
@@ -751,7 +760,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "Jhon = Human(name='Jhon', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth",
+        "peekOfCode": "Jhon = Human(name='Jhon', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDavid = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth",
         "detail": "Game",
         "documentation": {}
     },
@@ -760,7 +769,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "David = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret",
+        "peekOfCode": "David = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nJessica = Human(name='David', model='man', position=(4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret",
         "detail": "Game",
         "documentation": {}
     },
@@ -769,7 +778,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "Jessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret\n\"\"\"",
+        "peekOfCode": "Jessica = Human(name='David', model='man', position=(4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nDorothy = Human(name='David', model='man', position=(4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret\n\"\"\"",
         "detail": "Game",
         "documentation": {}
     },
@@ -778,7 +787,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "Dorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret\n\"\"\"\n#Man",
+        "peekOfCode": "Dorothy = Human(name='David', model='man', position=(4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nElizabeth = Human(name='David', model='man', position=(4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret\n\"\"\"\n#Man",
         "detail": "Game",
         "documentation": {}
     },
@@ -787,7 +796,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "Elizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret\n\"\"\"\n#Man\ntext_James = [\"제 몸에 기생충이 있는것 같아요.\", \"위를 갉아먹는 느낌이에요.\", \"기생충 좀 빼주세요.\"]",
+        "peekOfCode": "Elizabeth = Human(name='David', model='man', position=(4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\nMargaret = Human(name='David', model='man', position=(4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret\n\"\"\"\n#Man\ntext_James = [\"제 몸에 기생충이 있는것 같아요.\", \"위를 갉아먹는 느낌이에요.\", \"기생충 좀 빼주세요.\"]",
         "detail": "Game",
         "documentation": {}
     },
@@ -796,7 +805,7 @@
         "kind": 5,
         "importPath": "Game",
         "description": "Game",
-        "peekOfCode": "Margaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret\n\"\"\"\n#Man\ntext_James = [\"제 몸에 기생충이 있는것 같아요.\", \"위를 갉아먹는 느낌이에요.\", \"기생충 좀 빼주세요.\"]\ntext_Doyun = [\"너무 많이 뛰었더니,\", \"심장이 빨라져서 돌아오지 않아요.\", \"도와주세요.\"]",
+        "peekOfCode": "Margaret = Human(name='David', model='man', position=(4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))\n#dialog\n\"\"\"\nX-ray: James, Jessica, Dorothy\nStethoscope: Robert, Jhon, Elizabeth\nRinger: David, Margaret\n\"\"\"\n#Man\ntext_James = [\"제 몸에 기생충이 있는것 같아요.\", \"위를 갉아먹는 느낌이에요.\", \"기생충 좀 빼주세요.\"]\ntext_Doyun = [\"너무 많이 뛰었더니,\", \"심장이 빨라져서 돌아오지 않아요.\", \"도와주세요.\"]",
         "detail": "Game",
         "documentation": {}
     },

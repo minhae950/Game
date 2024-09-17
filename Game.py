@@ -5,9 +5,7 @@ import time
 
 app = Ursina()
 
-# if __name__ == "__main__":
-#     print("Arguments Are: " + sys.argv[1] + " / " + sys.argv[2] + " / " + sys.argv[3])
-#     time.sleep(3)
+# window.size = (sys.argv[2], sys.argv[3])
 
 #model import
 man = 'man.obj'
@@ -30,7 +28,7 @@ class Human(Entity):
         
     #interact #define
     def interact(self):
-        print(f"Interacted with {self.name}")
+        print(f"Interacted with {self}")
         self.color = color.red
     def on_hover(self):
         self.color = color.green
@@ -38,6 +36,18 @@ class Human(Entity):
     def on_unhover(self):
         self.color = self.original_color
         
+class Interactable(Entity):
+    def __init__(self, type, model, position=(), scale=(), rotation=(), texture='', **kwargs):
+        super().__init__(
+            type = type,
+            model = model,
+            position=position,
+            collider = MeshCollider(self),
+            scale=scale,
+            rotation=rotation,
+            texture=texture,
+            **kwargs
+        )
 
 #map
 ground = Entity(model='plane', scale=(50, 1, 50), texture='white_cube', texture_scale=(20, 20), collider='box')
@@ -49,10 +59,10 @@ Doyun = Human(name='도윤', model='man', position=(2, 0, 2), scale=(0.4, 0.4, 0
 Jhon = Human(name='Jhon', model='man', position=(2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
 David = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
 
-Jessica = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
-Dorothy = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
-Elizabeth = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
-Margaret = Human(name='David', model='man', position=(2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
+Jessica = Human(name='David', model='man', position=(4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
+Dorothy = Human(name='David', model='man', position=(4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
+Elizabeth = Human(name='David', model='man', position=(4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
+Margaret = Human(name='David', model='man', position=(4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 90))
 
 #dialog
 """
