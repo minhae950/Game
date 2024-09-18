@@ -47,6 +47,7 @@ class Interactable(Entity):
             scale=scale,
             rotation=rotation,
             texture=texture,
+            highlight_color = color.black,
             **kwargs
         )
 
@@ -72,17 +73,16 @@ Model_chair6 = Entity(model = 'chair6.obj', scale = (0.37, 0.37, 0.37), position
 Model_chair7 = Entity(model = 'chair7.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
 Model_chair8 = Entity(model = 'chair8.obj', scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
 
-
 #Human
-James = Human(name='James', model='man', position=(-2, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))
-Doyun = Human(name='도윤', model='man', position=(-2, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))
-Jhon = Human(name='Jhon', model='man', position=(-2, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))
-David = Human(name='David', model='man', position=(-2, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))
+James = Human(name='James', model='man', position=(-2, -0.4, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))
+Doyun = Human(name='도윤', model='man', position=(-12, -0.4, -14), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, 180))
+Jhon = Human(name='Jhon', model='man', position=(-2, -0.4, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))
+David = Human(name='David', model='man', position=(-2, -0.4, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))
 
-Jessica = Human(name='David', model='man', position=(-4, 0, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))
-Dorothy = Human(name='David', model='man', position=(-4, 0, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))
-Elizabeth = Human(name='David', model='man', position=(-4, 0, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))
-Margaret = Human(name='David', model='man', position=(-4, 0, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))
+Jessica = Human(name='David', model='man', position=(-4, -0.4, 0), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))
+Dorothy = Human(name='David', model='man', position=(-4, -0.4, 2), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))
+Elizabeth = Human(name='David', model='man', position=(-4, -0.4, 4), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))
+Margaret = Human(name='David', model='man', position=(-4, -0.4, 6), scale=(0.4, 0.4, 0.4), rotation=(-90, 0, -90))
 
 #dialog
 """
@@ -113,6 +113,15 @@ card.visible = False
 player = FirstPersonController()
 player.jump_height = 1.5
 camera.fov = 100
+
+# light = DirectionalLight(shadows=True, position=(0, 5, 0), look_at=(0, 0, 0))
+# light = AmbientLight(shadows=True, position=(0, 0, 0), look_at=(0, 0, 0))
+# light.color = color.white  # 빛의 색상 설정
+
+# point_light = PointLight(parent=player, color=color.white, position=(0, 0, 0), shadows=True)
+# point_light1 = PointLight(parent=player, color=color.white, position=(1, 0, 20), shadows=True)
+# point_light.range = 100
+# point_light.intensity = 5
 
 #UI
 hand = Entity(parent=camera, model='cube', scale=(0.13, 0.15, 0.13))
@@ -179,6 +188,9 @@ def show_text_sequence(texts, interval=2):
         total_time += interval
 
 def update():
+    print(player.position) #for check
+    #point_light.position = player.position
+    
     global previous_hovered_entity
     hit_info = raycast(camera.world_position, camera.forward, distance=3)
     
@@ -207,6 +219,9 @@ def update():
         if previous_hovered_entity:
             previous_hovered_entity.on_unhover()
             previous_hovered_entity = None
+
+
+
 
 def quit_game():
     application.quit()
