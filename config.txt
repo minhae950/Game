@@ -2,7 +2,7 @@
 100
 
 # resolution settings: respectively width and height(16:9 recommended) / no fullscreen unfortunately
-1200
+1366
 768
 
 # Memo:

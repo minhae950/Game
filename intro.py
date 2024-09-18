@@ -100,7 +100,7 @@ def main():
                         # exec(open('editPref.py').read())
                         subprocess.Popen(args=[sys.executable, "editPref.py"])
                     elif posStatus == 1:
-                        subprocess.Popen(args=[sys.executable, "Game.py", volumeCfg, widthCfg, heightCfg])
+                        subprocess.Popen(args=[sys.executable, "game.py", volumeCfg, widthCfg, heightCfg])
                         keepRunning = False
                     elif posStatus == 2:
                         pygame.draw.rect(screen, (0, 0, 0), (100, 100, 1170, 600))
