@@ -1281,7 +1281,7 @@
         "kind": 5,
         "importPath": "mini_game1",
         "description": "mini_game1",
-        "peekOfCode": "WHITE = (255, 255, 255)\nRED = (255, 0, 0)\nBLUE = (0, 0, 255)\nGREEN = (0, 255, 0)\nBLACK = (0, 0, 0)\n# 차량 크기와 설정\nGRID_SIZE = 100\nCARS = [\n    {\"rect\": pygame.Rect(100, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": RED, \"vertical\": False},  # 목표 차량\n    {\"rect\": pygame.Rect(300, 300, GRID_SIZE, GRID_SIZE * 2), \"color\": BLUE, \"vertical\": True},",
+        "peekOfCode": "WHITE = (255, 255, 255)\nRED = (255, 0, 0)\nBLUE = (0, 0, 255)\nGREEN = (0, 255, 0)\nBLACK = (0, 0, 0)\n# 차량 크기와 설정\nGRID_SIZE = 100\nCARS = [\n    {\"rect\": pygame.Rect(300, 300, GRID_SIZE, GRID_SIZE * 2), \"color\": BLUE, \"vertical\": True},\n    {\"rect\": pygame.Rect(100, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": RED, \"vertical\": False},",
         "detail": "mini_game1",
         "documentation": {}
     },
@@ -1290,7 +1290,7 @@
         "kind": 5,
         "importPath": "mini_game1",
         "description": "mini_game1",
-        "peekOfCode": "RED = (255, 0, 0)\nBLUE = (0, 0, 255)\nGREEN = (0, 255, 0)\nBLACK = (0, 0, 0)\n# 차량 크기와 설정\nGRID_SIZE = 100\nCARS = [\n    {\"rect\": pygame.Rect(100, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": RED, \"vertical\": False},  # 목표 차량\n    {\"rect\": pygame.Rect(300, 300, GRID_SIZE, GRID_SIZE * 2), \"color\": BLUE, \"vertical\": True},\n    {\"rect\": pygame.Rect(300, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": GREEN, \"vertical\": False},",
+        "peekOfCode": "RED = (255, 0, 0)\nBLUE = (0, 0, 255)\nGREEN = (0, 255, 0)\nBLACK = (0, 0, 0)\n# 차량 크기와 설정\nGRID_SIZE = 100\nCARS = [\n    {\"rect\": pygame.Rect(300, 300, GRID_SIZE, GRID_SIZE * 2), \"color\": BLUE, \"vertical\": True},\n    {\"rect\": pygame.Rect(100, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": RED, \"vertical\": False},\n    {\"rect\": pygame.Rect(300, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": GREEN, \"vertical\": False},",
         "detail": "mini_game1",
         "documentation": {}
     },
@@ -1299,7 +1299,7 @@
         "kind": 5,
         "importPath": "mini_game1",
         "description": "mini_game1",
-        "peekOfCode": "BLUE = (0, 0, 255)\nGREEN = (0, 255, 0)\nBLACK = (0, 0, 0)\n# 차량 크기와 설정\nGRID_SIZE = 100\nCARS = [\n    {\"rect\": pygame.Rect(100, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": RED, \"vertical\": False},  # 목표 차량\n    {\"rect\": pygame.Rect(300, 300, GRID_SIZE, GRID_SIZE * 2), \"color\": BLUE, \"vertical\": True},\n    {\"rect\": pygame.Rect(300, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": GREEN, \"vertical\": False},\n]",
+        "peekOfCode": "BLUE = (0, 0, 255)\nGREEN = (0, 255, 0)\nBLACK = (0, 0, 0)\n# 차량 크기와 설정\nGRID_SIZE = 100\nCARS = [\n    {\"rect\": pygame.Rect(300, 300, GRID_SIZE, GRID_SIZE * 2), \"color\": BLUE, \"vertical\": True},\n    {\"rect\": pygame.Rect(100, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": RED, \"vertical\": False},\n    {\"rect\": pygame.Rect(300, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": GREEN, \"vertical\": False},\n    {\"rect\": pygame.Rect(500, 100, GRID_SIZE, GRID_SIZE * 2), \"color\": (255, 255, 0), \"vertical\": True},",
         "detail": "mini_game1",
         "documentation": {}
     },
@@ -1308,7 +1308,7 @@
         "kind": 5,
         "importPath": "mini_game1",
         "description": "mini_game1",
-        "peekOfCode": "GREEN = (0, 255, 0)\nBLACK = (0, 0, 0)\n# 차량 크기와 설정\nGRID_SIZE = 100\nCARS = [\n    {\"rect\": pygame.Rect(100, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": RED, \"vertical\": False},  # 목표 차량\n    {\"rect\": pygame.Rect(300, 300, GRID_SIZE, GRID_SIZE * 2), \"color\": BLUE, \"vertical\": True},\n    {\"rect\": pygame.Rect(300, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": GREEN, \"vertical\": False},\n]\n# 게임 루프",
+        "peekOfCode": "GREEN = (0, 255, 0)\nBLACK = (0, 0, 0)\n# 차량 크기와 설정\nGRID_SIZE = 100\nCARS = [\n    {\"rect\": pygame.Rect(300, 300, GRID_SIZE, GRID_SIZE * 2), \"color\": BLUE, \"vertical\": True},\n    {\"rect\": pygame.Rect(100, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": RED, \"vertical\": False},\n    {\"rect\": pygame.Rect(300, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": GREEN, \"vertical\": False},\n    {\"rect\": pygame.Rect(500, 100, GRID_SIZE, GRID_SIZE * 2), \"color\": (255, 255, 0), \"vertical\": True},\n]",
         "detail": "mini_game1",
         "documentation": {}
     },
@@ -1317,7 +1317,7 @@
         "kind": 5,
         "importPath": "mini_game1",
         "description": "mini_game1",
-        "peekOfCode": "BLACK = (0, 0, 0)\n# 차량 크기와 설정\nGRID_SIZE = 100\nCARS = [\n    {\"rect\": pygame.Rect(100, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": RED, \"vertical\": False},  # 목표 차량\n    {\"rect\": pygame.Rect(300, 300, GRID_SIZE, GRID_SIZE * 2), \"color\": BLUE, \"vertical\": True},\n    {\"rect\": pygame.Rect(300, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": GREEN, \"vertical\": False},\n]\n# 게임 루프\nrunning = True",
+        "peekOfCode": "BLACK = (0, 0, 0)\n# 차량 크기와 설정\nGRID_SIZE = 100\nCARS = [\n    {\"rect\": pygame.Rect(300, 300, GRID_SIZE, GRID_SIZE * 2), \"color\": BLUE, \"vertical\": True},\n    {\"rect\": pygame.Rect(100, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": RED, \"vertical\": False},\n    {\"rect\": pygame.Rect(300, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": GREEN, \"vertical\": False},\n    {\"rect\": pygame.Rect(500, 100, GRID_SIZE, GRID_SIZE * 2), \"color\": (255, 255, 0), \"vertical\": True},\n]\n# 게임 루프",
         "detail": "mini_game1",
         "documentation": {}
     },
@@ -1326,7 +1326,7 @@
         "kind": 5,
         "importPath": "mini_game1",
         "description": "mini_game1",
-        "peekOfCode": "GRID_SIZE = 100\nCARS = [\n    {\"rect\": pygame.Rect(100, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": RED, \"vertical\": False},  # 목표 차량\n    {\"rect\": pygame.Rect(300, 300, GRID_SIZE, GRID_SIZE * 2), \"color\": BLUE, \"vertical\": True},\n    {\"rect\": pygame.Rect(300, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": GREEN, \"vertical\": False},\n]\n# 게임 루프\nrunning = True\nselected_car_index = 0  # 키보드로 선택할 차량\nMOVE_SPEED = GRID_SIZE  # 차량을 한 번에 이동시키는 단위",
+        "peekOfCode": "GRID_SIZE = 100\nCARS = [\n    {\"rect\": pygame.Rect(300, 300, GRID_SIZE, GRID_SIZE * 2), \"color\": BLUE, \"vertical\": True},\n    {\"rect\": pygame.Rect(100, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": RED, \"vertical\": False},\n    {\"rect\": pygame.Rect(300, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": GREEN, \"vertical\": False},\n    {\"rect\": pygame.Rect(500, 100, GRID_SIZE, GRID_SIZE * 2), \"color\": (255, 255, 0), \"vertical\": True},\n]\n# 게임 루프\nrunning = True\nselected_car_index = 0  # 키보드로 선택할 차량",
         "detail": "mini_game1",
         "documentation": {}
     },
@@ -1335,7 +1335,7 @@
         "kind": 5,
         "importPath": "mini_game1",
         "description": "mini_game1",
-        "peekOfCode": "CARS = [\n    {\"rect\": pygame.Rect(100, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": RED, \"vertical\": False},  # 목표 차량\n    {\"rect\": pygame.Rect(300, 300, GRID_SIZE, GRID_SIZE * 2), \"color\": BLUE, \"vertical\": True},\n    {\"rect\": pygame.Rect(300, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": GREEN, \"vertical\": False},\n]\n# 게임 루프\nrunning = True\nselected_car_index = 0  # 키보드로 선택할 차량\nMOVE_SPEED = GRID_SIZE  # 차량을 한 번에 이동시키는 단위\ndef draw_grid():",
+        "peekOfCode": "CARS = [\n    {\"rect\": pygame.Rect(300, 300, GRID_SIZE, GRID_SIZE * 2), \"color\": BLUE, \"vertical\": True},\n    {\"rect\": pygame.Rect(100, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": RED, \"vertical\": False},\n    {\"rect\": pygame.Rect(300, 100, GRID_SIZE * 2, GRID_SIZE), \"color\": GREEN, \"vertical\": False},\n    {\"rect\": pygame.Rect(500, 100, GRID_SIZE, GRID_SIZE * 2), \"color\": (255, 255, 0), \"vertical\": True},\n]\n# 게임 루프\nrunning = True\nselected_car_index = 0  # 키보드로 선택할 차량\nMOVE_SPEED = GRID_SIZE  # 차량을 한 번에 이동시키는 단위",
         "detail": "mini_game1",
         "documentation": {}
     },

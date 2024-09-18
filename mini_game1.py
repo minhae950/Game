@@ -19,9 +19,10 @@ BLACK = (0, 0, 0)
 # 차량 크기와 설정
 GRID_SIZE = 100
 CARS = [
-    {"rect": pygame.Rect(100, 100, GRID_SIZE * 2, GRID_SIZE), "color": RED, "vertical": False},  # 목표 차량
     {"rect": pygame.Rect(300, 300, GRID_SIZE, GRID_SIZE * 2), "color": BLUE, "vertical": True},
+    {"rect": pygame.Rect(100, 100, GRID_SIZE * 2, GRID_SIZE), "color": RED, "vertical": False},
     {"rect": pygame.Rect(300, 100, GRID_SIZE * 2, GRID_SIZE), "color": GREEN, "vertical": False},
+    {"rect": pygame.Rect(500, 100, GRID_SIZE, GRID_SIZE * 2), "color": (255, 255, 0), "vertical": True},
 ]
 
 # 게임 루프
