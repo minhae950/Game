@@ -26,8 +26,6 @@ chair6 = 'chair6.obj'
 chair7 = 'chair7.obj'
 chair8 = 'chair8.obj'
 
-#왼쪽벽, 중앙벽 다시 만들기(빼먹은 블록이 있음)
-
 #맵 생성
 Model_ground = Entity(model = ground, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
 Model_ceiling = Entity(model = ceiling, scale = (0.37, 0.37, 0.37), position = (-10, -0.8, -20), collider='box')
