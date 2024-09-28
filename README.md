@@ -1,8 +1,7 @@
 # Benzodiazepine
 ## 벤조디아제핀
+![/assets/images/bannner.png](https://github.com/minhae950/Game/blob/main/assets/images/banner.png)
 > 코딩대회 출품작
-
-*<여기에 게임 타이틀 아이콘 삽입>*
 ## 참고
 github desktop 설치
 pip install ursina
