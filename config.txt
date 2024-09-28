@@ -1,9 +1,0 @@
-# sound volume: minimum of 0 and maximum of 100
-100
-
-# resolution settings: respectively width and height(16:9 recommended) / no fullscreen unfortunately
-1366
-768
-
-# Memo:
-Can freely write here
