@@ -26,5 +26,5 @@ https://uppbeat.io/browse/music/lo-fi-beats
 Background music by PlayOnLoop.com
 Icon made by Studio Poppeople from www.flaticon.com
 
-Special Thanks
+### Special Thanks
 사랑하는 반려견 미루에게 이 게임을 바칩니다.
