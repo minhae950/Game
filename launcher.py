@@ -4,7 +4,6 @@ try:
     import tkinter
     import ursina
     import moviepy.editor as mp
-    import sys
     import subprocess
     import time
     import PIL
@@ -31,6 +30,8 @@ def main():
     parsed_vol = int(volumeCfg) / 100
 
     pygame.init()
+    favicon = pygame.image.load('assets/images/icon_nobg.png')
+    pygame.display.set_icon(favicon)
     screen = pygame.display.set_mode((1366, 768))
     pygame.display.set_caption("벤조디아제핀")
     _intro_vid = mp.VideoFileClip("assets/videos/intro.mp4")
@@ -38,15 +39,16 @@ def main():
     keepRunning = True
     clk = pygame.time.Clock()
     pixelFont_128 = pygame.font.Font("assets/fonts/neodgm.ttf", 128)
+    pixelFont_80 = pygame.font.Font("assets/fonts/neodgm.ttf", 80)
     pixelFont_64 = pygame.font.Font("assets/fonts/neodgm.ttf", 64)
     pixelFont_32 = pygame.font.Font("assets/fonts/neodgm.ttf", 32)
-    pixelFont_80 = pygame.font.Font("assets/fonts/neodgm.ttf", 80)
 
-    bzdzph_molecule = pygame.image.load("assets/images/bzd.png")
-    bzdzph_molecule = pygame.transform.scale(bzdzph_molecule, (300, 200))
+    # bzdzph_molecule = pygame.image.load("assets/images/bzd.png")
+    # bzdzph_molecule = pygame.transform.scale(bzdzph_molecule, (300, 200))
 
     pygame.mouse.set_visible(False)
 
+    pygame.mixer.init()
     intro_sfx = pygame.mixer.Sound('assets/music/intro_effect.mp3')
     intro_sfx.set_volume(0.5 * parsed_vol)
     intro_sfx.play()
